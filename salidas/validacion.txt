@@ -1,0 +1,27 @@
+VALIDACIÓN ENAHO 2024
+
+Pobreza monetaria, sumaria (factor07 x mieperho): 27.58 %
+Pobreza monetaria, personas (facpob07):           27.53 %
+Pobreza extrema, sumaria:                         5.50 %
+Pobreza extrema, personas:                        5.50 %
+Referencia:                                       27.6 % y 5.5 %
+
+Hogares en la sumaria:   33,691
+Filas del módulo 02:     117,721
+Residentes habituales:   108,664
+Filas de la base final:  108,664
+
+[OK] Llaves de hogar únicas en la sumaria
+[OK] Llaves de persona únicas en el módulo 02
+[OK] Hogares en la sumaria = 33,691
+[OK] Filas del módulo 02 = 117,721
+[OK] Residentes habituales = 108,664
+[OK] La unión no perdió ni duplicó filas
+[OK] Toda persona encontró su hogar
+[OK] Ninguna persona sin facpob07
+[OK] 25 departamentos en la base
+[OK] Pobreza con sumaria a 0.1 de 27.6 %
+[OK] Pobreza con personas a 0.1 de 27.6 %
+[OK] Pobreza extrema con sumaria a 0.1 de 5.5 %
+
+RESULTADO: APROBADO

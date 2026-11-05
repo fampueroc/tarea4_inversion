@@ -3,7 +3,8 @@
 Uso (desde la raíz del repositorio):
     uv run .claude/skills/mapeando-enaho/scripts/mapear.py
 
-Sale: mapas/pobreza_departamento.png. Si la unión o la validación fallan, no guarda el mapa.
+Sale: mapas/pobreza_departamento.png y salidas/mapa_vs_referencia.csv (cada departamento frente a la
+referencia de la sesión 16). Si la unión o la validación fallan, no guarda el mapa.
 """
 
 import argparse
@@ -27,6 +28,7 @@ def main() -> None:
     parser.add_argument("--base", type=Path, default=Path("salidas/personas_2024.parquet"))
     parser.add_argument("--limites", type=Path, default=Path("datos/peru_departamental_simple.geojson"))
     parser.add_argument("--destino", type=Path, default=Path("mapas/pobreza_departamento.png"))
+    parser.add_argument("--comparacion", type=Path, default=Path("salidas/mapa_vs_referencia.csv"))
     args = parser.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 
@@ -52,6 +54,13 @@ def main() -> None:
     # Validar contra la pobreza de referencia
     referencia = pd.read_csv(REFERENCIA, dtype={"ccdd": str}).set_index("ccdd").pobreza_pct
     diferencia = (mapa.set_index("departamento").pobreza_pct - referencia).abs()
+    # La comparación queda guardada como evidencia, pase o no la validación
+    tabla = pd.DataFrame({"departamento": mapa.set_index("departamento").NOMBDEP,
+                          "pobreza_calculada": mapa.set_index("departamento").pobreza_pct.round(2),
+                          "pobreza_referencia_sesion16": referencia, "diferencia_abs": diferencia.round(3)})
+    tabla["dentro_de_tolerancia"] = tabla.diferencia_abs < TOLERANCIA
+    args.comparacion.parent.mkdir(parents=True, exist_ok=True)
+    tabla.rename_axis("ccdd").sort_index().to_csv(args.comparacion, encoding="utf-8")
     if diferencia.isna().any() or (diferencia >= TOLERANCIA).any():
         sys.exit(f"Departamentos lejos de la referencia:\n{diferencia[~(diferencia < TOLERANCIA)]}")
 
@@ -77,6 +86,7 @@ def main() -> None:
     print(f"25 departamentos con dato. Diferencia máxima con la referencia: {diferencia.max():.2f} puntos.")
     print(orden.to_string(header=False))
     print(f"Mapa: {args.destino}")
+    print(f"Comparación con la sesión 16: {args.comparacion}")
 
 
 if __name__ == "__main__":

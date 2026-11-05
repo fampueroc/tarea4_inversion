@@ -19,7 +19,7 @@ No las cambies aunque edites el mapa.
 
 - Une por código y como texto: `ubigeo[:2]` con `FIRST_IDDP`. Nunca por nombre: «APURIMAC» no es «Apurímac».
 - Exige 25 departamentos y ninguno sin dato.
-- Valida cada departamento contra `referencias/pobreza_departamento_2024.csv`.
+- Valida cada departamento contra `referencias/pobreza_departamento_2024.csv` (copia idéntica del archivo de la sesión 16 del curso) y guarda la comparación en `salidas/mapa_vs_referencia.csv`.
 - Pondera con hogares únicos y `factor07 × mieperho`, como la referencia.
 - Un color de claro a oscuro, desde 0. Nunca arcoíris.
 - Leyenda con la unidad: % de personas.

@@ -25,7 +25,9 @@ SOLO_LECTURA = {"readOnlyHint": True, "openWorldHint": True}
 
 mcp = FastMCP("bcrp", instructions=(
     "Series oficiales del Banco Central de Reserva del Perú (BCRP). Primero busca el código con buscar_series; "
-    "luego usa resumen para variaciones, promedios y extremos, y serie para los datos. No calcules a mano: "
+    "luego usa resumen para variaciones, promedios y extremos, y serie para los datos. Para datos por departamento "
+    "(inversión pública, crédito, depósitos, exportaciones mineras) usa cuadre_territorial: trae los 25 departamentos "
+    "con su ubigeo y verifica que sumen el total oficial. No calcules a mano: "
     "cita siempre el código de la serie y el periodo."))
 
 
@@ -200,6 +202,117 @@ def tasa_real(desde: str, hasta: str, neutral: float = 2.0) -> dict:
             "tasa_real_maxima": df.loc[df.tasa_real.idxmax(), ["periodo", "tasa_real"]].to_dict(),
             "rachas": rachas, "meses": df.to_dict("records"),
             "fuentes": [ref["fuente"], inf["fuente"]]}
+
+
+# Códigos de departamento del INEI (los dos primeros dígitos del ubigeo), con Lima y Callao separados.
+UBIGEO = {"amazonas": "01", "ancash": "02", "apurimac": "03", "arequipa": "04", "ayacucho": "05", "cajamarca": "06",
+          "callao": "07", "cusco": "08", "huancavelica": "09", "huanuco": "10", "ica": "11", "junin": "12",
+          "la libertad": "13", "lambayeque": "14", "lima": "15", "loreto": "16", "madre de dios": "17",
+          "moquegua": "18", "pasco": "19", "piura": "20", "puno": "21", "san martin": "22", "tacna": "23",
+          "tumbes": "24", "ucayali": "25"}
+
+# Cada indicador: dónde están sus series anuales en el catálogo y cuál es el total oficial con el que cuadrar.
+INDICADORES = {
+    "inversion_gobierno_nacional": {
+        "grupo": "Inversión bruta fija del gobierno nacional por departamentos (millones S/)", "unidad": "millones S/"},
+    "inversion_gobiernos_regionales": {
+        "grupo": "Inversión bruta fija de los gobiernos regionales (millones S/)", "unidad": "millones S/"},
+    "inversion_gobiernos_locales": {
+        "grupo": "Inversión bruta fija de gobiernos locales por departamentos (millones S/)", "unidad": "millones S/"},
+    "credito": {"grupo": "Crédito directo del sistema financiero al sector privado por departamentos - fin de periodo "
+                         "(millones S/)", "solo": "(total)", "unidad": "millones S/, fin de periodo"},
+    "depositos": {"grupo": "Depósitos en el sistema financiero por departamentos - fin de periodo (millones S/)",
+                  "solo": "(total)", "unidad": "millones S/, fin de periodo"},
+    "exportaciones_mineras": {"grupo_empieza": "Exportaciones por grupo de productos ",   # «de X» y «sin ubigeo»
+                              "nombre": "Productos tradicionales - Mineros", "total": "PM40047BA",
+                              "unidad": "millones US$ FOB"},
+}
+
+
+def _depto(texto):
+    """'Huánuco (millones de soles)' o 'Exportaciones por grupo de productos de Huanuco (...)' -> 'huanuco'."""
+    t = _sin_tildes(re.sub(r"\(.*?\)", "", texto))
+    return re.sub(r"^exportaciones por grupo de productos (de )?", "", t.strip()).strip()
+
+
+def _series_del_indicador(indicador):
+    """Las series anuales del indicador, cada una marcada como departamento, total u otra (p. ej., Lima Metropolitana)."""
+    if indicador not in INDICADORES:
+        raise ToolError(f"Indicador {indicador!r} no disponible. Usen uno de: {', '.join(INDICADORES)}.")
+    cfg, df = INDICADORES[indicador], catalogo()
+    df = df[df.frecuencia == "Anual"]
+    if "grupo" in cfg:
+        sel = df[df.grupo == cfg["grupo"]]
+        if "solo" in cfg:
+            sel = sel[sel.nombre.str.strip().str.endswith(cfg["solo"])]
+        etiqueta = sel.nombre
+    else:
+        sel = df[df.grupo.str.startswith(cfg["grupo_empieza"]) & (df.nombre == cfg["nombre"])]
+        etiqueta = sel.grupo
+    filas = []
+    for codigo, texto in zip(sel.codigo, etiqueta):
+        d = _depto(texto)
+        tipo = "total" if d == "total" else ("departamento" if d in UBIGEO else "otra")
+        nombre = re.sub(r"\s*\(.*?\)\s*", " ", texto).strip()
+        nombre = re.sub(r"^Exportaciones por grupo de productos (de )?", "", nombre)
+        filas.append({"codigo": codigo, "nombre": nombre, "tipo": tipo, "ubigeo": UBIGEO.get(d)})
+    if "total" in cfg:
+        filas.append({"codigo": cfg["total"], "nombre": "Total nacional", "tipo": "total", "ubigeo": None})
+    return cfg, filas
+
+
+@mcp.tool(annotations=SOLO_LECTURA)
+def cuadre_territorial(indicador: str, desde: str, hasta: str) -> dict:
+    """Valores anuales por departamento de un indicador del BCRP, con su código de ubigeo, y el cuadre contra el total oficial.
+
+    Úsenla para preguntas como «¿cuánto invirtieron los gobiernos regionales en cada departamento en 2024?» o
+    «¿la suma de los departamentos coincide con el total nacional?». Devuelve los 25 departamentos (Lima y Callao
+    separados) con la llave ubigeo de dos dígitos del INEI, lista para unir con la ENAHO, y para cada año: suma de
+    departamentos, total oficial, diferencia y las series que no son departamentos (como la Municipalidad
+    Metropolitana de Lima) que la explican. Si faltan años, lo dice en vez de rellenar.
+
+    Indicadores: inversion_gobierno_nacional, inversion_gobiernos_regionales, inversion_gobiernos_locales,
+    credito, depositos, exportaciones_mineras. Años: cuadre_territorial("inversion_gobiernos_regionales", "2020", "2024").
+    """
+    cfg, filas = _series_del_indicador(indicador)
+    datos, fuentes = {}, []
+    for f in filas:
+        try:
+            s = _serie(f["codigo"], desde, hasta)
+        except ToolError:
+            ficha = _ficha(f["codigo"])
+            todo = _serie(f["codigo"], ficha["inicio"], hasta)["datos"]
+            raise ToolError(f"{indicador}: la serie {f['codigo']} ({f['nombre']}) no tiene datos entre {desde} y "
+                            f"{hasta}; su último año publicado es {todo[-1]['periodo']}. Usen años hasta ese.") from None
+        datos[f["codigo"]] = {d["periodo"]: d["valor"] for d in s["datos"]}
+        fuentes.append(s["fuente"])
+    periodos = sorted({p for v in datos.values() for p in v})
+    deptos = [f for f in filas if f["tipo"] == "departamento"]
+    faltan = sorted(set(UBIGEO.values()) - {f["ubigeo"] for f in deptos})
+    total = next((f for f in filas if f["tipo"] == "total"), None)
+    cuadre = []
+    for p in periodos:
+        suma = sum(datos[f["codigo"]].get(p, 0.0) for f in deptos)
+        otras = [{"codigo": f["codigo"], "nombre": f["nombre"], "valor": round(datos[f["codigo"]].get(p, 0.0), 4)}
+                 for f in filas if f["tipo"] == "otra"]
+        oficial = datos[total["codigo"]].get(p) if total else None
+        dif = None if oficial is None else oficial - suma
+        resto = None if dif is None else dif - sum(o["valor"] for o in otras)
+        tol = None if oficial is None else max(0.05, abs(oficial) * 1e-4)   # 0.01 % o 0.05: solo redondeo
+        cuadre.append({"periodo": p, "suma_departamentos": round(suma, 4), "total_oficial": oficial,
+                       "diferencia": None if dif is None else round(dif, 4), "otras_series": otras,
+                       "diferencia_sin_explicar": None if resto is None else round(resto, 4),
+                       "cuadra": None if resto is None else abs(resto) <= tol})
+    return {"indicador": indicador, "unidad": cfg["unidad"], "desde": periodos[0], "hasta": periodos[-1],
+            "departamentos": [{"ubigeo": f["ubigeo"], "departamento": f["nombre"], "codigo": f["codigo"],
+                               "valores": {p: round(v, 4) for p, v in datos[f["codigo"]].items()}}
+                              for f in sorted(deptos, key=lambda f: f["ubigeo"])],
+            "departamentos_faltantes": faltan, "cuadre": cuadre,
+            "cuadra_todo": all(c["cuadra"] for c in cuadre if c["cuadra"] is not None),
+            # si no cuadra, comparar fechas: un total actualizado después que los departamentos puede traer revisiones
+            "actualizacion": {"total": _ficha(total["codigo"])["actualizada"] if total else None,
+                              "departamentos": sorted({_ficha(f["codigo"])["actualizada"] for f in deptos})},
+            "fuentes": fuentes}
 
 
 @mcp.resource("bcrp://serie/{codigo}")

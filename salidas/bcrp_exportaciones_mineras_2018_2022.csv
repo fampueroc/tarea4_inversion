@@ -1,0 +1,136 @@
+indicador,tipo,ubigeo,nombre,codigo,anio,valor,unidad,fuente
+exportaciones_mineras,departamento,01,Amazonas,RD40961BA,2018,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40961BA/json/2018/2022
+exportaciones_mineras,departamento,01,Amazonas,RD40961BA,2019,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40961BA/json/2018/2022
+exportaciones_mineras,departamento,01,Amazonas,RD40961BA,2020,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40961BA/json/2018/2022
+exportaciones_mineras,departamento,01,Amazonas,RD40961BA,2021,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40961BA/json/2018/2022
+exportaciones_mineras,departamento,01,Amazonas,RD40961BA,2022,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40961BA/json/2018/2022
+exportaciones_mineras,departamento,02,Ancash,RD40978BA,2018,3687.3857962,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40978BA/json/2018/2022
+exportaciones_mineras,departamento,02,Ancash,RD40978BA,2019,3088.80176146,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40978BA/json/2018/2022
+exportaciones_mineras,departamento,02,Ancash,RD40978BA,2020,3179.694175727,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40978BA/json/2018/2022
+exportaciones_mineras,departamento,02,Ancash,RD40978BA,2021,5512.99225035,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40978BA/json/2018/2022
+exportaciones_mineras,departamento,02,Ancash,RD40978BA,2022,4692.9136617,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40978BA/json/2018/2022
+exportaciones_mineras,departamento,03,Apurimac,RD40995BA,2018,2578.2818516,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40995BA/json/2018/2022
+exportaciones_mineras,departamento,03,Apurimac,RD40995BA,2019,1931.92643139,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40995BA/json/2018/2022
+exportaciones_mineras,departamento,03,Apurimac,RD40995BA,2020,2047.68753098,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40995BA/json/2018/2022
+exportaciones_mineras,departamento,03,Apurimac,RD40995BA,2021,3038.22916847,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40995BA/json/2018/2022
+exportaciones_mineras,departamento,03,Apurimac,RD40995BA,2022,2050.76720516,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD40995BA/json/2018/2022
+exportaciones_mineras,departamento,04,Arequipa,RD41012BA,2018,4702.44770312,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41012BA/json/2018/2022
+exportaciones_mineras,departamento,04,Arequipa,RD41012BA,2019,4184.42587481,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41012BA/json/2018/2022
+exportaciones_mineras,departamento,04,Arequipa,RD41012BA,2020,3416.209362751,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41012BA/json/2018/2022
+exportaciones_mineras,departamento,04,Arequipa,RD41012BA,2021,4981.93564312,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41012BA/json/2018/2022
+exportaciones_mineras,departamento,04,Arequipa,RD41012BA,2022,5377.89242593,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41012BA/json/2018/2022
+exportaciones_mineras,departamento,05,Ayacucho,RD41029BA,2018,326.97402169,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41029BA/json/2018/2022
+exportaciones_mineras,departamento,05,Ayacucho,RD41029BA,2019,300.42234004,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41029BA/json/2018/2022
+exportaciones_mineras,departamento,05,Ayacucho,RD41029BA,2020,680.986977377,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41029BA/json/2018/2022
+exportaciones_mineras,departamento,05,Ayacucho,RD41029BA,2021,763.04694868,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41029BA/json/2018/2022
+exportaciones_mineras,departamento,05,Ayacucho,RD41029BA,2022,740.82724255,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41029BA/json/2018/2022
+exportaciones_mineras,departamento,06,Cajamarca,RD41046BA,2018,2445.09670667807,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41046BA/json/2018/2022
+exportaciones_mineras,departamento,06,Cajamarca,RD41046BA,2019,2929.70001289957,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41046BA/json/2018/2022
+exportaciones_mineras,departamento,06,Cajamarca,RD41046BA,2020,1322.22299218,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41046BA/json/2018/2022
+exportaciones_mineras,departamento,06,Cajamarca,RD41046BA,2021,1411.43141059,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41046BA/json/2018/2022
+exportaciones_mineras,departamento,06,Cajamarca,RD41046BA,2022,1340.90951024,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41046BA/json/2018/2022
+exportaciones_mineras,departamento,07,Callao,RD41063BA,2018,2966.74075729,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41063BA/json/2018/2022
+exportaciones_mineras,departamento,07,Callao,RD41063BA,2019,1929.30939718,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41063BA/json/2018/2022
+exportaciones_mineras,departamento,07,Callao,RD41063BA,2020,613.123237769,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41063BA/json/2018/2022
+exportaciones_mineras,departamento,07,Callao,RD41063BA,2021,1502.80630704,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41063BA/json/2018/2022
+exportaciones_mineras,departamento,07,Callao,RD41063BA,2022,1481.24027752,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41063BA/json/2018/2022
+exportaciones_mineras,departamento,08,Cusco,RD41080BA,2018,2140.64961977,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41080BA/json/2018/2022
+exportaciones_mineras,departamento,08,Cusco,RD41080BA,2019,1843.51931188,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41080BA/json/2018/2022
+exportaciones_mineras,departamento,08,Cusco,RD41080BA,2020,1768.90576164,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41080BA/json/2018/2022
+exportaciones_mineras,departamento,08,Cusco,RD41080BA,2021,2358.73364991,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41080BA/json/2018/2022
+exportaciones_mineras,departamento,08,Cusco,RD41080BA,2022,2146.72310961,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41080BA/json/2018/2022
+exportaciones_mineras,departamento,09,Huancavelica,RD41097BA,2018,18.09395452,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41097BA/json/2018/2022
+exportaciones_mineras,departamento,09,Huancavelica,RD41097BA,2019,14.16085949,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41097BA/json/2018/2022
+exportaciones_mineras,departamento,09,Huancavelica,RD41097BA,2020,29.52426254,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41097BA/json/2018/2022
+exportaciones_mineras,departamento,09,Huancavelica,RD41097BA,2021,64.02807901,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41097BA/json/2018/2022
+exportaciones_mineras,departamento,09,Huancavelica,RD41097BA,2022,55.72712048,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41097BA/json/2018/2022
+exportaciones_mineras,departamento,10,Huanuco,RD41114BA,2018,15.14966351,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41114BA/json/2018/2022
+exportaciones_mineras,departamento,10,Huanuco,RD41114BA,2019,23.52453207,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41114BA/json/2018/2022
+exportaciones_mineras,departamento,10,Huanuco,RD41114BA,2020,2.12470966,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41114BA/json/2018/2022
+exportaciones_mineras,departamento,10,Huanuco,RD41114BA,2021,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41114BA/json/2018/2022
+exportaciones_mineras,departamento,10,Huanuco,RD41114BA,2022,1.94851987,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41114BA/json/2018/2022
+exportaciones_mineras,departamento,11,Ica,RD41131BA,2018,943.92057057,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41131BA/json/2018/2022
+exportaciones_mineras,departamento,11,Ica,RD41131BA,2019,1325.40479376,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41131BA/json/2018/2022
+exportaciones_mineras,departamento,11,Ica,RD41131BA,2020,1627.276837559,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41131BA/json/2018/2022
+exportaciones_mineras,departamento,11,Ica,RD41131BA,2021,3901.62102073,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41131BA/json/2018/2022
+exportaciones_mineras,departamento,11,Ica,RD41131BA,2022,3540.08664205,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41131BA/json/2018/2022
+exportaciones_mineras,departamento,12,Junín,RD41148BA,2018,813.19068917,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41148BA/json/2018/2022
+exportaciones_mineras,departamento,12,Junín,RD41148BA,2019,788.20556954,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41148BA/json/2018/2022
+exportaciones_mineras,departamento,12,Junín,RD41148BA,2020,964.76746272,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41148BA/json/2018/2022
+exportaciones_mineras,departamento,12,Junín,RD41148BA,2021,1343.77261504,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41148BA/json/2018/2022
+exportaciones_mineras,departamento,12,Junín,RD41148BA,2022,1540.51132165,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41148BA/json/2018/2022
+exportaciones_mineras,departamento,13,La Libertad,RD41165BA,2018,1215.67219759,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41165BA/json/2018/2022
+exportaciones_mineras,departamento,13,La Libertad,RD41165BA,2019,999.59840757,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41165BA/json/2018/2022
+exportaciones_mineras,departamento,13,La Libertad,RD41165BA,2020,1335.603616712,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41165BA/json/2018/2022
+exportaciones_mineras,departamento,13,La Libertad,RD41165BA,2021,1773.86765828,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41165BA/json/2018/2022
+exportaciones_mineras,departamento,13,La Libertad,RD41165BA,2022,2063.73282617,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41165BA/json/2018/2022
+exportaciones_mineras,departamento,14,Lambayeque,RD41182BA,2018,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41182BA/json/2018/2022
+exportaciones_mineras,departamento,14,Lambayeque,RD41182BA,2019,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41182BA/json/2018/2022
+exportaciones_mineras,departamento,14,Lambayeque,RD41182BA,2020,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41182BA/json/2018/2022
+exportaciones_mineras,departamento,14,Lambayeque,RD41182BA,2021,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41182BA/json/2018/2022
+exportaciones_mineras,departamento,14,Lambayeque,RD41182BA,2022,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41182BA/json/2018/2022
+exportaciones_mineras,departamento,15,Lima,RD41199BA,2018,3506.24170509,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41199BA/json/2018/2022
+exportaciones_mineras,departamento,15,Lima,RD41199BA,2019,5227.92257558,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41199BA/json/2018/2022
+exportaciones_mineras,departamento,15,Lima,RD41199BA,2020,3412.397716499,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41199BA/json/2018/2022
+exportaciones_mineras,departamento,15,Lima,RD41199BA,2021,4522.77271082,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41199BA/json/2018/2022
+exportaciones_mineras,departamento,15,Lima,RD41199BA,2022,4099.47109028,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41199BA/json/2018/2022
+exportaciones_mineras,departamento,16,Loreto,RD41216BA,2018,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41216BA/json/2018/2022
+exportaciones_mineras,departamento,16,Loreto,RD41216BA,2019,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41216BA/json/2018/2022
+exportaciones_mineras,departamento,16,Loreto,RD41216BA,2020,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41216BA/json/2018/2022
+exportaciones_mineras,departamento,16,Loreto,RD41216BA,2021,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41216BA/json/2018/2022
+exportaciones_mineras,departamento,16,Loreto,RD41216BA,2022,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41216BA/json/2018/2022
+exportaciones_mineras,departamento,17,Madre de Dios,RD41233BA,2018,48.33397204,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41233BA/json/2018/2022
+exportaciones_mineras,departamento,17,Madre de Dios,RD41233BA,2019,34.31631191,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41233BA/json/2018/2022
+exportaciones_mineras,departamento,17,Madre de Dios,RD41233BA,2020,40.54525553,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41233BA/json/2018/2022
+exportaciones_mineras,departamento,17,Madre de Dios,RD41233BA,2021,114.21305014,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41233BA/json/2018/2022
+exportaciones_mineras,departamento,17,Madre de Dios,RD41233BA,2022,108.84258998,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41233BA/json/2018/2022
+exportaciones_mineras,departamento,18,Moquegua,RD41250BA,2018,1931.81141551,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41250BA/json/2018/2022
+exportaciones_mineras,departamento,18,Moquegua,RD41250BA,2019,2410.16653241,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41250BA/json/2018/2022
+exportaciones_mineras,departamento,18,Moquegua,RD41250BA,2020,2418.60173093,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41250BA/json/2018/2022
+exportaciones_mineras,departamento,18,Moquegua,RD41250BA,2021,3029.77235216,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41250BA/json/2018/2022
+exportaciones_mineras,departamento,18,Moquegua,RD41250BA,2022,3375.58111267,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41250BA/json/2018/2022
+exportaciones_mineras,departamento,19,Pasco,RD41267BA,2018,159.47177077,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41267BA/json/2018/2022
+exportaciones_mineras,departamento,19,Pasco,RD41267BA,2019,117.88707724,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41267BA/json/2018/2022
+exportaciones_mineras,departamento,19,Pasco,RD41267BA,2020,252.48026552,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41267BA/json/2018/2022
+exportaciones_mineras,departamento,19,Pasco,RD41267BA,2021,339.43287738,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41267BA/json/2018/2022
+exportaciones_mineras,departamento,19,Pasco,RD41267BA,2022,384.2309687,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41267BA/json/2018/2022
+exportaciones_mineras,departamento,20,Piura,RD41284BA,2018,46.05305122,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41284BA/json/2018/2022
+exportaciones_mineras,departamento,20,Piura,RD41284BA,2019,89.71035868,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41284BA/json/2018/2022
+exportaciones_mineras,departamento,20,Piura,RD41284BA,2020,59.72440704,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41284BA/json/2018/2022
+exportaciones_mineras,departamento,20,Piura,RD41284BA,2021,53.99355691,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41284BA/json/2018/2022
+exportaciones_mineras,departamento,20,Piura,RD41284BA,2022,30.97714092,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41284BA/json/2018/2022
+exportaciones_mineras,departamento,21,Puno,RD41301BA,2018,1300.43235461,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41301BA/json/2018/2022
+exportaciones_mineras,departamento,21,Puno,RD41301BA,2019,968.26854766,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41301BA/json/2018/2022
+exportaciones_mineras,departamento,21,Puno,RD41301BA,2020,1439.916034132,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41301BA/json/2018/2022
+exportaciones_mineras,departamento,21,Puno,RD41301BA,2021,2310.5260536,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41301BA/json/2018/2022
+exportaciones_mineras,departamento,21,Puno,RD41301BA,2022,1863.62194873,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41301BA/json/2018/2022
+exportaciones_mineras,departamento,22,San Martín,RD41318BA,2018,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41318BA/json/2018/2022
+exportaciones_mineras,departamento,22,San Martín,RD41318BA,2019,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41318BA/json/2018/2022
+exportaciones_mineras,departamento,22,San Martín,RD41318BA,2020,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41318BA/json/2018/2022
+exportaciones_mineras,departamento,22,San Martín,RD41318BA,2021,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41318BA/json/2018/2022
+exportaciones_mineras,departamento,22,San Martín,RD41318BA,2022,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41318BA/json/2018/2022
+exportaciones_mineras,departamento,23,Tacna,RD41335BA,2018,52.07957445,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41335BA/json/2018/2022
+exportaciones_mineras,departamento,23,Tacna,RD41335BA,2019,128.937323,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41335BA/json/2018/2022
+exportaciones_mineras,departamento,23,Tacna,RD41335BA,2020,346.01448374,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41335BA/json/2018/2022
+exportaciones_mineras,departamento,23,Tacna,RD41335BA,2021,568.73121366,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41335BA/json/2018/2022
+exportaciones_mineras,departamento,23,Tacna,RD41335BA,2022,395.31945025,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41335BA/json/2018/2022
+exportaciones_mineras,departamento,24,Tumbes,RD41352BA,2018,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41352BA/json/2018/2022
+exportaciones_mineras,departamento,24,Tumbes,RD41352BA,2019,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41352BA/json/2018/2022
+exportaciones_mineras,departamento,24,Tumbes,RD41352BA,2020,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41352BA/json/2018/2022
+exportaciones_mineras,departamento,24,Tumbes,RD41352BA,2021,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41352BA/json/2018/2022
+exportaciones_mineras,departamento,24,Tumbes,RD41352BA,2022,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41352BA/json/2018/2022
+exportaciones_mineras,departamento,25,Ucayali,RD41369BA,2018,0.64627423,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41369BA/json/2018/2022
+exportaciones_mineras,departamento,25,Ucayali,RD41369BA,2019,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41369BA/json/2018/2022
+exportaciones_mineras,departamento,25,Ucayali,RD41369BA,2020,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41369BA/json/2018/2022
+exportaciones_mineras,departamento,25,Ucayali,RD41369BA,2021,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41369BA/json/2018/2022
+exportaciones_mineras,departamento,25,Ucayali,RD41369BA,2022,1.64622625,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41369BA/json/2018/2022
+exportaciones_mineras,otra,,sin ubigeo,RD41386BA,2018,0.0,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41386BA/json/2018/2022
+exportaciones_mineras,otra,,sin ubigeo,RD41386BA,2019,9.54075539993937e-05,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41386BA/json/2018/2022
+exportaciones_mineras,otra,,sin ubigeo,RD41386BA,2020,1169.88439881725,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41386BA/json/2018/2022
+exportaciones_mineras,otra,,sin ubigeo,RD41386BA,2021,2309.24705474357,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41386BA/json/2018/2022
+exportaciones_mineras,otra,,sin ubigeo,RD41386BA,2022,2883.09065359056,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD41386BA/json/2018/2022
+exportaciones_mineras,total,,Total nacional,PM40047BA,2018,28904.4160093611,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PM40047BA/json/2018/2022
+exportaciones_mineras,total,,Total nacional,PM40047BA,2019,28350.6848238994,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PM40047BA/json/2018/2022
+exportaciones_mineras,total,,Total nacional,PM40047BA,2020,26123.6791052762,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PM40047BA/json/2018/2022
+exportaciones_mineras,total,,Total nacional,PM40047BA,2021,39900.7523347945,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PM40047BA/json/2018/2022
+exportaciones_mineras,total,,Total nacional,PM40047BA,2022,38278.0087076169,millones US$ FOB,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PM40047BA/json/2018/2022

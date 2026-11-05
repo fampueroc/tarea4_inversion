@@ -1,0 +1,57 @@
+== Datos del BCRP (guardados por la herramienta MCP cuadre_territorial)
+  Gobierno nacional: cuadra con el total oficial todos los años; series 26
+  Gobiernos regionales: cuadra con el total oficial todos los años; series 27; Municipalidad Metropolitana de Lima asignada a Lima
+  Gobiernos locales: cuadra con el total oficial todos los años; series 26
+  Total 2020–2024: 226,627 millones S/ corrientes (30,402 en 2020 y 57,945 en 2024)
+
+== ENAHO 2024: validación contra el INEI (Evolución de la Pobreza Monetaria 2015-2024, p. 220)
+  27 ámbitos (25 departamentos con Lima dividida en 2, y el nacional): diferencia máxima 0.05 puntos; semiancho del IC 95 % entre 0.95 y 1.01 veces el del INEI
+
+== Hallazgo 1: parte de la inversión frente a parte de los pobres y de la población
+  Cajamarca      pobreza 45.0 % | pobres del país  7.36 % [6.50–8.22] | inversión  4.40 % | inv/pobres 0.60 [0.54–0.68] | inv/población 0.98
+  Loreto         pobreza 43.0 % | pobres del país  5.10 % [4.48–5.73] | inversión  3.18 % | inv/pobres 0.62 [0.56–0.71] | inv/población 0.97
+  Puno           pobreza 39.9 % | pobres del país  6.66 % [5.67–7.66] | inversión  4.36 % | inv/pobres 0.65 [0.57–0.77] | inv/población 0.95
+  Pasco          pobreza 39.0 % | pobres del país  1.34 % [1.08–1.61] | inversión  1.21 % | inv/pobres 0.90 [0.75–1.12] | inv/población 1.27
+  Huánuco        pobreza 39.0 % | pobres del país  3.80 % [3.21–4.38] | inversión  2.55 % | inv/pobres 0.67 [0.58–0.79] | inv/población 0.95
+  Callao         pobreza 33.9 % | pobres del país  4.07 % [3.32–4.82] | inversión  2.58 % | inv/pobres 0.63 [0.53–0.78] | inv/población 0.78
+  Huancavelica   pobreza 33.4 % | pobres del país  1.91 % [1.62–2.20] | inversión  1.87 % | inv/pobres 0.98 [0.85–1.15] | inv/población 1.18
+  Ayacucho       pobreza 32.8 % | pobres del país  2.67 % [2.24–3.10] | inversión  3.24 % | inv/pobres 1.21 [1.04–1.45] | inv/población 1.44
+  Piura          pobreza 31.9 % | pobres del país  6.66 % [5.87–7.45] | inversión  7.15 % | inv/pobres 1.07 [0.96–1.22] | inv/población 1.24
+  La Libertad    pobreza 30.2 % | pobres del país  6.61 % [5.72–7.49] | inversión  5.01 % | inv/pobres 0.76 [0.67–0.88] | inv/población 0.83
+  Ucayali        pobreza 27.1 % | pobres del país  1.59 % [1.27–1.91] | inversión  1.60 % | inv/pobres 1.00 [0.84–1.26] | inv/población 0.99
+  Lima           pobreza 27.1 % | pobres del país 32.11 % [29.54–34.67] | inversión 19.77 % | inv/pobres 0.62 [0.57–0.67] | inv/población 0.60
+  Tumbes         pobreza 26.9 % | pobres del país  0.74 % [0.58–0.91] | inversión  1.24 % | inv/pobres 1.67 [1.36–2.14] | inv/población 1.63
+  Amazonas       pobreza 25.7 % | pobres del país  1.20 % [0.94–1.45] | inversión  2.17 % | inv/pobres 1.81 [1.50–2.30] | inv/población 1.69
+  Tacna          pobreza 24.0 % | pobres del país  0.96 % [0.68–1.24] | inversión  1.89 % | inv/pobres 1.97 [1.53–2.78] | inv/población 1.72
+  Apurímac       pobreza 24.0 % | pobres del país  1.24 % [1.00–1.49] | inversión  2.62 % | inv/pobres 2.10 [1.75–2.62] | inv/población 1.82
+  Áncash         pobreza 22.8 % | pobres del país  2.90 % [2.39–3.41] | inversión  7.02 % | inv/pobres 2.42 [2.06–2.93] | inv/población 2.00
+  San Martín     pobreza 22.0 % | pobres del país  2.19 % [1.74–2.65] | inversión  2.49 % | inv/pobres 1.14 [0.94–1.43] | inv/población 0.91
+  Cusco          pobreza 18.5 % | pobres del país  2.75 % [2.14–3.36] | inversión  9.43 % | inv/pobres 3.43 [2.81–4.41] | inv/población 2.31
+  Junín          pobreza 18.5 % | pobres del país  2.82 % [2.24–3.40] | inversión  3.35 % | inv/pobres 1.19 [0.98–1.49] | inv/población 0.80
+  Arequipa       pobreza 15.8 % | pobres del país  2.36 % [1.86–2.86] | inversión  4.55 % | inv/pobres 1.93 [1.59–2.45] | inv/población 1.10
+  Lambayeque     pobreza 14.0 % | pobres del país  1.99 % [1.44–2.55] | inversión  2.74 % | inv/pobres 1.37 [1.08–1.90] | inv/población 0.70
+  Madre de Dios  pobreza 11.1 % | pobres del país  0.19 % [0.11–0.28] | inversión  1.03 % | inv/pobres 5.32 [3.74–9.20] | inv/población 2.15
+  Moquegua       pobreza 11.0 % | pobres del país  0.23 % [0.15–0.31] | inversión  1.72 % | inv/pobres 7.50 [5.61–11.28] | inv/población 2.98
+  Ica            pobreza  6.0 % | pobres del país  0.54 % [0.37–0.72] | inversión  2.85 % | inv/pobres 5.27 [3.98–7.80] | inv/población 1.15
+  Los 5 departamentos más pobres (Cajamarca, Loreto, Puno, Pasco, Huánuco): 24.3 % de los pobres, 16.0 % de la población y 15.7 % de la inversión
+  Con el IC 95 % entero por debajo de 1 (reciben menos que su parte de pobres): 7 departamentos: Cajamarca, Lima, Loreto, Callao, Puno, Huánuco, La Libertad
+
+== Hallazgo 2: índices de concentración (orden: de mayor a menor pobreza; negativo = favorece a los más pobres)
+  Población pobre: -0.169 | Inversión total: +0.062
+  Gobierno nacional: +0.027
+  Gobiernos regionales: +0.026
+  Gobiernos locales: +0.120
+
+== Hallazgo 3: inversión por habitante según pobreza y densidad (25 departamentos, descriptivo)
+  pobreza (por punto): -0.0118 (EE robusto 0.0066; IC 95 % -0.0247 a +0.0012)
+  log(densidad): -0.1118 (EE robusto 0.0414; IC 95 % -0.1929 a -0.0307)
+  R² = 0.31. Lectura: con igual densidad, +1 punto de pobreza ≈ -1.2 % de inversión por habitante; duplicar la densidad ≈ -7.5 %.
+
+== Complemento: correlación de Spearman entre (inversión / pobres) y % de exportaciones mineras 2018–2022: 0.20 (25 departamentos)
+
+== Recuadro: Lima Metropolitana y Lima provincias
+  Lima Metropolitana (provincia de Lima): pobreza 27.6 % [25.0–30.1], 29.8 % de los pobres del país, inversión regional 2020–2024 455 millones S/
+  Lima provincias (región Lima): pobreza 21.7 % [18.3–25.1], 2.3 % de los pobres del país, inversión regional 2020–2024 1,516 millones S/
+  La inversión del gobierno nacional y de los gobiernos locales en Lima no viene separada en el BCRP.
+
+Guardado: salidas/indicadores.csv, salidas/recuadro_lima.csv, salidas/analisis.txt y 4 figuras en figuras/

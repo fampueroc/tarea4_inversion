@@ -1,0 +1,136 @@
+indicador,tipo,ubigeo,nombre,codigo,anio,valor,unidad,fuente
+inversion_gobiernos_regionales,departamento,01,Amazonas,RD16709DA,2020,289.522008,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16709DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,01,Amazonas,RD16709DA,2021,292.730032,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16709DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,01,Amazonas,RD16709DA,2022,291.744699,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16709DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,01,Amazonas,RD16709DA,2023,473.48602,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16709DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,01,Amazonas,RD16709DA,2024,364.084118,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16709DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,02,Ancash,RD16710DA,2020,212.313593,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16710DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,02,Ancash,RD16710DA,2021,261.228962,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16710DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,02,Ancash,RD16710DA,2022,423.664332,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16710DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,02,Ancash,RD16710DA,2023,234.026973,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16710DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,02,Ancash,RD16710DA,2024,278.522235,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16710DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,03,Apurímac,RD16711DA,2020,224.268339,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16711DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,03,Apurímac,RD16711DA,2021,246.524245,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16711DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,03,Apurímac,RD16711DA,2022,425.33227,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16711DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,03,Apurímac,RD16711DA,2023,325.29812,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16711DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,03,Apurímac,RD16711DA,2024,341.176005,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16711DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,04,Arequipa,RD16712DA,2020,416.917745,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16712DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,04,Arequipa,RD16712DA,2021,537.978175,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16712DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,04,Arequipa,RD16712DA,2022,689.567951,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16712DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,04,Arequipa,RD16712DA,2023,622.86276,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16712DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,04,Arequipa,RD16712DA,2024,595.861752,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16712DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,05,Ayacucho,RD16713DA,2020,306.233365,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16713DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,05,Ayacucho,RD16713DA,2021,405.489698,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16713DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,05,Ayacucho,RD16713DA,2022,490.401846,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16713DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,05,Ayacucho,RD16713DA,2023,621.364988,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16713DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,05,Ayacucho,RD16713DA,2024,806.227199,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16713DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,06,Cajamarca,RD16714DA,2020,149.854282,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16714DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,06,Cajamarca,RD16714DA,2021,282.233892,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16714DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,06,Cajamarca,RD16714DA,2022,393.070449,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16714DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,06,Cajamarca,RD16714DA,2023,711.138365,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16714DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,06,Cajamarca,RD16714DA,2024,838.272646,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16714DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,08,Cusco,RD16715DA,2020,380.155614,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16715DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,08,Cusco,RD16715DA,2021,584.555699,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16715DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,08,Cusco,RD16715DA,2022,703.74766,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16715DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,08,Cusco,RD16715DA,2023,807.379846,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16715DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,08,Cusco,RD16715DA,2024,1061.226088,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16715DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,09,Huancavelica,RD16716DA,2020,160.786943,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16716DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,09,Huancavelica,RD16716DA,2021,244.093086,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16716DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,09,Huancavelica,RD16716DA,2022,236.75433,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16716DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,09,Huancavelica,RD16716DA,2023,230.772304,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16716DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,09,Huancavelica,RD16716DA,2024,328.072045,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16716DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,10,Huánuco,RD16717DA,2020,249.215588,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16717DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,10,Huánuco,RD16717DA,2021,264.024506,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16717DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,10,Huánuco,RD16717DA,2022,182.031265,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16717DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,10,Huánuco,RD16717DA,2023,357.853366,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16717DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,10,Huánuco,RD16717DA,2024,411.771076,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16717DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,11,Ica,RD16718DA,2020,98.323382,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16718DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,11,Ica,RD16718DA,2021,176.169797,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16718DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,11,Ica,RD16718DA,2022,260.505382,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16718DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,11,Ica,RD16718DA,2023,462.362741,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16718DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,11,Ica,RD16718DA,2024,505.383887,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16718DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,12,Junín,RD16719DA,2020,260.547441,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16719DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,12,Junín,RD16719DA,2021,326.867806,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16719DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,12,Junín,RD16719DA,2022,640.322486,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16719DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,12,Junín,RD16719DA,2023,834.750792,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16719DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,12,Junín,RD16719DA,2024,874.486736,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16719DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,13,La Libertad,RD16720DA,2020,182.038316,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16720DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,13,La Libertad,RD16720DA,2021,233.58863,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16720DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,13,La Libertad,RD16720DA,2022,274.943109,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16720DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,13,La Libertad,RD16720DA,2023,428.702276,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16720DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,13,La Libertad,RD16720DA,2024,645.991636,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16720DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,14,Lambayeque,RD16721DA,2020,267.836015,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16721DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,14,Lambayeque,RD16721DA,2021,340.085907,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16721DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,14,Lambayeque,RD16721DA,2022,370.543311,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16721DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,14,Lambayeque,RD16721DA,2023,475.608642,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16721DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,14,Lambayeque,RD16721DA,2024,622.282215,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16721DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,16,Loreto,RD16722DA,2020,385.232,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16722DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,16,Loreto,RD16722DA,2021,583.156963,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16722DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,16,Loreto,RD16722DA,2022,737.581141,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16722DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,16,Loreto,RD16722DA,2023,643.160979,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16722DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,16,Loreto,RD16722DA,2024,969.221324,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16722DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,17,Madre de Dios,RD16723DA,2020,119.08326,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16723DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,17,Madre de Dios,RD16723DA,2021,141.170323,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16723DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,17,Madre de Dios,RD16723DA,2022,158.876343,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16723DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,17,Madre de Dios,RD16723DA,2023,163.840805,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16723DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,17,Madre de Dios,RD16723DA,2024,214.721121,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16723DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,18,Moquegua,RD16724DA,2020,153.521114,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16724DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,18,Moquegua,RD16724DA,2021,169.774448,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16724DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,18,Moquegua,RD16724DA,2022,200.636229,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16724DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,18,Moquegua,RD16724DA,2023,214.093903,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16724DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,18,Moquegua,RD16724DA,2024,276.728603,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16724DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,19,Pasco,RD16725DA,2020,159.941064,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16725DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,19,Pasco,RD16725DA,2021,182.300906,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16725DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,19,Pasco,RD16725DA,2022,275.688135,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16725DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,19,Pasco,RD16725DA,2023,311.148853,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16725DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,19,Pasco,RD16725DA,2024,306.879583,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16725DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,20,Piura,RD16726DA,2020,660.073418,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16726DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,20,Piura,RD16726DA,2021,553.113388,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16726DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,20,Piura,RD16726DA,2022,616.359729,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16726DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,20,Piura,RD16726DA,2023,763.863507,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16726DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,20,Piura,RD16726DA,2024,1183.165944,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16726DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,21,Puno,RD16727DA,2020,301.077311,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16727DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,21,Puno,RD16727DA,2021,210.7847,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16727DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,21,Puno,RD16727DA,2022,405.962077,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16727DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,21,Puno,RD16727DA,2023,510.585335,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16727DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,21,Puno,RD16727DA,2024,760.009993,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16727DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,22,San Martín,RD16728DA,2020,264.760625,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16728DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,22,San Martín,RD16728DA,2021,239.82646,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16728DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,22,San Martín,RD16728DA,2022,408.70416,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16728DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,22,San Martín,RD16728DA,2023,376.70168,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16728DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,22,San Martín,RD16728DA,2024,544.560866,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16728DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,23,Tacna,RD16729DA,2020,239.175074,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16729DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,23,Tacna,RD16729DA,2021,214.578678,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16729DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,23,Tacna,RD16729DA,2022,191.527612,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16729DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,23,Tacna,RD16729DA,2023,179.436329,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16729DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,23,Tacna,RD16729DA,2024,304.158438,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16729DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,24,Tumbes,RD16730DA,2020,65.529532,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16730DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,24,Tumbes,RD16730DA,2021,89.204502,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16730DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,24,Tumbes,RD16730DA,2022,76.167549,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16730DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,24,Tumbes,RD16730DA,2023,221.493829,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16730DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,24,Tumbes,RD16730DA,2024,205.41635,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16730DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,25,Ucayali,RD16731DA,2020,297.900291,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16731DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,25,Ucayali,RD16731DA,2021,304.184417,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16731DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,25,Ucayali,RD16731DA,2022,303.900571,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16731DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,25,Ucayali,RD16731DA,2023,500.990746,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16731DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,25,Ucayali,RD16731DA,2024,587.733326,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16731DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,15,Lima,RD16732DA,2020,352.779841,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16732DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,15,Lima,RD16732DA,2021,199.702357,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16732DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,15,Lima,RD16732DA,2022,275.021341,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16732DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,15,Lima,RD16732DA,2023,275.88359,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16732DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,15,Lima,RD16732DA,2024,412.583078,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16732DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,07,Callao,RD16733DA,2020,85.32087,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16733DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,07,Callao,RD16733DA,2021,111.223476,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16733DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,07,Callao,RD16733DA,2022,257.899754,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16733DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,07,Callao,RD16733DA,2023,114.002309,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16733DA/json/2020/2024
+inversion_gobiernos_regionales,departamento,07,Callao,RD16733DA,2024,186.027632,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16733DA/json/2020/2024
+inversion_gobiernos_regionales,otra,,Municipalidad Metropolitana de Lima,RD16734DA,2020,84.049066,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16734DA/json/2020/2024
+inversion_gobiernos_regionales,otra,,Municipalidad Metropolitana de Lima,RD16734DA,2021,93.016328,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16734DA/json/2020/2024
+inversion_gobiernos_regionales,otra,,Municipalidad Metropolitana de Lima,RD16734DA,2022,113.73404,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16734DA/json/2020/2024
+inversion_gobiernos_regionales,otra,,Municipalidad Metropolitana de Lima,RD16734DA,2023,70.940677,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16734DA/json/2020/2024
+inversion_gobiernos_regionales,otra,,Municipalidad Metropolitana de Lima,RD16734DA,2024,92.82433,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16734DA/json/2020/2024
+inversion_gobiernos_regionales,total,,Total,RD16735DA,2020,6366.456097,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16735DA/json/2020/2024
+inversion_gobiernos_regionales,total,,Total,RD16735DA,2021,7287.607381,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16735DA/json/2020/2024
+inversion_gobiernos_regionales,total,,Total,RD16735DA,2022,9404.687771,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16735DA/json/2020/2024
+inversion_gobiernos_regionales,total,,Total,RD16735DA,2023,10931.749735,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16735DA/json/2020/2024
+inversion_gobiernos_regionales,total,,Total,RD16735DA,2024,13717.388226,millones S/,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/RD16735DA/json/2020/2024

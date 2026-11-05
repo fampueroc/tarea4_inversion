@@ -261,8 +261,8 @@ def _series_del_indicador(indicador):
     return cfg, filas
 
 
-@mcp.tool(annotations=SOLO_LECTURA)
-def cuadre_territorial(indicador: str, desde: str, hasta: str) -> dict:
+@mcp.tool(annotations={"readOnlyHint": False, "destructiveHint": False, "openWorldHint": True})
+def cuadre_territorial(indicador: str, desde: str, hasta: str, guardar: bool = False) -> dict:
     """Valores anuales por departamento de un indicador del BCRP, con su código de ubigeo, y el cuadre contra el total oficial.
 
     Úsenla para preguntas como «¿cuánto invirtieron los gobiernos regionales en cada departamento en 2024?» o
@@ -270,6 +270,9 @@ def cuadre_territorial(indicador: str, desde: str, hasta: str) -> dict:
     separados) con la llave ubigeo de dos dígitos del INEI, lista para unir con la ENAHO, y para cada año: suma de
     departamentos, total oficial, diferencia y las series que no son departamentos (como la Municipalidad
     Metropolitana de Lima) que la explican. Si faltan años, lo dice en vez de rellenar.
+
+    Con guardar=True escribe además salidas/bcrp_<indicador>_<desde>_<hasta>.csv (una fila por serie y año, con su
+    código y URL de la fuente), que es lo que lee la skill analizando-reparto para cruzar con la ENAHO.
 
     Indicadores: inversion_gobierno_nacional, inversion_gobiernos_regionales, inversion_gobiernos_locales,
     credito, depositos, exportaciones_mineras. Años: cuadre_territorial("inversion_gobiernos_regionales", "2020", "2024").
@@ -286,6 +289,7 @@ def cuadre_territorial(indicador: str, desde: str, hasta: str) -> dict:
                             f"{hasta}; su último año publicado es {todo[-1]['periodo']}. Usen años hasta ese.") from None
         datos[f["codigo"]] = {d["periodo"]: d["valor"] for d in s["datos"]}
         fuentes.append(s["fuente"])
+        f["fuente"] = s["fuente"]
     periodos = sorted({p for v in datos.values() for p in v})
     deptos = [f for f in filas if f["tipo"] == "departamento"]
     faltan = sorted(set(UBIGEO.values()) - {f["ubigeo"] for f in deptos})
@@ -303,7 +307,16 @@ def cuadre_territorial(indicador: str, desde: str, hasta: str) -> dict:
                        "diferencia": None if dif is None else round(dif, 4), "otras_series": otras,
                        "diferencia_sin_explicar": None if resto is None else round(resto, 4),
                        "cuadra": None if resto is None else abs(resto) <= tol})
+    archivo = None
+    if guardar:
+        archivo = AQUI.parent / "salidas" / f"bcrp_{indicador}_{desde}_{hasta}.csv"
+        archivo.parent.mkdir(exist_ok=True)
+        pd.DataFrame([{"indicador": indicador, "tipo": f["tipo"], "ubigeo": f["ubigeo"], "nombre": f["nombre"],
+                       "codigo": f["codigo"], "anio": p, "valor": v, "unidad": cfg["unidad"], "fuente": f["fuente"]}
+                      for f in filas for p, v in datos[f["codigo"]].items()]).to_csv(archivo, index=False)
+        archivo = str(archivo.relative_to(AQUI.parent)).replace("\\", "/")
     return {"indicador": indicador, "unidad": cfg["unidad"], "desde": periodos[0], "hasta": periodos[-1],
+            "archivo": archivo,
             "departamentos": [{"ubigeo": f["ubigeo"], "departamento": f["nombre"], "codigo": f["codigo"],
                                "valores": {p: round(v, 4) for p, v in datos[f["codigo"]].items()}}
                               for f in sorted(deptos, key=lambda f: f["ubigeo"])],

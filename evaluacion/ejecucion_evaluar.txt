@@ -1,0 +1,22 @@
+20 sesiones con sonnet, 4 a la vez...
+B1 A: 15.4 s, MCP=False, skills=False 
+B2 A: 22.3 s, MCP=False, skills=False 
+B3 A: 15.0 s, MCP=False, skills=False 
+B4 A: 15.8 s, MCP=False, skills=False 
+E1 A: 23.2 s, MCP=False, skills=False 
+E2 A: 21.9 s, MCP=False, skills=False 
+E3 A: 20.3 s, MCP=False, skills=False 
+E4 A: 29.0 s, MCP=False, skills=False 
+C1 A: 29.9 s, MCP=False, skills=False 
+C2 A: 97.6 s, MCP=False, skills=False 
+B1 B: 20.2 s, MCP=True, skills=False 
+B2 B: 22.2 s, MCP=True, skills=False 
+B3 B: 19.6 s, MCP=True, skills=False 
+B4 B: 23.2 s, MCP=True, skills=False 
+E1 B: 22.6 s, MCP=False, skills=True 
+E2 B: 36.4 s, MCP=False, skills=False 
+E3 B: 21.7 s, MCP=False, skills=True 
+E4 B: 32.5 s, MCP=False, skills=False 
+C1 B: 71.3 s, MCP=True, skills=True 
+C2 B: 77.7 s, MCP=True, skills=True 
+Guardado: evaluacion\corridas.csv

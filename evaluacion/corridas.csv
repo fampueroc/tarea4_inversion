@@ -1,0 +1,318 @@
+id,tipo,modo,segundos,turnos,costo_usd,herramientas,uso_mcp,uso_skills,error,respuesta,log
+B1,BCRP,A,15.4,6,0.0458353,Glob | Bash | Bash | Bash | Bash,False,False,,"Según la API del BCRP (serie RD16715DA, «Inversión bruta fija de los gobiernos regionales (millones S/) – Cusco», frecuencia anual), el valor de 2024 es 1 061,226 millones de soles. Eso equivale a unos 1 061,2 millones.
+
+Para comparar, la serie da 703,7 millones en 2022, 807,4 millones en 2023 y 959,9 millones en 2025.
+
+RESPUESTA FINAL: 1 061,2 millones de soles (≈ S/ 1 061,23 millones) en 2024, serie BCRP RD16715DA",evaluacion/logs/B1_A.jsonl
+B2,BCRP,A,22.3,7,0.1049482,Glob | Bash | Bash | Bash | Bash | Bash,False,False,,"En 2024, la inversión bruta fija del gobierno nacional en todos los departamentos sumó unos **25 109 millones de soles**.
+
+- **Fuente:** el catálogo de la carpeta (`datos/catalogo_bcrp.csv`) solo lista las series, sin valores. Los datos salieron de la API del BCRP, serie **RD14117DM**, «Inversión bruta fija del gobierno nacional por departamentos (millones S/) – Total». El BCRP indica como fuente primaria al Ministerio de Economía y Finanzas.
+- **Cálculo:** sumé los 12 valores mensuales de 2024 (enero a diciembre). Son 25 109,329 millones de soles sin redondear.
+- **Mes con más inversión:** diciembre, con 4 873,4 millones.
+- **Revisión de las cifras:** la serie se actualizó por última vez el 16/09/2026, así que las cifras del BCRP pueden revisarse.
+- **Lo que no hice:** no sumé los departamentos uno por uno. Usé la fila «Total» que publica el BCRP.
+
+RESPUESTA FINAL: ≈ 25 109 millones de soles (25 109,33) de inversión bruta fija del gobierno nacional en 2024.",evaluacion/logs/B2_A.jsonl
+B3,BCRP,A,15.0,5,0.0677751,Glob | Bash | Bash | Bash,False,False,,"Según el BCRP, la inversión bruta fija de los gobiernos locales de Cajamarca fue más alta en **2022**, con unos **1 291,4 millones de soles**.
+
+Los datos salen de la serie anual RD16688DA del BCRP, ""Inversión bruta fija de gobiernos locales por departamentos (millones S/) – Cajamarca"". La fuente primaria es el Ministerio de Economía y Finanzas. Consulté la API del BCRP el 6 de noviembre de 2026.
+
+| Año | Millones de S/ |
+|---|---|
+| 2020 | 754,8 |
+| 2021 | 1 152,4 |
+| 2022 | **1 291,4** |
+| 2023 | 1 051,7 |
+| 2024 | 877,3 |
+
+Los montos están en soles corrientes, tal como los publica la serie.
+
+RESPUESTA FINAL: 2022, con 1 291,4 millones de soles (S/ 1 291,40 millones aprox.)",evaluacion/logs/B3_A.jsonl
+B4,BCRP,A,15.8,5,0.0664863,Glob | Bash | Bash | Bash,False,False,,"Según el BCRP, las exportaciones de productos tradicionales mineros de Arequipa en 2022 sumaron unos 5 378 millones de dólares FOB.
+
+La serie es RD38191BM, «Exportaciones por grupo de productos de Arequipa (Valores FOB en millones US$) – Productos tradicionales – Mineros». La consulté en la API de BCRPData y sumé los 12 valores mensuales de 2022:
+
+| Mes | Millones US$ FOB |
+|---|---|
+| Ene | 499,89 |
+| Feb | 436,83 |
+| Mar | 499,58 |
+| Abr | 382,02 |
+| May | 552,62 |
+| Jun | 493,37 |
+| Jul | 397,42 |
+| Ago | 311,84 |
+| Sep | 451,85 |
+| Oct | 467,12 |
+| Nov | 374,21 |
+| Dic | 511,14 |
+| **Total** | **5 377,89** |
+
+El BCRP no entrega esta serie con total anual, así que el total sale de mi suma de los valores mensuales.
+
+RESPUESTA FINAL: ≈ 5 378 millones de US$ FOB (5 377,89) en exportaciones tradicionales mineras de Arequipa en 2022.",evaluacion/logs/B4_A.jsonl
+C1,Ambas,A,29.9,8,0.0810422,Glob | Bash | Bash | Bash | Bash | Bash | Bash,False,False,,"Cajamarca recibe una parte de la inversión menor que su parte de los pobres: 4,4 % de la inversión frente a 7,4 % de los pobres.
+
+**Inversión bruta fija, 2020–2024 (BCRP, millones de S/, suma de los 60 meses)**
+
+Descargué las series departamentales del BCRP por su API. Los códigos son RD14097DM/RD14117DM, RD14123DM/RD14143DM y RD14149DM/RD14170DM.
+
+| Nivel de gobierno | Cajamarca | Total nacional |
+|---|---|---|
+| Gobierno nacional | 2 459,0 | 93 553,3 |
+| Gobiernos regionales | 2 374,3 | 47 659,1 |
+| Gobiernos locales | 5 127,6 | 85 153,0 |
+| **Suma** | **9 960,9** | **226 365,3** |
+
+Cajamarca ejecutó 9 960,9 / 226 365,3 = **4,40 %** de la inversión.
+
+**Pobreza 2024 (ENAHO, Sumaria 2024)**
+
+Conté como pobres a las personas con `pobreza` igual a 1 (pobre extremo) o 2 (pobre no extremo). Ponderé por `factor07 × mieperho` y asigné el departamento con los dos primeros dígitos del ubigeo (06 = Cajamarca). Eso da unos 700 mil pobres en Cajamarca de unos 9,51 millones en todo el país, es decir **7,36 %** de los pobres del Perú. Como referencia, Cajamarca tiene el 4,5 % de la población total y su tasa de pobreza es de 45,0 %.
+
+**Comparación**
+
+La inversión de Cajamarca es unos 2,96 puntos porcentuales menor que su parte de los pobres. La razón entre ambas es 4,40 / 7,36 ≈ 0,60.
+
+**Salvedades**
+- La inversión es la ejecutada en el departamento, no la que corresponde a su población. Parte de la inversión del gobierno nacional se registra por departamento según el BCRP, pero no verifiqué cómo se asigna la que sirve a varias regiones.
+- Sumé los tres niveles en soles corrientes, sin deflactar. No usé los totales de pobreza oficiales publicados por el INEI. Mi cálculo viene directamente de la base microdatos.
+
+RESPUESTA FINAL: Cajamarca ejecutó ≈4,40 % de la inversión bruta fija (gobierno nacional + regionales + locales, 2020–2024) y concentraba ≈7,36 % de los pobres del Perú en 2024; recibe una parte MENOR que su parte de los pobres.",evaluacion/logs/C1_A.jsonl
+C2,Ambas,A,97.6,12,0.1903048,Glob | Bash | Bash | Bash | Bash | Bash | Bash | Bash | Bash | Bash | Bash,False,False,,"Los 5 departamentos con más pobreza concentraban cerca de una cuarta parte de la población pobre del país, pero recibieron menos de una sexta parte de la inversión bruta fija pública de 2020-2024.
+
+## Datos y método
+- **Pobreza:** usé la sumaria ENAHO 2024 (`sumaria-2024.dta`). Conté como pobre a quien tiene `pobreza` igual a 1 o 2, y expandí con `factor07 × mieperho`. El departamento sale de los 2 primeros dígitos del `ubigeo`. La tasa nacional me da 27,6 %, que coincide con la cifra oficial.
+- **Inversión:** usé la API del BCRP con las series mensuales de inversión bruta fija por departamento, 2020-01 a 2024-12. Son tres series: gobierno nacional, gobiernos locales y gobiernos regionales. Los 60 meses están completos en todas. La suma de los departamentos coincide con el total de cada serie. El monto es nominal, en millones de S/.
+- **Gobierno regional de Lima:** en las series regionales aparece la Municipalidad Metropolitana de Lima como un rubro aparte. Lo dejé en el total nacional, pero no afecta a los 5 departamentos analizados.
+
+## Los 5 departamentos más pobres (ENAHO 2024)
+
+| Departamento | Tasa de pobreza | Población pobre | Inversión 2020-24 (mill. S/) |
+|---|---|---|---|
+| Cajamarca | 45,0 % | 7,4 % del total nacional | 9 961 |
+| Loreto | 43,0 % | 5,1 % | 7 210 |
+| Puno | 39,9 % | 6,7 % | 9 866 |
+| Pasco | 39,0 % | 1,3 % | 2 731 |
+| Huánuco | 39,0 % | 3,8 % | 5 782 |
+| **Total de los 5** | | **24,3 %** | **35 550 de 226 365 = 15,7 %** |
+
+Los 5 departamentos concentran el 16,0 % de la población total, así que la brecha entre población pobre e inversión no se explica solo por el tamaño de cada departamento.
+
+Por nivel de gobierno, estos 5 recibieron el 12,3 % de la inversión del gobierno nacional, el 15,8 % de la de los gobiernos locales y el 22,2 % de la de los gobiernos regionales.
+
+## Qué se puede concluir
+- La inversión pública está repartida de forma desigual frente a la pobreza. Los 5 departamentos tienen 24,3 % de los pobres y 15,7 % de la inversión, unos 8,6 puntos porcentuales menos.
+- La brecha es mayor en el gobierno nacional (12,3 %). Solo los gobiernos regionales (22,2 %) se acercan a la proporción de pobres.
+- Por persona, estos departamentos recibieron menos inversión que el promedio nacional. Su 15,7 % de la inversión se reparte entre el 16,0 % de la población.
+
+## Qué no se puede concluir
+- **Causalidad:** no se puede decir que la menor inversión cause la pobreza, ni que más inversión la reduciría. La pobreza de 2024 es un resultado de largo plazo. La inversión de 2020-2024 es solo un flujo reciente.
+- **Eficiencia o calidad:** el monto no dice si los proyectos sean buenos ni si llegan a los pobres. Tampoco mide el gasto corriente (salud, educación, programas sociales), que puede ser más relevante para la pobreza.
+- **Dentro del departamento:** la inversión se registra donde se ejecuta, no donde viven sus beneficiarios. Por ejemplo, una obra nacional en Lima puede servir a todo el país.
+- **Ranking:** Pasco (38,97 %) y Huánuco (38,96 %) casi empatan, y la ENAHO es una encuesta con margen de error. No calculé intervalos de confianza, así que el orden entre los departamentos de cola no es firme. Con una muestra pequeña en Pasco, su cifra es la menos precisa.
+- **Precios:** los montos son nominales y no están deflactados. Eso no cambia las proporciones de forma importante, pero sí los montos absolutos.
+- **Comparación temporal:** comparo la pobreza de un solo año (2024) con la inversión acumulada de cinco años.
+
+RESPUESTA FINAL: Los 5 departamentos más pobres en 2024 (Cajamarca, Loreto, Puno, Pasco y Huánuco) concentraban el 24,3 % de la población pobre del país y recibieron el 15,7 % de la inversión bruta fija pública 2020-2024 (S/ 35 550 millones de S/ 226 365 millones). Esto muestra una brecha de unos 8,6 puntos porcentuales, pero no prueba causalidad ni mide la calidad del gasto.",evaluacion/logs/C2_A.jsonl
+E1,ENAHO,A,23.2,6,0.0518691,Bash | Bash | Bash | Bash | Bash,False,False,,"En 2024, el **45,0 %** de la población de Cajamarca estaba en pobreza monetaria.
+
+Lo calculé con la base Sumaria 2024 de la ENAHO, que está en `datos/966-Modulo34.zip`. Filtré los hogares con ubigeo que empieza en 06, que es Cajamarca: son 1 469 hogares en la muestra. Ponderé cada hogar por `factor07 × mieperho` (factor de expansión por número de miembros), para contar personas y no hogares. Sumé las categorías «pobre extremo» y «pobre no extremo» de la variable `pobreza`.
+
+| Condición | % de la población |
+|---|---|
+| Pobre extremo | 19,7 % |
+| Pobre no extremo | 25,3 % |
+| **Pobreza monetaria total** | **45,0 %** |
+| No pobre | 55,0 % |
+
+No pude verificar la cifra contra la publicación oficial del INEI, porque no logré buscar en la web desde aquí. Es una estimación muestral, así que lleva un margen de error que no calculé. Cualquier diferencia con la cifra publicada, de décimas de punto, vendría del redondeo o de la forma de ponderar.
+
+RESPUESTA FINAL: 45,0 % de la población de Cajamarca en pobreza monetaria en 2024 (19,7 % pobre extremo + 25,3 % pobre no extremo)",evaluacion/logs/E1_A.jsonl
+E2,ENAHO,A,21.9,5,0.0466336,Glob | Bash | Bash | Bash,False,False,,"Según mi cálculo con la ENAHO 2024 (módulo 34, base Sumaria), la tasa de pobreza monetaria en los 43 distritos de la provincia de Lima, sin el Callao, fue de **27,6 %**.
+
+**Método:**
+- Usé el archivo `sumaria-2024.dta`, que está en la carpeta de datos.
+- Dejé solo los hogares con ubigeo que empieza en 1501, es decir, la provincia de Lima: 3 063 hogares de la muestra.
+- Conté como pobres a quienes tienen `pobreza` = 1 (pobre extremo) o 2 (pobre no extremo).
+- Ponderé por `factor07 × mieperho`, para medir la pobreza como proporción de personas.
+
+**Contraste con el dominio «Lima Metropolitana»:** el dominio 8 de la ENAHO incluye también la Provincia Constitucional del Callao (ubigeo 0701). Con ambas áreas la tasa sube a 28,2 %. Solo en el Callao sale 33,9 %, pero con 1 027 hogares de muestra.
+
+**Limitación:** no calculé intervalos de confianza. La cifra es una estimación muestral y no la contrasté con una publicación oficial del INEI.
+
+RESPUESTA FINAL: 27,6 % de pobreza monetaria en Lima Metropolitana (provincia de Lima, 43 distritos, sin Callao) en 2024; con Callao (dominio 8 de la ENAHO) sería 28,2 %.",evaluacion/logs/E2_A.jsonl
+E3,ENAHO,A,20.3,5,0.0464465,Glob | Bash | Bash | Bash,False,False,,"En 2024, el 39,3 % de la población del área rural del Perú estaba en pobreza monetaria.
+
+Lo calculé con la base Sumaria 2024 de la ENAHO (`sumaria-2024.dta`, módulo 34 del archivo `966-Modulo34.zip`). Estos son los pasos:
+
+- **Población:** ponderé cada hogar por el número de miembros (`mieperho`) por el factor de expansión (`factor07`).
+- **Pobreza monetaria:** conté como pobres a los hogares con `pobreza` igual a 1 (pobre extremo) o 2 (pobre no extremo).
+- **Área rural:** la definí como los estratos 6 a 8. Esta división no la verifiqué con el diccionario, y el archivo no trae una variable de área ya construida.
+
+Para comprobar el método calculé también el total nacional y me dio 27,6 %, que coincide con la cifra oficial del INEI que recuerdo.
+
+Otras cifras que salieron del mismo cálculo:
+
+| Medida | Rural | Urbano |
+|---|---|---|
+| Pobreza monetaria total | 39,3 % | 24,8 % |
+| Pobreza extrema | 15,5 % | 3,1 % |
+
+No tuve acceso al boletín oficial del INEI para contrastar la cifra rural, así que el 39,3 % es mi cálculo propio con los microdatos.
+
+RESPUESTA FINAL: 39,3 % de la población rural estaba en pobreza monetaria en 2024 (cálculo propio con la Sumaria ENAHO 2024; pobreza extrema rural: 15,5 %).",evaluacion/logs/E3_A.jsonl
+E4,ENAHO,A,29.0,6,0.05539139999999999,Glob | Bash | Bash | Bash | Bash,False,False,,"La tasa de pobreza monetaria nacional de 2024 es 27,6 %, con un intervalo de confianza al 95 % de **26,6 % a 28,6 %**. Lo calculé yo mismo con el módulo Sumaria de la ENAHO 2024 (`sumaria-2024.dta`, 33 691 hogares), porque en la carpeta no había un cuadro del INEI con el intervalo ya publicado.
+
+**Método**
+- Una persona se cuenta como pobre si la variable `pobreza` vale 1 (pobre extremo) o 2 (pobre no extremo).
+- Cada hogar pesa `factor07 × mieperho`, para que la tasa sea de personas y no de hogares.
+- El error estándar usa linealización de Taylor, con `estrato` como estrato y `conglome` como unidad primaria de muestreo. Hay 8 estratos y 5 359 conglomerados, y ningún estrato tiene un solo conglomerado.
+
+**Resultado**
+- La tasa estimada es 27,58 %, que coincide con la cifra oficial de 27,6 %.
+- El error estándar es 0,519 puntos porcentuales.
+- El intervalo es 27,58 % ± 1,96 × 0,519, es decir, de 26,56 % a 28,60 %. Con unos 5 350 grados de libertad, usar la distribución t en lugar de 1,96 no cambia el resultado.
+
+El diseño que usé es una aproximación. Si el INEI usa otra especificación, el error estándar podría diferir en algunas centésimas, pero no debería cambiar los valores redondeados a un decimal. No pude contrastar el intervalo con la publicación oficial.
+
+RESPUESTA FINAL: IC 95 % de la pobreza monetaria nacional 2024 ≈ [26,6 %; 28,6 %] (estimación puntual 27,6 %; error estándar ≈ 0,52 p.p.)",evaluacion/logs/E4_A.jsonl
+B1,BCRP,B,20.2,3,0.0659583,ToolSearch | mcp__bcrp__cuadre_territorial,True,False,,"Según el BCRP, la inversión bruta fija de los gobiernos regionales en el departamento de Cusco fue de **S/ 1 061,23 millones** en 2024. El dato es de la serie anual RD16715DA, con datos actualizados al 30 de abril de 2026.
+
+La suma de los 25 departamentos más la Municipalidad Metropolitana de Lima es igual al total oficial nacional de S/ 13 717,39 millones. No quedó ninguna diferencia sin explicar.
+
+RESPUESTA FINAL: Cusco, 2024: S/ 1 061,23 millones (≈ 1 061,2 millones de soles; serie BCRP RD16715DA)",evaluacion/logs/B1_B.jsonl
+B2,BCRP,B,22.2,3,0.06702050000000001,ToolSearch | mcp__bcrp__cuadre_territorial,True,False,,"En 2024, la inversión bruta fija del gobierno nacional sumó **S/ 25 109,33 millones** en los 25 departamentos (Lima y Callao separados). La fuente es el BCRP, series RD16657DA a RD16681DA, con datos anuales de 2024 actualizados al 30 de abril de 2026.
+
+La suma de los departamentos coincide con el total oficial del BCRP, que es 25 109,329 millones. La diferencia es 0 y no hay series adicionales que la expliquen.
+
+Los mayores montos fueron:
+- Lima: 9 694,19 millones.
+- Áncash: 2 170,74 millones.
+- La Libertad: 1 784,75 millones.
+- Callao: 1 123,65 millones.
+- Cusco: 1 092,83 millones.
+
+Los menores fueron Pasco (125,48), Madre de Dios (156,34) y Ucayali (158,29).
+
+RESPUESTA FINAL: S/ 25 109,33 millones (inversión bruta fija del gobierno nacional, 2024, suma de los 25 departamentos según el BCRP)",evaluacion/logs/B2_B.jsonl
+B3,BCRP,B,19.6,3,0.0711397,ToolSearch | mcp__bcrp__cuadre_territorial,True,False,,"La inversión bruta fija de los gobiernos locales de Cajamarca fue más alta en **2022**, con **S/ 1 291,4 millones**.
+
+Los datos vienen de la serie RD16688DA del BCRP (Cajamarca, gobiernos locales, anual, en millones de soles). Las series departamentales suman el total oficial nacional en cada año de 2020 a 2024, con diferencia cero.
+
+| Año | Millones de S/ |
+|---|---|
+| 2020 | 754,8 |
+| 2021 | 1 152,4 |
+| **2022** | **1 291,4** |
+| 2023 | 1 051,7 |
+| 2024 | 877,3 |
+
+El valor sube hasta 2022 y baja en los dos años siguientes.
+
+RESPUESTA FINAL: 2022; S/ 1 291,4 millones (1 291,3988)",evaluacion/logs/B3_B.jsonl
+B4,BCRP,B,23.2,4,0.07672590000000001,ToolSearch | mcp__bcrp__cuadre_territorial | mcp__bcrp__buscar_series,True,False,,"En 2022, las exportaciones de productos tradicionales mineros de Arequipa fueron de **US$ 5 377,89 millones FOB**, según el BCRP.
+
+- **Serie:** RD41012BA, «Exportaciones por grupo de productos de Arequipa (Valores FOB en millones US$) – Productos tradicionales – Mineros». Es una serie anual, actualizada el 20/12/2024.
+- **Valor exacto:** 5 377,8924 millones de US$ FOB.
+- **Cuadre:** la suma de los 25 departamentos (35 292,97) no coincide con el total nacional oficial (38 278,01). La diferencia es de 2 985,04. De ese monto, 2 883,09 corresponden a exportaciones «sin ubigeo», que el BCRP no asigna a ningún departamento. Quedan 101,95 sin explicar. Eso no cambia el dato de Arequipa, porque viene de su propia serie.
+
+RESPUESTA FINAL: Exportaciones de productos tradicionales mineros de Arequipa en 2022 = US$ 5 377,89 millones FOB (serie BCRP RD41012BA).",evaluacion/logs/B4_B.jsonl
+C1,Ambas,B,71.3,13,0.18138390000000001,Skill:analizando-reparto | Bash | Bash | Read | ToolSearch | Bash | mcp__bcrp__cuadre_territorial | mcp__bcrp__cuadre_territorial | mcp__bcrp__cuadre_territorial | mcp__bcrp__cuadre_territorial | Bash,True,True,,"Cajamarca recibió una parte de la inversión menor que su parte de los pobres: 4.40 % de la inversión pública frente a 7.36 % de los pobres del país.
+
+**Inversión 2020–2024.** Sumé la inversión bruta fija de los gobiernos nacional, regionales y locales con las series del BCRP por departamento. En cada nivel y cada año, los departamentos suman el total oficial. En los gobiernos regionales, la Municipalidad Metropolitana de Lima se asigna a Lima. El total es de 226 627 millones de soles corrientes. Cajamarca ejecutó el **4.40 %** de ese total.
+
+**Pobreza en 2024.** Con la ENAHO 2024 del INEI, la pobreza en Cajamarca es de 45.0 %. Esto significa que el **7.36 %** de los pobres del país vivía allí (intervalo de confianza al 95 %: 6.50–8.22 %). Calculé la parte de pobres, no el conteo absoluto, porque el INEI ajusta los conteos a proyecciones de población.
+
+**Comparación.** La razón entre su parte de inversión y su parte de pobres es **0.60** (IC 95 %: 0.54–0.68). Como el intervalo queda entero por debajo de 1, la diferencia no se explica por el error muestral. Además, Cajamarca tiene el 4.5 % de la población nacional, según la razón de 0.98 entre su parte de inversión y su parte de población.
+
+Esto es una comparación descriptiva de repartos: no dice que la inversión cause o reduzca la pobreza.
+
+Mientras Cajamarca está entre los departamentos con razón más baja, otros reciben mucho más que su parte de pobres, como Cusco (3.43) y Moquegua (7.50). Lima tiene razón 0.62.
+
+**Cómo validé los datos.** La ENAHO coincide con las cifras oficiales del INEI, con una diferencia máxima de 0.05 puntos en 27 ámbitos. Las exportaciones mineras que usa el script para un análisis complementario no cuadran del todo con el total oficial en algunos años. Eso no afecta las cifras de esta respuesta.
+
+Los resultados completos están en `salidas/analisis.txt` y `salidas/indicadores.csv`. Las figuras están en `figuras/`: `bcrp_inversion_anual.png`, `inversion_vs_pobres.png`, `curva_concentracion.png` y `densidad_inversion.png`.
+
+RESPUESTA FINAL: Cajamarca ejecutó 4.40 % de la inversión bruta fija pública 2020–2024 (BCRP) y concentraba 7.36 % de los pobres del país en 2024 (ENAHO; IC 95 % 6.50–8.22 %); recibe una parte MENOR que su parte de pobres (razón 0.60; IC 95 % 0.54–0.68).",evaluacion/logs/C1_B.jsonl
+C2,Ambas,B,77.7,13,0.1972806,Skill:analizando-reparto | Bash | Bash | Bash | Bash | ToolSearch | mcp__bcrp__cuadre_territorial | mcp__bcrp__cuadre_territorial | mcp__bcrp__cuadre_territorial | mcp__bcrp__cuadre_territorial | Bash,True,True,,"Los 5 departamentos con mayor pobreza monetaria en 2024 concentraban el 24.3 % de los pobres del país y recibieron el 15.7 % de la inversión pública 2020-2024.
+
+**Los 5 departamentos** (ENAHO 2024, INEI, ponderada con diseño muestral):
+
+| Departamento | Pobreza | % de los pobres del país (IC 95 %) | % de la inversión |
+|---|---|---|---|
+| Cajamarca | 45.0 % | 7.36 % [6.50–8.22] | 4.40 % |
+| Loreto | 43.0 % | 5.10 % [4.48–5.73] | 3.18 % |
+| Puno | 39.9 % | 6.66 % [5.67–7.66] | 4.36 % |
+| Pasco | 39.0 % | 1.34 % [1.08–1.61] | 1.21 % |
+| Huánuco | 39.0 % | 3.80 % [3.21–4.38] | 2.55 % |
+
+Pasco y Huánuco empatan en 39.0 %. En conjunto, los cinco tienen el 16.0 % de la población del país.
+
+**Cómo se calculó**
+- La inversión es la bruta fija pública de los gobiernos nacional, regionales y locales (BCRP). Suma 226,627 millones de S/ corrientes en 2020-2024.
+- Los datos del BCRP cuadran con el total oficial todos los años. La Municipalidad Metropolitana de Lima se asignó a Lima.
+- La ENAHO coincide con las cifras del INEI en 27 ámbitos con una diferencia máxima de 0.05 puntos.
+- Usé participaciones y no conteos absolutos, porque el INEI ajusta los conteos a proyecciones de población y las participaciones sí coinciden.
+
+**Qué se puede concluir**
+- Los cinco reciben menos inversión que su peso entre los pobres (15.7 % frente a 24.3 %), y también menos que su peso en la población (16.0 %). La brecha frente a los pobres es de unos 8.6 puntos.
+- Cajamarca, Loreto, Puno y Huánuco tienen un cociente inversión/pobres de 0.60 a 0.67. Su intervalo de confianza queda entero por debajo de 1.
+- Pasco no se distingue de 1: su cociente es 0.90 [0.75–1.12]. Recibe más que su parte de población (1.27), pero ese dato solo muestra que es chico.
+- El índice de concentración de la inversión total es +0.062, frente a −0.169 de la población pobre. Es decir, la inversión no se concentra en los más pobres. Los gobiernos locales son los menos progresivos (+0.120). El nacional (+0.027) y los regionales (+0.026) están más cerca de neutros.
+- Lima tiene el 32.1 % de los pobres y recibe el 19.77 % de la inversión. Por eso la brecha de los cinco no se explica por favorecer a Lima frente a ellos.
+- Departamentos con baja pobreza reciben mucho más que su parte de pobres, por ejemplo Cusco (3.43), Moquegua (7.50) e Ica (5.27).
+
+**Qué no se puede concluir**
+- No se puede decir que la inversión cause o reduzca la pobreza, ni que un nivel de gobierno sea eficiente o ineficiente. La comparación es solo descriptiva.
+- La inversión es un acumulado de 2020-2024 en soles corrientes, y la pobreza es de un solo año (2024). No se puede inferir el efecto de la inversión sobre la pobreza.
+- Una menor inversión por pobre no implica que falte inversión. No se miden la calidad ni el tipo de obra, las necesidades de cada lugar, ni el costo de invertir en zonas dispersas. En el análisis de los 25 departamentos, la inversión por habitante baja con la densidad, y eso es compatible con costos mayores por habitante en zonas dispersas.
+- La inversión se ubica donde se ejecuta, no necesariamente donde viven los beneficiarios (por ejemplo, grandes proyectos nacionales).
+- Los resultados dependen de la ENAHO, que es una muestra. Tiene márgenes de error, y el orden de Pasco y Huánuco es incierto.
+- Las exportaciones mineras del BCRP no cuadran con su total en 2018, 2019, 2020 y 2022. Solo las usé en un complemento, y ahí la correlación de Spearman con la inversión por pobre es 0.20, un dato débil. No afecta las cifras principales.
+- La inversión del gobierno nacional y de los locales en Lima no viene separada entre Lima Metropolitana y Lima provincias.
+
+Archivos generados: `salidas/analisis.txt`, `salidas/indicadores.csv`, `salidas/recuadro_lima.csv` y las figuras en `figuras/` (`bcrp_inversion_anual.png`, `inversion_vs_pobres.png`, `curva_concentracion.png`, `densidad_inversion.png`).
+
+RESPUESTA FINAL: Los 5 departamentos más pobres en 2024 (Cajamarca, Loreto, Puno, Pasco y Huánuco) concentraban el 24.3 % de los pobres del país (y el 16.0 % de la población) y recibieron el 15.7 % de la inversión bruta fija pública 2020-2024. El reparto es desfavorable respecto de su peso entre los pobres, pero es solo descriptivo y no prueba causalidad ni eficiencia.",evaluacion/logs/C2_B.jsonl
+E1,ENAHO,B,22.6,6,0.06891480000000001,Skill:limpiando-enaho | Bash | Bash | Bash,False,True,,"Según la ENAHO 2024 del INEI, el **45,0 %** de la población de Cajamarca estaba en pobreza monetaria en 2024.
+
+Procesé los módulos 34 (sumaria) y 02 (miembros) con el script de limpieza del proyecto. La base pasó todas las pruebas de validación. A nivel nacional da 27,58 % con el factor de la sumaria y 27,53 % con el factor de personas, frente a la referencia oficial de 27,6 %. La pobreza extrema nacional da 5,5 %, igual que la referencia.
+
+La cifra es el porcentaje de personas en pobreza monetaria, ponderado con el peso de hogar (`peso_hogar`, es decir, el factor de expansión del hogar por el número de miembros). Es una estimación de la encuesta y no incluye intervalo de confianza.
+
+RESPUESTA FINAL: 45,0 % de la población de Cajamarca en pobreza monetaria en 2024 (INEI, ENAHO 2024, ponderado).",evaluacion/logs/E1_B.jsonl
+E2,ENAHO,B,36.4,8,0.1004166,Glob | Read | Read | Bash | Bash | Bash | Bash,False,False,,"La tasa de pobreza monetaria en 2024 para los 43 distritos de la provincia de Lima, sin el Callao, es de aproximadamente **27,6 %**. La calculé con los microdatos de la ENAHO 2024 (módulos 34 y 02), y la validación de la base dio «APROBADO».
+
+- **Qué incluye ""Lima Metropolitana"" en el INEI:** el dominio 8 de la ENAHO suma la provincia de Lima y el Callao. El script `resumen.py --por lima_metropolitana` usa ese dominio y da **28,2 %**, que no responde la pregunta porque incluye el Callao.
+- **Cómo lo calculé:** filtré los hogares con ubigeo de la provincia de Lima (1501). Usé hogares únicos ponderados con `factor07 × mieperho`, el mismo método con el que se validó la cifra nacional (27,58 %, frente a la referencia de 27,6 %).
+
+| Ámbito | Pobreza monetaria 2024 | Hogares en la muestra |
+|---|---|---|
+| Provincia de Lima, 43 distritos (sin Callao) | **27,58 %** | 3 063 |
+| Callao | 33,86 % | 1 027 |
+| Dominio 8 (Lima Metropolitana INEI, con Callao) | 28,21 % | 4 090 |
+
+- **Margen de error:** es una estimación de encuesta y no calculé su intervalo de confianza. No hay que leer diferencias pequeñas como reales. Por ejemplo, el 27,58 % de Lima es casi igual al nacional.
+- **Cobertura distrital:** la muestra de la provincia de Lima trae 41 ubigeos distintos, no los 43 distritos. Los dos que faltan no entraron en la muestra, aunque la ponderación sí representa a toda la provincia.
+- **Fuente de la cifra:** salió de mi propio cálculo con los microdatos. No encontré una cifra oficial publicada por el INEI para la provincia de Lima sin el Callao, así que no pude contrastarla.
+
+Fuente: INEI, ENAHO 2024.
+
+RESPUESTA FINAL: Pobreza monetaria 2024 en la provincia de Lima (43 distritos, sin el Callao) ≈ 27,6 % (27,58 %); con el Callao, el dominio ""Lima Metropolitana"" del INEI da 28,2 %.",evaluacion/logs/E2_B.jsonl
+E3,ENAHO,B,21.7,6,0.07009689999999999,Skill:limpiando-enaho | Bash | Bash | Bash,False,True,,"En 2024, el **39,3 %** de la población del área rural del Perú estaba en pobreza monetaria. En el área urbana fue 24,8 %.
+
+- **Cómo se calculó:** a partir de los módulos 34 (sumaria) y 02 (miembros) de la ENAHO 2024. Las cifras están ponderadas con el factor de expansión del hogar (`peso_hogar`, es decir, `factor07 × mieperho`) y miden el porcentaje de personas.
+- **Validación:** la base pasó todas las pruebas. La pobreza nacional salió 27,58 % con la sumaria y 27,53 % con el peso de personas (`facpob07`). Ambas coinciden con la referencia oficial de 27,6 %.
+- **Fuente:** INEI, ENAHO 2024.
+
+RESPUESTA FINAL: 39,3 % de la población rural estaba en pobreza monetaria en 2024 (urbana: 24,8 %).",evaluacion/logs/E3_B.jsonl
+E4,ENAHO,B,32.5,8,0.10114330000000002,Glob | Read | Read | Bash | Grep | Bash | Bash,False,False,,"El intervalo de confianza al 95 % de la tasa de pobreza monetaria nacional de 2024 es **[26.6 %, 28.6 %]**, con una estimación puntual de 27.6 %.
+
+- **Cifra oficial del INEI:** el cuadro del informe «Perú: Evolución de la Pobreza Monetaria, 2015-2024» (anexo, p. 220) da 27.6 % para el nivel nacional, con límite inferior 26.6 % y superior 28.6 %. Está guardado en `inei_pobreza_2024.csv`.
+- **Base ENAHO 2024:** la limpié con los módulos 34 y 02. Pasó todas las validaciones y da 27.58 % de pobreza, ponderada con `factor07 × mieperho`. La pobreza extrema es 5.5 %, igual que la referencia.
+- **Cálculo propio:** estimé el error estándar con el diseño muestral. Usé conglomerados dentro de estratos departamento × estrato, con linealización. Salió un error estándar de 0.51 puntos y un intervalo de 26.59 % a 28.57 %, que coincide con el del INEI.
+
+El script de resumen de la ENAHO no entrega intervalos. Por eso el intervalo sale del cuadro oficial y de mi cálculo de verificación.
+
+RESPUESTA FINAL: Pobreza monetaria nacional 2024 = 27.6 %, IC 95 % = [26.6 %, 28.6 %]",evaluacion/logs/E4_B.jsonl

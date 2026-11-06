@@ -1,0 +1,12 @@
+10 sesiones con sonnet, 4 a la vez...
+R1 A: 23.6 s, MCP=False, skills=False 
+R2 A: 19.0 s, MCP=False, skills=False 
+R3 A: 31.1 s, MCP=False, skills=False 
+R4 A: 27.6 s, MCP=False, skills=False 
+R5 A: 12.3 s, MCP=False, skills=False 
+R1 B: 29.0 s, MCP=True, skills=False 
+R2 B: 19.3 s, MCP=True, skills=False 
+R3 B: 40.1 s, MCP=True, skills=False 
+R4 B: 30.7 s, MCP=False, skills=False 
+R5 B: 20.4 s, MCP=True, skills=False 
+Guardado: evaluacion\robustez_corridas.csv

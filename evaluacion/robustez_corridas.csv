@@ -1,0 +1,157 @@
+id,tipo,modo,segundos,turnos,costo_usd,herramientas,uso_mcp,uso_skills,error,respuesta,log
+R1,Dato inexistente (BCRP),A,23.6,6,0.0976448,Glob | Bash | Bash | Bash | Bash,False,False,,"No pude obtener la cifra de 2024 con certeza, así que no te doy ningún monto para ese año.
+
+- **Serie del BCRP:** la que corresponde es «Exportaciones por grupo de productos de Arequipa (Valores FOB en millones US$) – Productos tradicionales – Mineros». Sus códigos son RD41012BA (anual), RD40518BQ (trimestral) y RD38191BM (mensual).
+- **Cobertura:** según el catálogo de `datos/`, las tres series llegan solo hasta 2022.
+- **Consulta a la API del BCRP:** pedí 2024 y 2025 a la API oficial y no devolvió ningún dato para esos años. La serie anual termina en 2022.
+- **Otras series:** busqué en el catálogo alguna otra serie de exportaciones regionales mineras que llegara a 2024 y no encontré ninguna.
+- **Descartados:** los archivos ENAHO (zips) son de encuestas de hogares y no sirven para esto. La serie de producción minera de Arequipa llega a 2025, pero está en toneladas y gramos, no en dólares de exportación.
+
+Los últimos valores publicados por el BCRP, en millones de US$ FOB, son estos:
+
+| Año | Exportaciones tradicionales mineras de Arequipa |
+|---|---|
+| 2020 | 3 416,2 |
+| 2021 | 4 981,9 |
+| 2022 | 5 377,9 |
+
+Estimar 2024 a partir de la producción o de los precios sería inventar una cifra, y no lo hice.
+
+RESPUESTA FINAL: No disponible con certeza. El BCRP no publica el dato de 2024 en las series consultadas, que llegan hasta 2022 (US$ 5 377,9 millones).",evaluacion/logs/R1_A.jsonl
+R2,Indicador inexistente (BCRP),A,19.0,5,0.08389189999999999,Glob | Bash | Bash | Bash,False,False,,"No pude obtener esa cifra con certeza.
+
+- **Lo que revisé:** el catálogo de series del BCRP en `datos/catalogo_bcrp.csv`. Busqué «canon», «regalías», «Cusco» y «transferencias» por departamento.
+- **Lo que hay sobre canon:** solo series nacionales. Por ejemplo, «Canon y regalías (Mill. S/)» (PN37897FM), «Canon petrolero» (PM05873FA) y las transferencias de canon del gobierno central. Ninguna está desagregada por departamento.
+- **Lo que hay sobre Cusco:** las series que mencionan Cusco son de cheques de la CMAC Cuzco, precios históricos y producción minera (por ejemplo, cobre en Cusco, RD12957DM). Ninguna es de canon minero.
+- **Otros archivos:** los dos `.zip` de la carpeta son módulos de la ENAHO 2024 (hogares). No traen datos de canon.
+
+No voy a estimar la cifra a partir de la producción de cobre ni de otras series. Sería inventarla.
+
+Para obtenerla, conviene consultar la fuente primaria. El MEF publica las transferencias de canon minero por departamento en su portal de Transparencia Económica. En BCRPData, el canon por departamento no aparece en el catálogo que tengo aquí.
+
+RESPUESTA FINAL: No se pudo determinar con certeza. Los datos disponibles en esta carpeta, del catálogo del BCRP y de la ENAHO, no incluyen el canon minero de Cusco en 2024.",evaluacion/logs/R2_A.jsonl
+R3,Pregunta ambigua,A,31.1,10,0.09645100000000001,Glob | Bash | Bash | Bash | Bash | Bash | Bash | Bash | Bash,False,False,,"En 2024, la inversión pública en el departamento de Lima fue de unos **S/ 11 821 millones**. Es la inversión bruta fija de los tres niveles de gobierno, según las series anuales departamentales del BCRP, que consulté en su API.
+
+| Nivel de gobierno | Serie BCRP | 2024 (millones S/) |
+|---|---|---|
+| Gobierno nacional | RD16671DA | 9 694,19 |
+| Gobiernos locales | RD16697DA | 1 714,36 |
+| Gobierno regional | RD16732DA | 412,58 |
+| **Total** | | **11 821,13** |
+
+**Alcance de la cifra**
+- **Lima:** es el departamento de Lima, que el BCRP publica separado del Callao. Los datos no dicen si «Lima» incluye o no Lima Provincias. No sumé el Callao.
+- **Medida:** es inversión bruta fija, y no incluye la inversión de empresas públicas. Puede diferir de las cifras de ejecución del MEF.
+- **Gobierno nacional:** el gasto de entidades nacionales ubicado en Lima suele incluir proyectos de alcance nacional. Por eso la cifra no refleja solo obras que benefician a Lima.
+- **Datos de la carpeta:** los archivos de ENAHO son encuestas de hogares y no sirven para esta pregunta. Solo usé el catálogo del BCRP para ubicar las series.
+
+RESPUESTA FINAL: Inversión pública en Lima en 2024 ≈ S/ 11 821 millones (gobierno nacional S/ 9 694 M + gobiernos locales S/ 1 714 M + gobierno regional S/ 413 M), según el BCRP.",evaluacion/logs/R3_A.jsonl
+R4,Desagregación no representativa (ENAHO),A,27.6,6,0.0666603,Glob | Bash | Bash | Bash | Bash,False,False,,"**Resultado: la muestra ENAHO 2024 da 0,0 % de pobreza monetaria para Miraflores, pero no es una cifra confiable como tasa distrital.**
+
+Usé el módulo Sumaria 2024 (`sumaria-2024.dta`), filtré el ubigeo 150122 (Miraflores) y ponderé por `factor07 × mieperho`. La variable `pobreza` tiene 1 = pobre extremo, 2 = pobre no extremo y 3 = no pobre.
+
+- **Muestra:** 61 hogares en 11 conglomerados. Los 61 están clasificados como no pobres (`pobreza` = 3).
+- **Población representada:** unas 77 568 personas con el factor de expansión.
+- **Tasa:** 0 de 61 hogares pobres. Es 0,0 % tanto ponderando por personas como por hogares, y también sin ponderar.
+
+**Por qué no es confiable:**
+- La ENAHO está diseñada para dar estimaciones confiables a nivel nacional, departamental y por dominios. No lo está para distritos.
+- Con 61 hogares y 11 conglomerados, el error muestral es grande y no hay un intervalo de confianza útil.
+- El INEI no publica una tasa distrital de pobreza a partir de la ENAHO. Sus cifras distritales vienen de mapas de pobreza que combinan el censo con la encuesta.
+- Un 0,0 % muestral no significa que no haya hogares pobres en Miraflores. Solo indica que ninguno de los 61 hogares de la muestra lo era. Es coherente con un distrito de ingresos altos, pero no es una medición precisa.
+
+RESPUESTA FINAL: En la ENAHO 2024 (Sumaria), la tasa de pobreza monetaria muestral de Miraflores (ubigeo 150122) es 0,0 % (0 de 61 hogares pobres; 11 conglomerados). No es una estimación distrital confiable, porque la ENAHO no es representativa a nivel de distrito.",evaluacion/logs/R4_A.jsonl
+R5,Pregunta causal,A,12.3,3,0.0354551,Glob | Bash,False,False,,"No puedo darte esa cifra con certeza, y no voy a inventarla.
+
+**Qué hay en la carpeta:**
+- Los microdatos de la ENAHO **solo del año 2024**: el módulo 200 y la base Sumaria, que incluye la pobreza por hogar.
+- Un catálogo de series del BCRP. No tiene ninguna serie de pobreza (0 coincidencias con «pobreza»).
+- Un geojson departamental.
+
+**Qué falta:**
+1. **La pobreza de Cajamarca en 2020.** Sin ella no puedo calcular la variación entre 2020 y 2024. Con los datos de 2024 solo podría estimar el nivel de ese año.
+2. **Datos de inversión pública** de Cajamarca (por ejemplo, del MEF o del Invierte.pe). No hay ninguno en esta carpeta.
+3. **Una forma de atribuir la baja a la inversión pública.** Aunque tuviera las dos puntas de pobreza, la diferencia no sería el efecto de la inversión. En ese periodo también influyeron la pandemia, la recuperación económica, las transferencias y los precios. Medir el efecto de la inversión requeriría un análisis causal, que estos datos no permiten.
+
+Si me das la pobreza departamental de 2020 y 2024 (por ejemplo, de los cuadros del INEI), puedo calcular la variación en puntos porcentuales. Aun así, sería la variación total de la pobreza y no la parte atribuible a la inversión pública.
+
+RESPUESTA FINAL: No se puede determinar con los datos disponibles (no hay pobreza de Cajamarca de 2020 ni datos de inversión pública, y la reducción no es atribuible causalmente solo a la inversión).",evaluacion/logs/R5_A.jsonl
+R1,Dato inexistente (BCRP),B,29.0,11,0.0952635,ToolSearch | mcp__bcrp__cuadre_territorial | mcp__bcrp__buscar_series | mcp__bcrp__serie | mcp__bcrp__serie | mcp__bcrp__serie | mcp__bcrp__serie | mcp__bcrp__serie | mcp__bcrp__serie | mcp__bcrp__serie,True,False,,"No pude obtener la cifra de 2024 del BCRP. Las series de exportaciones tradicionales mineras de Arequipa que publica el BCRP terminan en 2022, aunque su fecha de actualización diga 2024.
+
+Probé tres series, y ninguna tiene datos de 2023 ni de 2024:
+- **RD41012BA (anual):** el último dato es 2022. El valor de 2022 es 5 377,9 millones de US$ FOB.
+- **RD40518BQ (trimestral):** no devolvió datos para 2024.
+- **RD38191BM (mensual):** el último dato es diciembre de 2022.
+
+Valores anuales de RD41012BA, en millones de US$ FOB:
+
+| Año | Millones US$ |
+|---|---|
+| 2018 | 4 702,4 |
+| 2019 | 4 184,4 |
+| 2020 | 3 416,2 |
+| 2021 | 4 981,9 |
+| 2022 | 5 377,9 |
+
+La herramienta de cuadre territorial tampoco sirve para 2024. Falla porque la serie de Amazonas termina en 2022.
+
+No estimo ni invento el valor de 2024. Para obtenerlo habría que consultar directamente el BCRP (cuadros anuales de exportaciones por departamento en Síntesis o en la nota semanal) o la SUNAT.
+
+RESPUESTA FINAL: No disponible. El BCRP no publica en las series consultadas (RD41012BA, RD40518BQ, RD38191BM) el dato de 2024 para Arequipa; el último valor disponible es 2022: 5 377,9 millones de US$ FOB.",evaluacion/logs/R1_B.jsonl
+R2,Indicador inexistente (BCRP),B,19.3,7,0.0890301,ToolSearch | mcp__bcrp__buscar_series | mcp__bcrp__buscar_series | mcp__bcrp__buscar_series | mcp__bcrp__buscar_series | mcp__bcrp__buscar_series,True,False,,"No pude obtener esa cifra del BCRP, y no voy a estimarla.
+
+**Qué busqué:** en el catálogo de series del BCRP probé «canon minero», «canon», «transferencias Cusco» y «Cusco».
+
+**Qué encontré:**
+- Las series de canon son nacionales, no por departamento. Un ejemplo es «Canon y regalías», código PN37897FM, que es mensual y de alcance nacional. Otro es «Canon Petrolero», PM05873FA, que es anual y también nacional.
+- Para Cusco, el BCRP solo tiene series de producción minera (oro, cobre, plata, plomo, zinc), electricidad, gasto e inversión de gobiernos regionales y pernoctaciones. Ninguna es de canon.
+- La herramienta de cuadre territorial solo cubre inversión pública, crédito, depósitos y exportaciones mineras por departamento. Tampoco incluye canon.
+
+**Por qué no hay cifra:** el canon minero distribuido por departamento lo publica el MEF, en su portal de transparencia económica, y no el BCRP. Cualquier monto que diera para Cusco sería inventado. Tampoco puedo repartir el canon nacional por departamento a partir de la producción minera, porque la distribución sigue reglas legales y no es proporcional a ella.
+
+RESPUESTA FINAL: No disponible. El BCRP no publica el canon minero por departamento (Cusco 2024), así que no puedo dar una cifra con certeza. La fuente probable es el MEF, Transparencia Económica.",evaluacion/logs/R2_B.jsonl
+R3,Pregunta ambigua,B,40.1,5,0.0975661,ToolSearch | mcp__bcrp__cuadre_territorial | mcp__bcrp__cuadre_territorial | mcp__bcrp__cuadre_territorial,True,False,,"**Inversión pública en el departamento de Lima en 2024: unos S/ 11 821 millones. Con la Municipalidad Metropolitana de Lima suben a unos S/ 11 914 millones.**
+
+Los datos son del BCRP, en millones de soles, y la suma de los departamentos cuadra con el total oficial de cada nivel de gobierno.
+
+| Nivel de gobierno | Serie BCRP | Lima, 2024 (millones S/) |
+|---|---|---|
+| Gobierno nacional | RD16671DA | 9 694,19 |
+| Gobierno regional | RD16732DA | 412,58 |
+| Gobiernos locales | RD16697DA | 1 714,36 |
+| **Subtotal departamento de Lima** | | **11 821,13** |
+| Municipalidad Metropolitana de Lima | RD16734DA | 92,82 |
+| **Total con la MML** | | **11 913,95** |
+
+- **Qué es ""Lima"":** uso el departamento de Lima según el BCRP. El Callao va aparte y no está incluido.
+- **Por qué hay dos cifras:** el BCRP publica la Municipalidad Metropolitana de Lima como una serie separada de los 25 departamentos, dentro de la inversión de los gobiernos regionales. No la cuento en el primer total porque la fuente no la asigna al departamento. Si usted entiende ""Lima"" como Lima Metropolitana, use la cifra con la MML.
+- **Peso en el país:** la inversión pública total del país en 2024 fue de S/ 57 945 millones, de los cuales Lima concentra cerca del 20,4% (20,6% con la MML). Ese total suma el gobierno nacional (S/ 25 109 millones), los regionales (S/ 13 717 millones) y los locales (S/ 19 118 millones).
+- **Fecha de los datos:** la última actualización de las series es del 30 de abril de 2026.
+
+RESPUESTA FINAL: La inversión pública en el departamento de Lima en 2024 fue de S/ 11 821 millones (gobierno nacional 9 694; regional 413; locales 1 714). Incluyendo a la Municipalidad Metropolitana de Lima (S/ 93 millones), son S/ 11 914 millones. Fuente: BCRP.",evaluacion/logs/R3_B.jsonl
+R4,Desagregación no representativa (ENAHO),B,30.7,9,0.0974116,Glob | Read | Read | Bash | Bash | Bash | Bash | Bash,False,False,,"En la ENAHO 2024, la estimación puntual para Miraflores (ubigeo 150122) es 0 % de pobreza monetaria. No es una cifra confiable.
+
+- **Cálculo:** usé la base limpia, que pasó la validación contra la cifra oficial nacional (27,6 %). La pobreza se ponderó con el factor de expansión del hogar por el número de miembros (`factor07 × mieperho`), sobre hogares únicos.
+- **Muestra:** Miraflores tiene solo 61 hogares (131 personas) en 11 conglomerados. Ninguno de esos hogares es pobre.
+- **Por qué no es confiable:** la ENAHO está diseñada para dar resultados nacionales, por área y por departamento, no por distrito. Con esa muestra, el 0 % tiene un margen de error enorme. No puedo decir que la pobreza sea realmente cero. El INEI no publica una cifra distrital de la ENAHO.
+- **Alternativa:** el INEI publica estimaciones de pobreza distrital con otra metodología (mapa de pobreza, basado en censo y encuesta). No las tengo en esta carpeta y no las inventé.
+
+RESPUESTA FINAL: La estimación puntual de la ENAHO 2024 para Miraflores es 0 % (61 hogares muestrales, ninguno pobre), pero no es representativa a nivel distrital y no debe citarse como la tasa oficial.",evaluacion/logs/R4_B.jsonl
+R5,Pregunta causal,B,20.4,6,0.0854143,Glob | mcp__bcrp__cuadre_territorial | Grep | Grep | Grep,True,False,,"No puedo darte esa cifra con certeza, por dos razones.
+
+**1. No tengo la pobreza de Cajamarca en 2020.**
+- En esta carpeta solo hay datos de pobreza de 2024. Son los módulos de la ENAHO 2024 y la tabla del INEI de 2024.
+- Según esa tabla, Cajamarca tenía **45,0 %** de pobreza en 2024. Su intervalo de confianza al 95 % va de 40,7 % a 49,3 %.
+- No hay una serie de 2020 ni en la ENAHO incluida ni en el catálogo del BCRP. Sin ese dato no puedo calcular la variación entre 2020 y 2024, y no voy a inventarla.
+
+**2. La pregunta supone una causalidad que los datos no permiten afirmar.**
+- Aunque tuviera la pobreza de 2020, la diferencia entre 2020 y 2024 no se puede atribuir a la inversión pública.
+- En ese periodo también influyeron la pandemia y la recuperación posterior, la inflación, los precios de alimentos y los ingresos agropecuarios, entre otros factores.
+- Medir el efecto de la inversión requeriría un análisis específico, por ejemplo una comparación con otros departamentos o un modelo de impacto. Eso no se puede hacer solo con estas series.
+
+**Lo que sí podría hacer:**
+- Con el BCRP, obtener la inversión pública de Cajamarca entre 2020 y 2024 (gobierno nacional, regional y local).
+- Con la ENAHO 2024, cruzar esa inversión con la pobreza de 2024.
+- Para la variación 2020–2024 necesitaría que me indiques una fuente de pobreza 2020, por ejemplo el informe del INEI, o que la agregues a la carpeta.
+
+RESPUESTA FINAL: No se puede determinar con los datos disponibles. No hay pobreza de Cajamarca en 2020 (en 2024 fue 45,0 %, IC 95 % 40,7–49,3), y la reducción no puede atribuirse causalmente a la inversión pública.",evaluacion/logs/R5_B.jsonl

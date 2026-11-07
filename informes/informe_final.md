@@ -151,3 +151,15 @@ Requisitos: `uv` y los microdatos de la ENAHO 2024 en `datos/`, descargados del 
 4. **Salidas esperadas:** `salidas/validacion.txt` (con «RESULTADO: APROBADO»), `salidas/indicadores.csv`, `salidas/analisis.txt`, `salidas/recuadro_lima.csv`, `salidas/mapa_vs_referencia.csv`, `figuras/*.png` y `mapas/pobreza_departamento.png`.
 
 Fecha de consulta de los datos del BCRP: 2026-11-06. Según la herramienta, las series de inversión se actualizaron el 2026-04-30.
+
+## 8. Verificación manual de cifras
+
+La autora comprobó a mano tres afirmaciones numéricas del informe, de las dos fuentes, en los sitios oficiales (7-nov-2026). Las capturas están en [`evidencias_ia/verificacion/`](../evidencias_ia/verificacion/).
+
+| # | Afirmación del informe | Valor encontrado en la fuente | Fuente y procedimiento | ¿Coincide? | Diferencias |
+|---|---|---|---|---|---|
+| 1 | La inversión del gobierno nacional pasó de 12 545.7 millones de soles (2020) a 25 109.3 millones (2024), +100.14 % (sección 3) | 12 546 (2020) y 25 109 (2024); con esos valores, 25 109 ÷ 12 546 − 1 = +100.14 % | [BCRPData, serie RD16682DA](https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/RD16682DA/html/2020/2024/), tabla anual; cálculo con calculadora | Sí | La web muestra enteros; el informe usa los decimales que entrega la API. La variación coincide a dos decimales |
+| 2 | Pobreza monetaria de Cajamarca 2024: 45.0 %, IC 95 % 40.7–49.3 (secciones 4.1 y `salidas/indicadores.csv`) | 45,0 %; intervalo 40,7–49,3 | INEI, *Perú: Evolución de la Pobreza Monetaria, 2015-2024*, Cuadro Nº III.1, p. 220 del documento (p. 222 del PDF) | Sí | Ninguna |
+| 3 | Pobreza monetaria de Lima Metropolitana 2024: 27.6 %, IC 95 % 25.0–30.1 (sección 4.4) | 27,6 %; intervalo 25,0–30,1 | Mismo cuadro y página | Sí | Ninguna |
+
+Las tres cifras del informe coinciden con las fuentes oficiales. Además, el análisis valida automáticamente las 27 cifras de pobreza del INEI (25 departamentos con Lima dividida en dos, y el nacional) y el cuadre de las series del BCRP cada vez que se ejecuta (`salidas/analisis.txt`).

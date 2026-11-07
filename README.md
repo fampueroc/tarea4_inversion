@@ -4,7 +4,22 @@ Un agente de investigación con Claude Code que combina un **servidor MCP del BC
 
 Autora: **Fiorella Ampuero**, con Claude Code. Curso Python Intermedio, Tarea 4 ([issue #201](https://github.com/d2cml-ai/Data-Science-Python/issues/201)). Proyecto académico personal; no representa a ninguna institución.
 
-👉 **[Informe final](informes/informe_final.md)** · **[Policy brief (PDF)](informes/policy_brief.pdf)** · **[Comparación con y sin MCP/Skills](evaluacion/comparacion.md)**
+## Entregables (enlaces directos)
+
+| Qué pide la tarea | Archivo definitivo |
+|---|---|
+| Informe final de investigación | [`informes/informe_final.md`](informes/informe_final.md) |
+| Pruebas del servidor MCP: **10 passed** | [`evidencias_ia/mcp/pruebas.txt`](evidencias_ia/mcp/pruebas.txt) · código: [`mcp/server.py`](mcp/server.py), [`mcp/test_server.py`](mcp/test_server.py), [`mcp/test_cuadre.py`](mcp/test_cuadre.py) |
+| Validación de la ENAHO 2024 (27,58 %, 108 664 residentes, 25 departamentos) | [`salidas/validacion.txt`](salidas/validacion.txt) |
+| Mapa con las 25 unidades y comparación con la sesión 16 | [`mapas/pobreza_departamento.png`](mapas/pobreza_departamento.png) · [`salidas/mapa_vs_referencia.csv`](salidas/mapa_vs_referencia.csv) |
+| Indicadores del cruce BCRP + ENAHO | [`salidas/indicadores.csv`](salidas/indicadores.csv) · [`salidas/analisis.txt`](salidas/analisis.txt) |
+| Evidencia de integración MCP + Skills (una sola sesión) | [`evidencias_ia/integracion/intento2_conversacion.md`](evidencias_ia/integracion/intento2_conversacion.md) · capturas en [`evidencias_ia/integracion/`](evidencias_ia/integracion/) |
+| Preguntas de evaluación | [`evaluacion/preguntas.csv`](evaluacion/preguntas.csv) · robustez: [`evaluacion/robustez.csv`](evaluacion/robustez.csv) |
+| Resultados de la evaluación | [`evaluacion/resultados.csv`](evaluacion/resultados.csv) · robustez: [`evaluacion/robustez_resultados.csv`](evaluacion/robustez_resultados.csv) |
+| Comparación con y sin MCP/Skills | [`evaluacion/comparacion.md`](evaluacion/comparacion.md) |
+| Verificación manual de 3 cifras | [Sección 8 del informe](informes/informe_final.md#8-verificación-manual-de-cifras) · capturas en [`evidencias_ia/verificacion/`](evidencias_ia/verificacion/) |
+| Evidencias del uso de IA (conversaciones completas) | [Índice en la sección 12](#12-evidencias-del-uso-de-ia) |
+| Extra: policy brief para decisores | [`informes/policy_brief.pdf`](informes/policy_brief.pdf) · [`informes/policy_brief.png`](informes/policy_brief.png) |
 
 ![Policy brief](informes/policy_brief.png)
 
@@ -133,14 +148,18 @@ En esa sola sesión el agente hizo **9 llamadas al MCP** (`cuadre_territorial` �
 
 ## 12. Evidencias del uso de IA
 
-Todo el desarrollo se hizo con Claude Code. Las conversaciones completas, con datos personales ocultos, y las capturas están en [`evidencias_ia/`](evidencias_ia/):
+El desarrollo se hizo con Claude Code. Las conversaciones completas están exportadas a Markdown con [`evidencias_ia/exportar_conversaciones.py`](evidencias_ia/exportar_conversaciones.py), que reemplaza el correo y el usuario de Windows de la autora, omite los recordatorios internos del sistema y verifica que no quede ningún dato personal. En 4 capturas se tapó el usuario de Windows.
 
-| Carpeta | Contenido |
+| Etapa | Conversación |
 |---|---|
-| `mcp/`, `skills/` | Conversación de desarrollo del servidor y las skills |
-| `integracion/` | Capturas de los dos intentos de la ejecución integrada y sus registros |
-| `evaluacion/` | Registros de las 30 sesiones de evaluación (también en `evaluacion/logs/`) |
-| `verificacion/` | Verificación manual de 3 cifras del informe en las fuentes originales |
+| Conversación principal de la Tarea 4: plan, herramienta propia del MCP, skills nuevas, análisis, evaluación, informe y brief (3 al 7-nov) | [`evidencias_ia/00_conversacion_principal_tarea4.md`](evidencias_ia/00_conversacion_principal_tarea4.md) |
+| Desarrollo del servidor MCP del BCRP (sesión 04, 28-oct) | [`evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md`](evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md) |
+| Prueba del MCP desde Claude Code (28-oct) | [`evidencias_ia/mcp/02_prueba_mcp_en_claude_code.md`](evidencias_ia/mcp/02_prueba_mcp_en_claude_code.md) |
+| Desarrollo de las skills de la ENAHO (sesión 16, 31-oct) | [`evidencias_ia/skills/01_desarrollo_skills_enaho_sesion16.md`](evidencias_ia/skills/01_desarrollo_skills_enaho_sesion16.md) |
+| Ejecución integrada, intento 1 (skills corridas por Bash) | [`evidencias_ia/integracion/intento1_conversacion.md`](evidencias_ia/integracion/intento1_conversacion.md) · [informe de ese intento](evidencias_ia/integracion/intento1_informe_final.md) |
+| Ejecución integrada, intento 2 (4 skills + 9 llamadas al MCP) | [`evidencias_ia/integracion/intento2_conversacion.md`](evidencias_ia/integracion/intento2_conversacion.md) |
+| Las 40 sesiones de evaluación (modos A, B y solo memoria, más robustez), en bruto | [`evaluacion/logs/`](evaluacion/logs/) |
+| Capturas de la ejecución integrada y de la verificación manual | [`evidencias_ia/integracion/`](evidencias_ia/integracion/) · [`evidencias_ia/verificacion/`](evidencias_ia/verificacion/) |
 
 ## Estructura
 
@@ -153,6 +172,7 @@ Tarea_4/
 ├── salidas/            validacion.txt, indicadores.csv, analisis.txt, bcrp_*.csv, …
 ├── figuras/ · mapas/
 ├── informes/           informe_final.md, policy_brief.png/.pdf
+├── analisis/           borradores de exploración de los primeros días (no forman parte del flujo final; ver su README)
 ├── evaluacion/         preguntas.csv, robustez.csv, evaluar.py, calificar*.py, resultados.csv, comparacion.md, logs/
 └── evidencias_ia/      mcp/, skills/, integracion/, evaluacion/, verificacion/
 ```

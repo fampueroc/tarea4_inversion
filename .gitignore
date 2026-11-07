@@ -9,3 +9,6 @@ __pycache__/
 
 # Base procesada pesada (se regenera con limpiando-enaho)
 salidas/*.parquet
+
+# Configuración local de Claude Code (aprobaciones de esta computadora)
+.claude/settings.local.json

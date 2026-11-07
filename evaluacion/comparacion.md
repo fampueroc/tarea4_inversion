@@ -1,7 +1,5 @@
 # Comparación: Claude Code sin y con MCP y Skills
 
-> **Borrador.** Pendiente: revisión humana de la interpretación de C1 y C2 (columna `revision_humana` de `resultados.csv`).
-
 ## Diseño
 
 | | |
@@ -75,12 +73,25 @@ Ningún modo inventó datos. **Debilidad común en R5:** los dos supusieron que 
 3. **El modo B tuvo acceso a cifras de referencia.** `analizando-reparto/referencias/inei_pobreza_2024.csv` forma parte de la skill (lo usa para validar) y contiene cifras oficiales. En E4, Claude lo leyó, lo citó y además calculó el intervalo de forma independiente, con el mismo resultado. La respuesta es correcta, pero no puede contarse como un cálculo a ciegas.
 4. **Arranque del MCP.** En la prueba previa, el servidor MCP no alcanzó a conectar en la copia limpia porque `uv` instalaba las dependencias desde cero. Se corrigió usando el entorno ya instalado en los dos modos; la prueba fallida no se cuenta.
 5. **Dato con cuadre incompleto.** Las exportaciones mineras por departamento no suman el total oficial en 4 de 5 años (hasta 101.95 millones de US$ en 2022). La herramienta `cuadre_territorial` lo reporta en vez de ocultarlo.
+6. **Series mensuales frente a anuales.** En C1 y C2, el modo A sumó las series mensuales del BCRP (total 2020–2024: 226 365 millones de soles) y el modo B usó las anuales (226 627 millones). La diferencia es de 0.1 % y no cambia los porcentajes pedidos, pero muestra que el código improvisado puede elegir otra serie sin advertirlo.
+
+## Revisión de la autora: interpretación de C1 y C2
+
+Las cuatro respuestas cumplen el criterio fijado de antemano: cifras dentro de la tolerancia y conclusión descriptiva, sin afirmar causalidad (`REVISION_HUMANA` en `calificar.py`). La calificación no cambia. Pero la lectura completa muestra una diferencia de calidad que la calificación numérica no captura.
+
+La pregunta de investigación es de **focalización territorial**: si el reparto de la inversión pública entre departamentos guarda relación con la distribución de la **necesidad** (la población pobre) o con la de la **población total**, y cómo cambia esa relación al considerar la **densidad poblacional**. La densidad importa porque la provisión de infraestructura en territorios dispersos tiene costos por habitante más altos, de modo que un mismo nivel de inversión por persona no significa lo mismo en Loreto que en Lima. Es, por tanto, una pregunta sobre **asociación y reparto**, no sobre el efecto de la inversión en la pobreza.
+
+- **Modo A, C2:** responde las cifras, pero organiza su conclusión en torno a la causalidad («no se puede decir que la menor inversión cause la pobreza, ni que más inversión la reduciría»), que no era lo preguntado, y **no considera la densidad**. Tampoco calcula intervalos de confianza: reconoce que el orden entre Pasco y Huánuco «no es firme».
+- **Modo B, C1 y C2:** sitúa la respuesta en el marco del reparto. Da la razón inversión/pobres con su intervalo de confianza (Cajamarca 0.60 [0.54–0.68]), la compara con la parte de población y advierte que la inversión por habitante **disminuye con la densidad**, lo que es compatible con mayores costos en zonas dispersas.
+
+La diferencia se explica por el diseño: la skill `analizando-reparto` lleva incorporado el marco de la investigación (participaciones, densidad, intervalos validados), mientras que el modo A reconstruye el análisis desde cero en cada sesión y decide por su cuenta qué es relevante. Para una investigación con un enfoque teórico definido, esta es una ventaja de las skills que la exactitud numérica, igual en ambos modos, no refleja.
 
 ## Conclusión sobre la utilidad de MCP y Skills
 
 Con preguntas de cifras puntuales y datos crudos a mano, un modelo actual con Bash llega a las mismas respuestas que con MCP y Skills, y algo más rápido y barato (−16 % de tiempo, −24 % de costo). **La ventaja del MCP y las Skills no se vio en la exactitud, sino en cómo se obtiene la respuesta:**
 
 - **Trazabilidad:** el modo B cita la serie, el periodo y el cuadre contra el total oficial; el código del modo A se escribe cada vez y no queda guardado.
+- **Pertinencia:** el modo B responde dentro del marco de la investigación (reparto frente a necesidad y densidad); el modo A tiende a desviarse hacia preguntas que no se hicieron (ver la revisión de la autora).
 - **Consistencia y validación:** el modo B usa siempre el mismo método, ya validado contra el INEI (27 ámbitos, IC entre 0.95 y 1.01 veces el oficial); el modo A acertó, pero con un procedimiento distinto en cada sesión.
 - **Reutilización:** en la ejecución integrada, las mismas skills produjeron el informe completo y regeneraron salidas idénticas byte a byte.
 

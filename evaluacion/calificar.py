@@ -3,7 +3,7 @@
     uv run evaluacion/calificar.py
 
 Revisa la línea «RESPUESTA FINAL» de cada sesión (si falta, toda la respuesta). En C1 y C2 la parte numérica es
-automática; la interpretación (sin causalidad) se marca para revisión humana en la columna revision_humana.
+automática; la interpretación (sin causalidad) la revisó la autora y queda en REVISION_HUMANA.
 Sale: evaluacion/resultados.csv
 """
 import csv
@@ -35,6 +35,15 @@ def sin_causalidad(texto):
     t = texto.lower()
     return bool(re.search(r"no (prueba|permite|demuestra|implica|establece|mide)[^.]*causal|descriptiv|no causal", t))
 
+
+# Revisión humana de la interpretación (C1 y C2), hecha por la autora el 7-nov-2026 sobre las respuestas completas
+REVISION_HUMANA = {
+    ("C1", "A"): (True, "Cumple: compara partes sin afirmar causalidad (no la niega explícitamente)."),
+    ("C2", "A"): (True, "Cumple: niega la causalidad. Observación: enfoca la conclusión en la causalidad, que no era "
+                        "la pregunta, y omite la densidad poblacional."),
+    ("C1", "B"): (True, "Cumple: declara que es una comparación descriptiva de repartos; da IC de la razón."),
+    ("C2", "B"): (True, "Cumple: descriptivo, sin causalidad ni juicio de eficiencia; incorpora la densidad."),
+}
 
 CHEQUEOS = {  # id -> (función sobre el texto final, descripción); rangos de preguntas.csv
     "B1": (lambda t: hay(t, 1050.6, 1071.8), "1050.6–1071.8"),
@@ -72,9 +81,7 @@ def main():
         revision = ""
         correcta = ok_num
         if r["id"] in ("C1", "C2"):
-            causal_ok = sin_causalidad(r["respuesta"]) or r["id"] == "C1"
-            revision = ("pendiente: confirmar que no afirma causalidad"
-                        + ("" if causal_ok else " (la heurística no encontró una negación explícita)"))
+            causal_ok, revision = REVISION_HUMANA[(r["id"], r["modo"])]
             correcta = ok_num and causal_ok
         p = preguntas[r["id"]]
         filas.append({"id": r["id"], "tipo": r["tipo"], "modo": r["modo"], "pregunta": p["pregunta"],

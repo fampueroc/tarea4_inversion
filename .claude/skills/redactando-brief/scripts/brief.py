@@ -45,9 +45,10 @@ def leer():
     txt = (s / "analisis.txt").read_text(encoding="utf-8")
     m = re.search(r"Población pobre: ([+-]\d\.\d+) \| Inversión total: ([+-]\d\.\d+)", txt)
     tot = re.search(r"Total 2020–2024: ([\d,]+) millones", txt)
-    if not m or not tot or len(t) != 25:
+    dens = re.search(r"duplicar la densidad ≈ ([+-]?\d+\.\d) %", txt)
+    if not m or not tot or not dens or len(t) != 25:
         detener("salidas de analizando-reparto incompletas: vuelve a correr esa skill.")
-    return t, lima, float(m.group(1)), float(m.group(2)), int(tot.group(1).replace(",", ""))
+    return t, lima, float(m.group(1)), float(m.group(2)), int(tot.group(1).replace(",", "")), float(dens.group(1))
 
 
 def texto(fig, x, y, s, size, peso="normal", color=TINTA, ancho=None, **kw):
@@ -58,7 +59,7 @@ def texto(fig, x, y, s, size, peso="normal", color=TINTA, ancho=None, **kw):
 
 
 def main():
-    t, lima, ic_pobres, ic_inv, inv_total = leer()
+    t, lima, ic_pobres, ic_inv, inv_total, dens = leer()
     orden = t.sort_values("pobreza_pct", ascending=False)
     top5 = orden.head(5)
     debajo = t[t.ratio_ic_sup < 1].sort_values("inversion_vs_pobres")
@@ -130,9 +131,11 @@ def main():
     texto(fig, x0, y2 - 0.022,
           f"Si la inversión siguiera a la pobreza, la barra azul igualaría a la naranja. El índice de concentración de "
           f"la inversión es {coma(ic_inv, 3)} (cercano a 0: reparto como la población); el de los pobres, "
-          f"{coma(ic_pobres, 3).replace('-', '−')} (concentrados en los departamentos más pobres). Es una comparación descriptiva: "
-          "no mide si la inversión reduce la pobreza ni juzga la eficiencia de ningún gobierno. El reparto puede "
-          "responder a costos, obras de alcance nacional o reglas como el canon.", 9, color=SUAVE, ancho=100)
+          f"{coma(ic_pobres, 3).replace('-', '−')} (concentrados en los departamentos más pobres). Con igual densidad "
+          "poblacional, la pobreza no se asocia con más inversión por habitante; la densidad sí: duplicarla se asocia "
+          f"con {coma(dens).replace('-', '−')} % de inversión por habitante, coherente con mayores costos en zonas "
+          "dispersas. Es una comparación descriptiva de repartos: no juzga la eficiencia de ningún gobierno.",
+          9, color=SUAVE, ancho=100)
 
     texto(fig, x0, 0.135, "Preguntas para quien decide", 11, "bold")
     preguntas = ["¿Los criterios de asignación de la inversión consideran cuántos pobres hay en cada departamento, "

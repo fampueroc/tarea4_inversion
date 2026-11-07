@@ -1,6 +1,6 @@
 # ¿La inversión pública 2020–2024 se repartió donde vive la población pobre?
 
-Informe final · Tarea 4, Python Intermedio · Elaborado con Claude Code (servidor MCP `bcrp` y skills del proyecto)
+Informe final · Tarea 4, Python Intermedio · Autora: Fiorella Ampuero · Elaborado con Claude Code (servidor MCP `bcrp` y skills del proyecto)
 
 ---
 
@@ -130,7 +130,7 @@ Esto describe *cómo* se repartió la inversión, no *por qué* ni con qué efec
 7. **Regresión con 25 observaciones.** La regresión del hallazgo 3 es descriptiva, tiene poca potencia y el coeficiente de pobreza no es estadísticamente distinto de cero.
 8. **Conteos absolutos.** No se reportan números de pobres porque la base pública no reproduce el total ajustado del INEI (sección 2.2).
 
-**Fallas de herramientas.** Ninguna herramienta falló. Todas las llamadas al MCP `bcrp` devolvieron datos para los 25 departamentos sin años faltantes, y las cuatro skills terminaron con sus validaciones aprobadas. La única irregularidad de datos es la del punto 6. El servidor MCP `ide` no se conectó en esta sesión, pero no se usó para el análisis.
+**Fallas de herramientas.** Ninguna herramienta falló. Todas las llamadas al MCP `bcrp` devolvieron datos para los 25 departamentos sin años faltantes, y las cuatro skills terminaron con sus validaciones aprobadas. La única irregularidad de datos es la del punto 6.
 
 ## 7. Reproducibilidad
 

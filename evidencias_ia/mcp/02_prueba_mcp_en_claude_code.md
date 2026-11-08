@@ -88,6 +88,17 @@ La serie **PD04722MM** (Tasa de Referencia de la Política Monetaria, mensual) t
 
 El inicio coincide con la adopción del régimen actual: el BCRP empezó a usar una tasa de referencia como instrumento operativo en septiembre de 2003, dentro del esquema de metas de inflación que había adoptado en 2002. Antes de 2004 no existe esta serie. Para ese periodo habría que usar otras tasas, como la interbancaria.
 
+## 👤 Usuaria · 2026-10-29 01:39 UTC
+
+/mcp__bcrp__postura_monetaria 2021-01 2026-09
+
+<details open><summary>Texto que devuelve el prompt del servidor MCP</summary>
+
+```text
+Usa la herramienta tasa_real del servidor bcrp entre 2021-01 y 2026-09 y escribe un informe breve en español: (1) la tasa real y la postura del último mes, (2) los tramos restrictivos, neutrales y expansivos con sus fechas, (3) los meses con tasa real negativa y (4) la tasa real mínima y máxima. No calcules a mano: cada cifra debe salir de la herramienta y citar el código de la serie (PD04722MM o PN01273PM) y el periodo. Termina con las URLs de las fuentes.
+```
+</details>
+
 > 🔧 **mcp__bcrp__tasa_real** `{"desde": "2021-01", "hasta": "2026-09"}`
 
 <details><summary>Resultado de la herramienta</summary>

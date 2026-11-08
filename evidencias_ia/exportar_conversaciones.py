@@ -24,6 +24,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 PROYECTOS = Path.home() / ".claude" / "projects"
 CORREO = re.compile(r"[\w.+\\-]+@[\w\\-]+\\?\.[\w.\\-]+")   # cualquier correo, también escrito con «\.» (no se escribe el de la autora)
 USUARIO = re.compile(r"(?<![A-Za-z])" + re.escape(Path.home().name) + r"(?![A-Za-z])", re.I)   # usuario de Windows, leído del sistema
+PROMPT_MCP = re.compile(r"<command-name>(?P<nombre>/mcp__[\w-]+)</command-name>\s*<command-args>(?P<args>.*?)</command-args>", re.S)
 RECORDATORIO = re.compile(r"<system-reminder>.*?</system-reminder>", re.S)
 ORGANIZACION = re.compile(r"[organización]|\bIPA\b|[organización]")   # «[organización]» solo como sigla
 MEMORIA = re.compile(r"[\\/]memory[\\/]|MEMORY\.md|originSessionId|node_type: memory|[nota omitida]|[nota omitida]|Diplomado PUCP\. Trab", re.I)   # notas de memoria de Claude
@@ -35,6 +36,8 @@ SESIONES = [  # (carpeta del proyecto, id de sesión, archivo de salida, título
      "mcp/01_desarrollo_mcp_bcrp_sesion04.md", "Desarrollo del servidor MCP del BCRP (ejercicio de la sesión 04, 28-oct-2026)"),
     ("C--Users-{u}-Documents-GitHub-mcp-bcrp", "44379eac-435e-4c70-a879-a922770b1268",
      "mcp/02_prueba_mcp_en_claude_code.md", "Prueba del MCP desde Claude Code (28-oct-2026)"),
+    ("C--Users-{u}-Documents-GitHub-Python-Interm-Tareas-Tarea-4", "288b6482-a668-4558-85d4-ed6833fd096e",
+     "mcp/03_prompt_y_recurso.md", "Prompt informe y recurso bcrp://serie/RD16682DA del MCP desde Claude Code (8-nov-2026)"),
     ("C--Users-{u}-Documents-GitHub-Data-Science-Python", "b521c8f1-adac-42bd-8d75-9d9720577812",
      "skills/01_desarrollo_skills_enaho_sesion16.md", "Desarrollo de las skills de la ENAHO (ejercicio de la sesión 16, 31-oct-2026)"),
     ("C--Users-{u}-Documents-GitHub-Python-Interm-Tareas-Tarea-4", "1bb110e2-4f4e-4827-909e-21b1901164f9",
@@ -93,12 +96,34 @@ def exportar(origen, destino, titulo):
               "*Exportado de Claude Code. Datos personales reemplazados por [correo] y [usuario]; recordatorios internos "
               "del sistema y razonamiento interno omitidos; resultados largos de herramientas recortados.*", ""]
     n_usuaria = n_claude = n_herr = 0
+    prompt_mcp_pendiente = False
     for linea in origen.read_text(encoding="utf-8").splitlines():
         try:
             e = json.loads(linea)
         except json.JSONDecodeError:
             continue
+        hora = (e.get("timestamp") or "")[:16].replace("T", " ")
+        contenido = e.get("message", {}).get("content", "")
+        # Prompt de un servidor MCP invocado con «/mcp__servidor__prompt»: se muestra el comando y el texto que
+        # devuelve el servidor (Claude Code lo guarda como mensaje interno justo después del comando).
+        comando = PROMPT_MCP.search(contenido) if isinstance(contenido, str) else None
+        if e.get("type") == "user" and comando:
+            n_usuaria += 1
+            lineas += [f"## 👤 Usuaria · {hora} UTC", "", limpiar(f"{comando['nombre']} {comando['args']}").strip(), ""]
+            prompt_mcp_pendiente = True
+            continue
+        if e.get("isMeta") and e.get("type") == "user" and prompt_mcp_pendiente:
+            prompt_mcp_pendiente = False
+            texto = texto_de(contenido)[0]
+            lineas += ["<details open><summary>Texto que devuelve el prompt del servidor MCP</summary>", "",
+                       "```text", limpiar(texto).strip().replace("```", "ʼʼʼ"), "```", "</details>", ""]
+            continue
+        prompt_mcp_pendiente = False if e.get("type") == "assistant" else prompt_mcp_pendiente
         if e.get("type") not in ("user", "assistant") or e.get("isMeta"):
+            continue
+        if e.get("isCompactSummary"):  # resumen automático al compactar el contexto: repite notas internas
+            lineas += [f"*[{(e.get('timestamp') or '')[:16].replace('T', ' ')}] Resumen automático del contexto "
+                       "(compactación de Claude Code) omitido; la conversación sigue a continuación.*", ""]
             continue
         texto, usos, resultados = texto_de(e.get("message", {}).get("content", ""))
         hora = (e.get("timestamp") or "")[:16].replace("T", " ")

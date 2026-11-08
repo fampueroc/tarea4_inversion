@@ -10,6 +10,7 @@ Autora: **Fiorella Ampuero**, con Claude Code. Curso Python Intermedio, Tarea 4 
 |---|---|
 | Informe final de investigación | [`informes/informe_final.md`](informes/informe_final.md) |
 | Pruebas del servidor MCP: **10 passed** | [`evidencias_ia/mcp/pruebas.txt`](evidencias_ia/mcp/pruebas.txt) · código: [`mcp/server.py`](mcp/server.py), [`mcp/test_server.py`](mcp/test_server.py), [`mcp/test_cuadre.py`](mcp/test_cuadre.py) |
+| Recurso y prompt del MCP usados desde Claude Code | [`evidencias_ia/mcp/03_prompt_y_recurso.md`](evidencias_ia/mcp/03_prompt_y_recurso.md) · capturas: [prompt (1)](evidencias_ia/mcp/mcp_03_prompt_informe_1.png), [prompt (2)](evidencias_ia/mcp/mcp_03_prompt_informe_2.png), [recurso](evidencias_ia/mcp/mcp_04_recurso_serie.png) |
 | Validación de la ENAHO 2024 (27,58 %, 108 664 residentes, 25 departamentos) | [`salidas/validacion.txt`](salidas/validacion.txt) |
 | Mapa con las 25 unidades y comparación con la sesión 16 | [`mapas/pobreza_departamento.png`](mapas/pobreza_departamento.png) · [`salidas/mapa_vs_referencia.csv`](salidas/mapa_vs_referencia.csv) |
 | Indicadores del cruce BCRP + ENAHO | [`salidas/indicadores.csv`](salidas/indicadores.csv) · [`salidas/analisis.txt`](salidas/analisis.txt) |
@@ -60,6 +61,8 @@ El MCP trae los datos del BCRP y los guarda con el código y la URL de cada seri
 | **Herramienta propia** | **`cuadre_territorial`** | Un indicador por departamento (inversión de los 3 niveles de gobierno, crédito, depósitos, exportaciones mineras) con la **llave ubigeo del INEI**; verifica que los 25 departamentos **sumen el total oficial** cada año, explica las diferencias (p. ej., la Municipalidad Metropolitana de Lima) y, si un año no existe, dice cuál es el último publicado en vez de rellenar. Con `guardar=True` escribe `salidas/bcrp_*.csv` |
 | Recurso | `bcrp://serie/{codigo}` | Ficha descriptiva de una serie |
 | Prompts | `postura_monetaria`, `informe` | Informes con cada cifra citada |
+
+El recurso y el prompt `informe` se usaron desde Claude Code el 8-nov (`@bcrp:bcrp://serie/RD16682DA` y `/mcp__bcrp__informe`): [conversación](evidencias_ia/mcp/03_prompt_y_recurso.md) y capturas en [`evidencias_ia/mcp/`](evidencias_ia/mcp/). Claude Code separa los argumentos de un prompt por espacios, así que el prompt recibió solo `tema = «inversión»` (se ve en el texto exportado); el agente igual armó el informe por departamento con 12 llamadas al MCP.
 
 **Pruebas:** `uv run pytest` → **10 passed**: las 8 originales de la sesión 04 (`mcp/test_server.py`, sin cambios) y 2 propias de `cuadre_territorial` (`mcp/test_cuadre.py`): el cuadre de la inversión regional 2024 con Lima Metropolitana y el aviso cuando un dato no existe.
 
@@ -155,6 +158,7 @@ El desarrollo se hizo con Claude Code. Las conversaciones completas están expor
 | Conversación principal de la Tarea 4: plan, herramienta propia del MCP, skills nuevas, análisis, evaluación, informe y brief (3 al 7-nov) | [`evidencias_ia/00_conversacion_principal_tarea4.md`](evidencias_ia/00_conversacion_principal_tarea4.md) |
 | Desarrollo del servidor MCP del BCRP (sesión 04, 28-oct) | [`evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md`](evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md) |
 | Prueba del MCP desde Claude Code (28-oct) | [`evidencias_ia/mcp/02_prueba_mcp_en_claude_code.md`](evidencias_ia/mcp/02_prueba_mcp_en_claude_code.md) |
+| Prompt `/mcp__bcrp__informe` y recurso `@bcrp:bcrp://serie/RD16682DA` desde Claude Code (8-nov) | [`evidencias_ia/mcp/03_prompt_y_recurso.md`](evidencias_ia/mcp/03_prompt_y_recurso.md) · [capturas](evidencias_ia/mcp/) |
 | Desarrollo de las skills de la ENAHO (sesión 16, 31-oct) | [`evidencias_ia/skills/01_desarrollo_skills_enaho_sesion16.md`](evidencias_ia/skills/01_desarrollo_skills_enaho_sesion16.md) |
 | Ejecución integrada, intento 1 (skills corridas por Bash) | [`evidencias_ia/integracion/intento1_conversacion.md`](evidencias_ia/integracion/intento1_conversacion.md) · [informe de ese intento](evidencias_ia/integracion/intento1_informe_final.md) |
 | Ejecución integrada, intento 2 (4 skills + 9 llamadas al MCP) | [`evidencias_ia/integracion/intento2_conversacion.md`](evidencias_ia/integracion/intento2_conversacion.md) |

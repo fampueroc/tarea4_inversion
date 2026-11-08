@@ -1,0 +1,19 @@
+10 sesiones con sonnet, 4 a la vez...
+B1 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+B2 M: 180.7 s, MCP=False, skills=False 
+B3 M: 5.7 s, MCP=False, skills=False 
+B4 M: 9.0 s, MCP=False, skills=False 
+E1 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+E2 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+E3 M: 4.7 s, MCP=False, skills=False 
+E4 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+C1 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+C2 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+Guardado: evaluacion\corridas.csv
+5 sesiones con sonnet, 4 a la vez...
+R1 M: 2315.6 s, MCP=False, skills=False tiempo agotado (300 s)
+R2 M: 5.5 s, MCP=False, skills=False 
+R3 M: 4.8 s, MCP=False, skills=False 
+R4 M: 2316.3 s, MCP=False, skills=False tiempo agotado (300 s)
+R5 M: 8.4 s, MCP=False, skills=False 
+Guardado: evaluacion\robustez_corridas.csv

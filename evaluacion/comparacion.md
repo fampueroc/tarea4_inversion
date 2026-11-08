@@ -75,6 +75,10 @@ Ningún modo inventó datos. **Debilidad común en R5:** los dos supusieron que 
 5. **Dato con cuadre incompleto.** Las exportaciones mineras por departamento no suman el total oficial en 4 de 5 años (hasta 101.95 millones de US$ en 2022). La herramienta `cuadre_territorial` lo reporta en vez de ocultarlo.
 6. **Series mensuales frente a anuales.** En C1 y C2, el modo A sumó las series mensuales del BCRP (total 2020–2024: 226 365 millones de soles) y el modo B usó las anuales (226 627 millones). La diferencia es de 0.1 % y no cambia los porcentajes pedidos, pero muestra que el código improvisado puede elegir otra serie sin advertirlo.
 
+## Intento de un tercer modo, «solo memoria» (no incluido en los resultados)
+
+Para ver la escalera completa (memoria → herramientas generales → MCP y Skills) se intentó correr las 10 preguntas y las 5 de robustez **sin ninguna herramienta** (`--tools ""`, modo `M` de `evaluar.py`). El intento no produjo resultados comparables: como la instrucción, idéntica en todos los modos, pide buscar datos con las herramientas disponibles, el modelo escribió llamadas a herramientas como texto en lugar de responder, y 9 de las 15 sesiones agotaron el límite de 300 s sin respuesta. Por eso **no se cuenta como modo evaluado**. Cambiar la instrucción solo para este modo rompería la condición de «mismas instrucciones». Los registros quedan como evidencia en `logs/*_M.jsonl` y `ejecucion_memoria.txt`.
+
 ## Revisión de la autora: interpretación de C1 y C2
 
 Las cuatro respuestas cumplen el criterio fijado de antemano: cifras dentro de la tolerancia y conclusión descriptiva, sin afirmar causalidad (`REVISION_HUMANA` en `calificar.py`). La calificación no cambia. Pero la lectura completa muestra una diferencia de calidad que la calificación numérica no captura.

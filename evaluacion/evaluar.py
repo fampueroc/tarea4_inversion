@@ -6,6 +6,7 @@
 
 Modo A: Claude Code sin el MCP ni las skills del proyecto (copia sin .claude/ ni .mcp.json, y Skill bloqueada).
 Modo B: Claude Code con el servidor MCP bcrp y las skills de .claude/skills/.
+Modo M (extra): solo memoria, sin ninguna herramienta, para ver la escalera completa.
 En los dos: la misma instrucción, el mismo modelo, los mismos datos crudos (datos/), herramientas generales
 (Bash, PowerShell, Read, Write, Edit, Glob, Grep), el mismo entorno de Python y SIN web (WebSearch y WebFetch bloqueadas). Cada pregunta corre
 en su propia sesión (claude -p, sin persistencia) dentro de una copia limpia fuera del repositorio, que no lleva
@@ -40,6 +41,8 @@ MODOS = {
     "A": {"copiar": COMUNES, "permitidas": GENERALES, "bloqueadas": ["Skill", "WebSearch", "WebFetch"], "mcp": False},
     "B": {"copiar": COMUNES + [".claude", "mcp", ".mcp.json"], "permitidas": GENERALES + ["Skill", "mcp__bcrp"],
           "bloqueadas": ["WebSearch", "WebFetch"], "mcp": True},
+    # Modo M (extra): solo memoria. Sin ninguna herramienta (--tools "") y en una carpeta vacía.
+    "M": {"copiar": [], "permitidas": [], "bloqueadas": [], "mcp": False},
 }
 
 
@@ -58,8 +61,11 @@ def correr(fila, modo, modelo, limite):
     copia = preparar_copia(modo)
     cfg = MODOS[modo]
     cmd = ["claude", "-p", INSTRUCCION + fila["pregunta"], "--model", modelo, "--output-format", "stream-json",
-           "--verbose", "--no-session-persistence", "--strict-mcp-config",
-           "--allowedTools", *cfg["permitidas"], "--disallowedTools", *cfg["bloqueadas"]]
+           "--verbose", "--no-session-persistence", "--strict-mcp-config"]
+    if modo == "M":
+        cmd += ["--tools", ""]
+    else:
+        cmd += ["--allowedTools", *cfg["permitidas"], "--disallowedTools", *cfg["bloqueadas"]]
     if cfg["mcp"]:
         cmd += ["--mcp-config", str(copia / ".mcp.json")]
     log = LOGS / f"{fila['id']}_{modo}.jsonl"

@@ -15,84 +15,45 @@
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-10 sesiones con sonnet, 4 a la vez...
-
-R1 A: 23.6 s, MCP=False, skills=False 
-
-R2 A: 19.0 s, MCP=False, skills=False 
-
-R3 A: 31.1 s, MCP=False, skills=False 
-
-R4 A: 27.6 s, MCP=False, skills=False 
-
-R5 A: 12.3 s, MCP=False, skills=False 
-
-R1 B: 29.0 s, MCP=True, skills=False 
-
-R2 B: 19.3 s, MCP=True, skills=False 
-
-R3 B: 40.1 s, MCP=True, skills=False 
-
-R4 B: 30.7 s, MCP=False, skills=False 
-
-R5 B: 20.4 s, MCP=True, skills=False 
-
-Guardado: evaluacion\robustez_corridas.csv
-
-===== R1 A (23.6 s) [Glob | Bash | Bash | Bash | Bash]
-
- a la API oficial y no devolvió ningún dato para esos años. La serie anual termina en 2022.
-
-- **Otras series:** busqué en el catálogo alguna otra serie de exportaciones regionales mineras que llegara a 2024 y no encontré ninguna.
-
-- **Descartados:** los archivos ENAHO (zips) son de encuestas de hogares y no sirven para esto. La serie de producción minera de Arequipa llega a 2025, pero está en toneladas y gramos, no en dólares de exportación.
-
-
-
-Los últimos valores publicados por el BCRP, en millones de US$ FOB, son estos:
-
-
-
-| Año | Exportaciones tradicionales mineras de Arequipa |
-
-|---|---|
-
-| 2020 | 3 416,2 |
-
-| 2021 | 4 981,9 |
-
-| 2022 | 5 377,9 |
-
-
-
-Estimar 2024 a partir de la producción o de los precios sería inventar una cifra, y no lo hice.
-
-
-
-RESPUESTA FINAL: No disponible con certeza. El BCRP no publica el dato de 2024 en las series consultadas, que llegan hasta 2022 (US$ 5 377,9 millones).
-
-===== R2 A (19.0 s) [Glob | Bash | Bash | Bash]
-
- gobierno central. Ninguna está desagregada por departamento.
-
-- **Lo que hay sobre Cusco:** las series que mencionan Cusco son de cheques de la CMAC Cuzco, precios históricos y producción minera (por ejemplo, cobre en Cusco, RD12957DM). Ninguna es de canon minero.
-
-- **Otros archivos:** los dos `.zip` de la carpeta son módulos de la ENAHO 2024 (hogares). No traen datos de canon.
-
-
-
-No voy a estimar la cifra a partir de la producción de cobre ni de otras series. Sería inventarla.
-
-
-
-Para obtenerla, conviene consultar la fuente primaria. El MEF publica las transferencias de canon minero por departamento en su portal de Transparencia Económica. En BCRPData, el canon por departamento no aparece en el catálogo que tengo aquí.
-
-
-
-RESPUESTA FINAL: No se pudo determinar con certeza. Los datos disponibles en esta carpeta, del catálogo del BCRP y de la ENAHO, no incluyen el canon minero de Cusco en 2024.
-
-===== R3 A (31.1 s) [Glob | Bash | Bash | Bash | Bash | Bash | Bash | Bash | Bash]
-
+10 sesiones con sonnet, 4 a la vez...
+R1 A: 23.6 s, MCP=False, skills=False 
+R2 A: 19.0 s, MCP=False, skills=False 
+R3 A: 31.1 s, MCP=False, skills=False 
+R4 A: 27.6 s, MCP=False, skills=False 
+R5 A: 12.3 s, MCP=False, skills=False 
+R1 B: 29.0 s, MCP=True, skills=False 
+R2 B: 19.3 s, MCP=True, skills=False 
+R3 B: 40.1 s, MCP=True, skills=False 
+R4 B: 30.7 s, MCP=False, skills=False 
+R5 B: 20.4 s, MCP=True, skills=False 
+Guardado: evaluacion\robustez_corridas.csv
+===== R1 A (23.6 s) [Glob | Bash | Bash | Bash | Bash]
+ a la API oficial y no devolvió ningún dato para esos años. La serie anual termina en 2022.
+- **Otras series:** busqué en el catálogo alguna otra serie de exportaciones regionales mineras que llegara a 2024 y no encontré ninguna.
+- **Descartados:** los archivos ENAHO (zips) son de encuestas de hogares y no sirven para esto. La serie de producción minera de Arequipa llega a 2025, pero está en toneladas y gramos, no en dólares de exportación.
+
+Los últimos valores publicados por el BCRP, en millones de US$ FOB, son estos:
+
+| Año | Exportaciones tradicionales mineras de Arequipa |
+|---|---|
+| 2020 | 3 416,2 |
+| 2021 | 4 981,9 |
+| 2022 | 5 377,9 |
+
+Estimar 2024 a partir de la producción o de los precios sería inventar una cifra, y no lo hice.
+
+RESPUESTA FINAL: No disponible con certeza. El BCRP no publica el dato de 2024 en las series consultadas, que llegan hasta 2022 (US$ 5 377,9 millones).
+===== R2 A (19.0 s) [Glob | Bash | Bash | Bash]
+ gobierno central. Ninguna está desagregada por departamento.
+- **Lo que hay sobre Cusco:** las series que mencionan Cusco son de cheques de la CMAC Cuzco, precios históricos y producción minera (por ejemplo, cobre en Cusco, RD12957DM). Ninguna es de canon minero.
+- **Otros archivos:** los dos `.zip` de la carpeta son módulos de la ENAHO 2024 (hogares). No traen datos de canon.
+
+No voy a estimar la cifra a partir de la producción de cobre ni de otras series. Sería inventarla.
+
+Para obtenerla, conviene consultar la fuente primaria. El MEF publica las transferencias de canon minero por departamento en su portal de Transparencia Económica. En BCRPData, el canon por departamento no aparece en el catálogo que tengo aquí.
+
+RESPUESTA FINAL: No se pudo determinar con certeza. Los datos disponibles en esta carpeta, del catálogo del BCRP y de la ENAHO, no incluyen el canon minero de Cusco en 2024.
+===== R3 A (31.1 s) [Glob | Bash | Bash | Bash | Bash | Bash | Bash | Bash | Bash]
 nal | 
 … [8014 caracteres más omitidos]
 ```
@@ -108,10 +69,8 @@ Terminaron las pruebas de robustez. Las califico con los criterios registrados e
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Modo A: 5/5 cumplen
-
-Modo B: 5/5 cumplen
-
+Modo A: 5/5 cumplen
+Modo B: 5/5 cumplen
 warning: in the working copy of 'evaluacion/logs/R3_B.jsonl', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'evaluacion/logs/R4_B.jsonl', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'evaluacion/logs/R5_B.jsonl', LF will be replaced by CRLF the next time Git touches it
@@ -497,32 +456,19 @@ Permission for this action was denied by the Claude Code auto mode classifier. R
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-mensajes de la usuaria: 1
-
-   2026-11-06T07:46:43.220Z   <pasted_content id="73f9"> Pregunta de investigación: entre 2020 y 2024, ¿la inversión p
-
-5 Bash
-
-1 ToolSearch
-
-1 mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobierno_nacional", "desde": "2020", "hasta": "2024", "guardar": 
-
-1 mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobiernos_regionales", "desde": "2020", "hasta": "2024", "guardar
-
-1 mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobiernos_locales", "desde": "2020", "hasta": "2024", "guardar": 
-
-1 mcp__bcrp__cuadre_territorial {"indicador": "exportaciones_mineras", "desde": "2018", "hasta": "2022", "guardar": true}
-
-1 mcp__bcrp__buscar_series {"texto": "inversión gobierno nacional", "frecuencia": "Anual"}
-
-1 mcp__bcrp__resumen {"codigo": "RD16682DA", "desde": "2020", "hasta": "2024"}
-
-4 Read
-
-1 Write
-
-1 mcp__bcrp__serie {"codigo": "PM40047BA", "desde": "2018", "hasta": "2018"}
-
+mensajes de la usuaria: 1
+   2026-11-06T07:46:43.220Z   <pasted_content id="73f9"> Pregunta de investigación: entre 2020 y 2024, ¿la inversión p
+5 Bash
+1 ToolSearch
+1 mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobierno_nacional", "desde": "2020", "hasta": "2024", "guardar": 
+1 mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobiernos_regionales", "desde": "2020", "hasta": "2024", "guardar
+1 mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobiernos_locales", "desde": "2020", "hasta": "2024", "guardar": 
+1 mcp__bcrp__cuadre_territorial {"indicador": "exportaciones_mineras", "desde": "2018", "hasta": "2022", "guardar": true}
+1 mcp__bcrp__buscar_series {"texto": "inversión gobierno nacional", "frecuencia": "Anual"}
+1 mcp__bcrp__resumen {"codigo": "RD16682DA", "desde": "2020", "hasta": "2024"}
+4 Read
+1 Write
+1 mcp__bcrp__serie {"codigo": "PM40047BA", "desde": "2018", "hasta": "2018"}
 modelo: {'claude-opus-5-5'}
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -533,24 +479,15 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
->> Bash {"command": "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\"; ls -la; ls analisis informes datos .claude .claude/skills 2>/dev/null; cat CLAUDE.md 2>/dev/null | head -80", "description": "List project structure"}
-
->> Bash {"command": "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\"; for s in limpiando-enaho graficando-enaho mapeando-enaho analizando-reparto; do echo \"=== $s\"; ls -R .claude/skills/$s; cat .claude/skills/$s/SKILL.md; done; cat README.md",
-
->> Bash {"command": "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\"; ls salidas; S=.claude/skills/limpiando-enaho; uv run \"$S/scripts/limpiar.py\" --anio 2024 2>&1 | tail -30; cat salidas/validacion.txt", "description": "Clean ENAHO 2024 and v
-
->> Bash {"command": "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\"; echo \"=== GRAFICO\"; uv run .claude/skills/graficando-enaho/scripts/graficar.py --por departamento 2>&1 | tail -40; echo \"=== MAPA\"; uv run .claude/skills/mapeando-enaho/sc
-
->> Bash {"command": "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\"; cat salidas/analisis.txt; echo; head -3 salidas/indicadores.csv; uv run python -c \"\nimport pandas as pd; d=pd.read_csv('salidas/indicadores.csv'); pd.set_option('display.wid
-
->> Read {"file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\figuras\\bcrp_inversion_anual.png"}
-
->> Read {"file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\figuras\\pobreza_departamento.png"}
-
->> Read {"file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\mapas\\pobreza_departamento.png"}
-
->> Read {"file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\figuras\\inversion_vs_pobres.png"}
-
+>> Bash {"command": "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\"; ls -la; ls analisis informes datos .claude .claude/skills 2>/dev/null; cat CLAUDE.md 2>/dev/null | head -80", "description": "List project structure"}
+>> Bash {"command": "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\"; for s in limpiando-enaho graficando-enaho mapeando-enaho analizando-reparto; do echo \"=== $s\"; ls -R .claude/skills/$s; cat .claude/skills/$s/SKILL.md; done; cat README.md",
+>> Bash {"command": "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\"; ls salidas; S=.claude/skills/limpiando-enaho; uv run \"$S/scripts/limpiar.py\" --anio 2024 2>&1 | tail -30; cat salidas/validacion.txt", "description": "Clean ENAHO 2024 and v
+>> Bash {"command": "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\"; echo \"=== GRAFICO\"; uv run .claude/skills/graficando-enaho/scripts/graficar.py --por departamento 2>&1 | tail -40; echo \"=== MAPA\"; uv run .claude/skills/mapeando-enaho/sc
+>> Bash {"command": "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\"; cat salidas/analisis.txt; echo; head -3 salidas/indicadores.csv; uv run python -c \"\nimport pandas as pd; d=pd.read_csv('salidas/indicadores.csv'); pd.set_option('display.wid
+>> Read {"file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\figuras\\bcrp_inversion_anual.png"}
+>> Read {"file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\figuras\\pobreza_departamento.png"}
+>> Read {"file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\mapas\\pobreza_departamento.png"}
+>> Read {"file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\figuras\\inversion_vs_pobres.png"}
 >> Write {"file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\informes\\informe_final.md", "content": "# ¿La inversión pública se reparte donde vive la población pobre? Perú, 2020–2024\n\n*Informe final, Tarea 4. Fiorella Ampuero, con
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -1208,46 +1145,26 @@ Mientras tanto, reviso el registro de esta segunda ejecución.
 ```text
 /c/Users/[usuario]/.claude/projects/C--Users-[usuario]-Documents-GitHub-Python-Interm-Tareas-Tarea-4/ff4b3efb-1caf-4214-8fff-c882108a2032.jsonl
 /c/Users/[usuario]/.claude/projects/C--Users-[usuario]-Documents-GitHub-Python-Interm-Tareas-Tarea-4/1bb110e2-4f4e-4827-909e-21b1901164f9.jsonl
-ff4b3efb-1caf-4214-8fff-c882108a2032.jsonl
-
->> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && ls -la && cat CLAUDE.md 2>/dev/null | head -80 && ls .claude .claude/skills
-
->> ToolSearch {"query": "bcrp", "max_results": 10}
-
->> mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobierno_nacional", "desde": "2020", "hasta": "2024", "guardar": true}
-
->> mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobiernos_regionales", "desde": "2020", "hasta": "2024", "guardar": true}
-
->> mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobiernos_locales", "desde": "2020", "hasta": "2024", "guardar": true}
-
->> mcp__bcrp__cuadre_territorial {"indicador": "exportaciones_mineras", "desde": "2018", "hasta": "2022", "guardar": true}
-
->> mcp__bcrp__buscar_series {"texto": "inversión gobierno nacional", "frecuencia": "Anual"}
-
->> mcp__bcrp__resumen {"codigo": "RD16682DA", "desde": "2020", "hasta": "2024"}
-
->> Skill "limpiando-enaho"
-
->> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && ls salidas; ls salidas/personas_2024.parquet salidas/validacion.txt 2>&1"
-
->> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && uv run \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.c
-
->> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && S=\"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.claude
-
->> Skill "graficando-enaho"
-
->> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && uv run \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.c
-
->> Read "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\figuras\\pobreza_departamento.png"
-
->> Skill "mapeando-enaho"
-
->> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && uv run \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.c
-
->> Read "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\mapas\\pobreza_departamento.png"
-
->> Skill "analizando-reparto"
-
+ff4b3efb-1caf-4214-8fff-c882108a2032.jsonl
+>> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && ls -la && cat CLAUDE.md 2>/dev/null | head -80 && ls .claude .claude/skills
+>> ToolSearch {"query": "bcrp", "max_results": 10}
+>> mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobierno_nacional", "desde": "2020", "hasta": "2024", "guardar": true}
+>> mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobiernos_regionales", "desde": "2020", "hasta": "2024", "guardar": true}
+>> mcp__bcrp__cuadre_territorial {"indicador": "inversion_gobiernos_locales", "desde": "2020", "hasta": "2024", "guardar": true}
+>> mcp__bcrp__cuadre_territorial {"indicador": "exportaciones_mineras", "desde": "2018", "hasta": "2022", "guardar": true}
+>> mcp__bcrp__buscar_series {"texto": "inversión gobierno nacional", "frecuencia": "Anual"}
+>> mcp__bcrp__resumen {"codigo": "RD16682DA", "desde": "2020", "hasta": "2024"}
+>> Skill "limpiando-enaho"
+>> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && ls salidas; ls salidas/personas_2024.parquet salidas/validacion.txt 2>&1"
+>> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && uv run \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.c
+>> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && S=\"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.claude
+>> Skill "graficando-enaho"
+>> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && uv run \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.c
+>> Read "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\figuras\\pobreza_departamento.png"
+>> Skill "mapeando-enaho"
+>> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && uv run \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.c
+>> Read "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\mapas\\pobreza_departamento.png"
+>> Skill "analizando-reparto"
 >> Bash "cd \"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4\" && uv run \"C:/Users/[usuar
 … [1547 caracteres más omitidos]
 ```
@@ -1296,12 +1213,9 @@ ff4b3efb-1caf-4214-8fff-c882108a2032.jsonl
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Figura: figuras\pobreza_area.png
-
-Figura: figuras\pobreza_sexo.png
-
-Figura: figuras\pobreza_edad.png
-
+Figura: figuras\pobreza_area.png
+Figura: figuras\pobreza_sexo.png
+Figura: figuras\pobreza_edad.png
 ?? analisis/
 ?? evidencias_ia/
 ?? informes/
@@ -1489,60 +1403,33 @@ ok, eso ya más tarde dormiré un poco
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-A ok 10 prom 29.0 mediana 22.1 costo 0.76 turnos 6.5
-
-    BCRP 17.1
-
-    ENAHO 23.6
-
-    Ambas 63.8
-
-B ok 10 prom 34.7 mediana 22.9 costo 1.0 turnos 6.7
-
-    BCRP 21.3
-
-    ENAHO 28.3
-
-    Ambas 74.5
-
-B1 A 15.4 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-B2 A 22.3 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-B3 A 15.0 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-B4 A 15.8 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-E1 A 23.2 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-E2 A 21.9 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-E3 A 20.3 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-E4 A 29.0 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-C1 A 29.9 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-C2 A 97.6 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-B1 B 20.2 True False MCP bcrp (API del BCRP)
-
-B2 B 22.2 True False MCP bcrp (API del BCRP)
-
-B3 B 19.6 True False MCP bcrp (API del BCRP)
-
-B4 B 23.2 True False MCP bcrp (API del BCRP)
-
-E1 B 22.6 False True skills: limpiando-enaho
-
-E2 B 36.4 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-E3 B 21.7 False True skills: limpiando-enaho
-
-E4 B 32.5 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
-
-C1 B 71.3 True True MCP bcrp (API del BCRP); skills: analizando-reparto
-
+A ok 10 prom 29.0 mediana 22.1 costo 0.76 turnos 6.5
+    BCRP 17.1
+    ENAHO 23.6
+    Ambas 63.8
+B ok 10 prom 34.7 mediana 22.9 costo 1.0 turnos 6.7
+    BCRP 21.3
+    ENAHO 28.3
+    Ambas 74.5
+B1 A 15.4 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+B2 A 22.3 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+B3 A 15.0 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+B4 A 15.8 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+E1 A 23.2 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+E2 A 21.9 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+E3 A 20.3 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+E4 A 29.0 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+C1 A 29.9 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+C2 A 97.6 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+B1 B 20.2 True False MCP bcrp (API del BCRP)
+B2 B 22.2 True False MCP bcrp (API del BCRP)
+B3 B 19.6 True False MCP bcrp (API del BCRP)
+B4 B 23.2 True False MCP bcrp (API del BCRP)
+E1 B 22.6 False True skills: limpiando-enaho
+E2 B 36.4 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+E3 B 21.7 False True skills: limpiando-enaho
+E4 B 32.5 False False Bash: API del BCRP con curl y/o microdatos de la ENAHO procesados por 
+C1 B 71.3 True True MCP bcrp (API del BCRP); skills: analizando-reparto
 C2 B 77.7 True True MCP bcrp (API del BCRP); skills: analizando-reparto
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -1553,44 +1440,25 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-===== evaluacion/logs/E2_B.jsonl
-
->> Glob {"pattern": "**/*"}
-
->> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_p5z8ixvu\\.claude\\skills\\limpiando-enaho\\SKILL.md"}
-
->> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_p5z8ixvu\\.claude\\skills\\limpiando-enaho\\reference.md"}
-
->> Bash {"command": "ls salidas 2>/dev/null; cat salidas/validacion.txt 2>/dev/null | tail -20"}
-
->> Bash {"command": "uv run \".claude/skills/limpiando-enaho/scripts/limpiar.py\" --anio 2024 2>&1 | tail -30; cat salidas/validacion.txt | tail -30"}
-
->> Bash {"command": "uv run \".claude/skills/limpiando-enaho/scripts/resumen.py\" --por lima_metropolitana 2>&1 | tail -30"}
-
->> Bash {"command": "grep -n -i \"lima\\|dominio\" .claude/skills/limpiando-enaho/scripts/resumen.py | head -20; uv run -q python -I -c \"\nimport pandas as pd\nd=pd.read_parquet('salidas/personas_2024.parquet')\nprint(d.columns.tolist())\nx=d[d.dominio.astype(str).str.strip()=='8'].copy()\nprint(x.ubigeo.s
-
-===== evaluacion/logs/E4_B.jsonl
-
->> Glob {"pattern": "**/*"}
-
->> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_ylpc8v7k\\.claude\\skills\\limpiando-enaho\\SKILL.md"}
-
->> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_ylpc8v7k\\.claude\\skills\\analizando-reparto\\referencias\\inei_pobreza_2024.csv"}
-
->> Bash {"command": "uv run \".claude/skills/limpiando-enaho/scripts/limpiar.py\" --anio 2024 2>&1 | tail -30; cat salidas/validacion.txt; uv run \".claude/skills/limpiando-enaho/scripts/resumen.py\" --por nacional 2>&1 | tail -30"}
-
->> Grep {"pattern": "(?i)intervalo|ic95|conglomerado|estrato", "path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_ylpc8v7k\\.claude\\skills", "output_mode": "content", "head_limit": 30}
-
->> Bash {"command": "mkdir -p /tmp/s && cat > /tmp/s/ic.py <<'E'\nimport pandas as pd, numpy as np\nb=pd.read_parquet(\"salidas/personas_2024.parquet\")\nprint(b.columns.tolist())\nh=b.drop_duplicates(\"conglome\" if False else [c for c in b.columns if c in(\"conglome\",\"vivienda\",\"hogar\")]) \nh=h.copy(
-
->> Bash {"command": "uv run /tmp/s/ic.py 2>&1 | tail -5"}
-
-===== evaluacion/logs/R4_B.jsonl
-
->> Glob {"pattern": "**/*"}
-
->> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_p924g2b9\\.claude\\skills\\limpiando-enaho\\SKILL.md"}
-
+===== evaluacion/logs/E2_B.jsonl
+>> Glob {"pattern": "**/*"}
+>> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_p5z8ixvu\\.claude\\skills\\limpiando-enaho\\SKILL.md"}
+>> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_p5z8ixvu\\.claude\\skills\\limpiando-enaho\\reference.md"}
+>> Bash {"command": "ls salidas 2>/dev/null; cat salidas/validacion.txt 2>/dev/null | tail -20"}
+>> Bash {"command": "uv run \".claude/skills/limpiando-enaho/scripts/limpiar.py\" --anio 2024 2>&1 | tail -30; cat salidas/validacion.txt | tail -30"}
+>> Bash {"command": "uv run \".claude/skills/limpiando-enaho/scripts/resumen.py\" --por lima_metropolitana 2>&1 | tail -30"}
+>> Bash {"command": "grep -n -i \"lima\\|dominio\" .claude/skills/limpiando-enaho/scripts/resumen.py | head -20; uv run -q python -I -c \"\nimport pandas as pd\nd=pd.read_parquet('salidas/personas_2024.parquet')\nprint(d.columns.tolist())\nx=d[d.dominio.astype(str).str.strip()=='8'].copy()\nprint(x.ubigeo.s
+===== evaluacion/logs/E4_B.jsonl
+>> Glob {"pattern": "**/*"}
+>> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_ylpc8v7k\\.claude\\skills\\limpiando-enaho\\SKILL.md"}
+>> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_ylpc8v7k\\.claude\\skills\\analizando-reparto\\referencias\\inei_pobreza_2024.csv"}
+>> Bash {"command": "uv run \".claude/skills/limpiando-enaho/scripts/limpiar.py\" --anio 2024 2>&1 | tail -30; cat salidas/validacion.txt; uv run \".claude/skills/limpiando-enaho/scripts/resumen.py\" --por nacional 2>&1 | tail -30"}
+>> Grep {"pattern": "(?i)intervalo|ic95|conglomerado|estrato", "path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_ylpc8v7k\\.claude\\skills", "output_mode": "content", "head_limit": 30}
+>> Bash {"command": "mkdir -p /tmp/s && cat > /tmp/s/ic.py <<'E'\nimport pandas as pd, numpy as np\nb=pd.read_parquet(\"salidas/personas_2024.parquet\")\nprint(b.columns.tolist())\nh=b.drop_duplicates(\"conglome\" if False else [c for c in b.columns if c in(\"conglome\",\"vivienda\",\"hogar\")]) \nh=h.copy(
+>> Bash {"command": "uv run /tmp/s/ic.py 2>&1 | tail -5"}
+===== evaluacion/logs/R4_B.jsonl
+>> Glob {"pattern": "**/*"}
+>> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_p924g2b9\\.claude\\skills\\limpiando-enaho\\SKILL.md"}
 >> Read {"file_path": "C:\\Users\\[usuario]\\AppData\\Local\\Temp\\tarea4_modoB_p924g2b9\\.claude\\skills\\
 … [1140 caracteres más omitidos]
 ```
@@ -1601,41 +1469,19 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-<< -version | pyproject.toml | .mcp.json | uv.lock | .claude\skills\graficando-enaho\scripts\graficar.py | .claude\skills\graficando-enaho\SKILL.md | .claude\skills\mapeando-enaho\SKILL.md | .claude\skills\mapeando-enaho\scripts\mapear.py | mcp\server.py | .claude\skills\analizando-reparto\referencias\inei_pobreza_2024.csv | .claude\skills\analizando-reparto\scripts\analizar.py | .claude\skills\analizando-reparto\SKILL.md
-
-
-
-<< a|sexo|edad>`. No calcules esas cifras de otra forma. | 14	6. Responde con la cifra, el peso usado y la fuente: INEI, ENAHO 2024. Toda cifra va ponderada. | 15	7. Antes de usar una variable que no está en la base, o si dudas sobre un código o un peso, lee [reference.md](reference.md). | 16	 | 17	Solo 2024 tiene cifras de referencia para validar. Si piden otro año, dilo y no lo limpies con este script. | 18	
-
-
-
-<< ua,11.0,7.5,14.5,16.3 | 19	19,Pasco,39.0,34.0,44.0,6.5 | 20	20,Piura,31.9,28.6,35.1,5.2 | 21	21,Puno,39.9,35.4,44.5,5.8 | 22	22,San Martín,22.0,18.1,25.9,9.0 | 23	23,Tacna,24.0,18.3,29.6,11.9 | 24	24,Tumbes,26.9,22.1,31.7,9.1 | 25	25,Ucayali,27.1,22.7,31.4,8.1 | 26	LM,Lima Metropolitana (provincia de Lima),27.6,25.0,30.1,4.7 | 27	LP,Lima provincias (región Lima),21.7,18.3,25.1,8.0 | 28	PE,Nacional,27.6,26.6,28.6, | 29	
-
-
-
-<< tró su hogar
- | [OK] Ninguna persona sin facpob07
- | [OK] 25 departamentos en la base
- | [OK] Pobreza con sumaria a 0.1 de 27.6 %
- | [OK] Pobreza con personas a 0.1 de 27.6 %
- | [OK] Pobreza extrema con sumaria a 0.1 de 5.5 %
- | 
- | RESULTADO: APROBADO
- | Pobreza monetaria 2024 (% de personas), ponderada con peso_hogar
- | Perú    27.6 | Shell cwd was reset to C:\Users\[usuario]\AppData\Local\Temp\tarea4_modoB_ylpc8v7k
-
-
-
-<< -reparto\scripts\analizar.py:157:             f"Fuentes: {FUENTE_BCRP}; {FUENTE_ENAHO}. Intervalos por el error muestral de la ENAHO.") | .claude\skills\analizando-reparto\scripts\analizar.py:241:    h["estrato_diseno"] = h.departamento + "-" + h.estrato.astype(str) | .claude\skills\analizando-reparto\scripts\analizar.py:249:        razones.append(1.96 * ee / ((r.ic95_superior - r.ic95_inferior) / 2))
-
-
-
-<< Exit code 2 | error: unexpected argument '-I' found |  | Usage: uv.exe run [OPTIONS] [COMMAND] |  | For more information, try '--help'.
-
-
-
-<< ['conglome', 'vivienda', 'hogar', 'codperso', 'p203', 'p204', 'p205', 'p206', 'p207', 'p208a', 'facpob07', 'ubigeo', 'dominio', 'estrato', 'pobreza', 'factor07', 'mieperho', 'departamento', 'urbano', 'pobre', 'pobre_extremo', 'anio']
- | 27.5
+<< -version | pyproject.toml | .mcp.json | uv.lock | .claude\skills\graficando-enaho\scripts\graficar.py | .claude\skills\graficando-enaho\SKILL.md | .claude\skills\mapeando-enaho\SKILL.md | .claude\skills\mapeando-enaho\scripts\mapear.py | mcp\server.py | .claude\skills\analizando-reparto\referencias\inei_pobreza_2024.csv | .claude\skills\analizando-reparto\scripts\analizar.py | .claude\skills\analizando-reparto\SKILL.md
+
+<< a|sexo|edad>`. No calcules esas cifras de otra forma. | 14	6. Responde con la cifra, el peso usado y la fuente: INEI, ENAHO 2024. Toda cifra va ponderada. | 15	7. Antes de usar una variable que no está en la base, o si dudas sobre un código o un peso, lee [reference.md](reference.md). | 16	 | 17	Solo 2024 tiene cifras de referencia para validar. Si piden otro año, dilo y no lo limpies con este script. | 18	
+
+<< ua,11.0,7.5,14.5,16.3 | 19	19,Pasco,39.0,34.0,44.0,6.5 | 20	20,Piura,31.9,28.6,35.1,5.2 | 21	21,Puno,39.9,35.4,44.5,5.8 | 22	22,San Martín,22.0,18.1,25.9,9.0 | 23	23,Tacna,24.0,18.3,29.6,11.9 | 24	24,Tumbes,26.9,22.1,31.7,9.1 | 25	25,Ucayali,27.1,22.7,31.4,8.1 | 26	LM,Lima Metropolitana (provincia de Lima),27.6,25.0,30.1,4.7 | 27	LP,Lima provincias (región Lima),21.7,18.3,25.1,8.0 | 28	PE,Nacional,27.6,26.6,28.6, | 29	
+
+<< tró su hogar | [OK] Ninguna persona sin facpob07 | [OK] 25 departamentos en la base | [OK] Pobreza con sumaria a 0.1 de 27.6 % | [OK] Pobreza con personas a 0.1 de 27.6 % | [OK] Pobreza extrema con sumaria a 0.1 de 5.5 % |  | RESULTADO: APROBADO | Pobreza monetaria 2024 (% de personas), ponderada con peso_hogar | Perú    27.6 | Shell cwd was reset to C:\Users\[usuario]\AppData\Local\Temp\tarea4_modoB_ylpc8v7k
+
+<< -reparto\scripts\analizar.py:157:             f"Fuentes: {FUENTE_BCRP}; {FUENTE_ENAHO}. Intervalos por el error muestral de la ENAHO.") | .claude\skills\analizando-reparto\scripts\analizar.py:241:    h["estrato_diseno"] = h.departamento + "-" + h.estrato.astype(str) | .claude\skills\analizando-reparto\scripts\analizar.py:249:        razones.append(1.96 * ee / ((r.ic95_superior - r.ic95_inferior) / 2))
+
+<< Exit code 2 | error: unexpected argument '-I' found |  | Usage: uv.exe run [OPTIONS] [COMMAND] |  | For more information, try '--help'.
+
+<< ['conglome', 'vivienda', 'hogar', 'codperso', 'p203', 'p204', 'p205', 'p206', 'p207', 'p208a', 'facpob07', 'ubigeo', 'dominio', 'estrato', 'pobreza', 'factor07', 'mieperho', 'departamento', 'urbano', 'pobre', 'pobre_extremo', 'anio'] | 27.5
 … [1316 caracteres más omitidos]
 ```
 </details>
@@ -1871,16 +1717,11 @@ File created successfully at: C:\Users\[usuario]\Documents\GitHub\Python_Interm\
 
 ```text
 Exit code 1
-<stdin>:4: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
-
-<stdin>:8: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
-
-  File "C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\.claude\skills\redactando-brief\scripts\brief.py", line 73
-
-    texto(fig, x0, 0.868, f"Entre 2020 y 2024 el Estado invirti� S/ {inv_total:,} millones (corrientes) en los 25 departamentos. ".replace(",", " ")
-
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
+<stdin>:4: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+<stdin>:8: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+  File "C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\.claude\skills\redactando-brief\scripts\brief.py", line 73
+    texto(fig, x0, 0.868, f"Entre 2020 y 2024 el Estado invirti� S/ {inv_total:,} millones (corrientes) en los 25 departamentos. ".replace(",", " ")
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 SyntaxError: invalid syntax. Perhaps you forgot a comma?
 ```
 </details>
@@ -1915,8 +1756,7 @@ The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\.claud
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-5 más pobres: 24.3 % de los pobres y 15.7 % de la inversión; 7 departamentos con IC < 1; Lima Metropolitana 29.8 % de los pobres.
-
+5 más pobres: 24.3 % de los pobres y 15.7 % de la inversión; 7 departamentos con IC < 1; Lima Metropolitana 29.8 % de los pobres.
 Guardado: informes/policy_brief.png y informes/policy_brief.pdf
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -1974,8 +1814,7 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Guardado: informes/policy_brief.png y informes/policy_brief.pdf
-
+Guardado: informes/policy_brief.png y informes/policy_brief.pdf
 ['Cajamarca', 'Loreto', 'Puno', 'Hu�nuco', 'Callao', 'La Libertad']
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -2468,68 +2307,37 @@ Para cerrar solo me faltan tus respuestas a estas 4 preguntas:
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-===== C1 A
-
-el de gobierno | Cajamarca | Total nacional |
-
-|---|---|---|
-
-| Gobierno nacional | 2 459,0 | 93 553,3 |
-
-| Gobiernos regionales | 2 374,3 | 47 659,1 |
-
-| Gobiernos locales | 5 127,6 | 85 153,0 |
-
-| **Suma** | **9 960,9** | **226 365,3** |
-
-
-
-Cajamarca ejecutó 9 960,9 / 226 365,3 = **4,40 %** de la inversión.
-
-
-
-**Pobreza 2024 (ENAHO, Sumaria 2024)**
-
-
-
-Conté como pobres a las personas con `pobreza` igual a 1 (pobre extremo) o 2 (pobre no extremo). Ponderé por `factor07 × mieperho` y asigné el departamento con los dos primeros dígitos del ubigeo (06 = Cajamarca). Eso da unos 700 mil pobres en Cajamarca de unos 9,51 millones en todo el país, es decir **7,36 %** de los pobres del Perú. Como referencia, Cajamarca tiene el 4,5 % de la población total y su tasa de pobreza es de 45,0 %.
-
-
-
-**Comparación**
-
-
-
-La inversión de Cajamarca es unos 2,96 puntos porcentuales menor que su parte de los pobres. La razón entre ambas es 4,40 / 7,36 ≈ 0,60.
-
-
-
-**Salvedades**
-
-- La inversión es la ejecutada en el departamento, no la que corresponde a su población. Parte de la inversión del gobierno nacional se registra por departamento según el BCRP, pero no verifiqué cómo se asigna la que sirve a varias regiones.
-
-- Sumé los tres niveles en soles corrientes, sin deflactar. No usé los totales de pobreza oficiales publicados por el INEI. Mi cálculo viene directamente de la base microdatos.
-
-
-
-RESPUESTA FINAL: Cajamarca ejecutó ≈4,40 % de la inversión bruta fija (gobierno nacional + regionales + locales, 2020–2024) y concentraba ≈7,36 % de los pobres del Perú en 2024; recibe una parte MENOR que su parte de los pobres.
-
-
-
-===== C2 A
-
-rsión se reparte entre el 16,0 % de la población.
-
-
-
-## Qué no se puede concluir
-
-- **Causalidad:** no se puede decir que la menor inversión cause la pobreza, ni que más inversión la reduciría. La pobreza de 2024 es un resultado de largo plazo. La inversión de 2020-2024 es solo un flujo reciente.
-
-- **Eficiencia o calidad:** el monto no dice si los proyectos sean buenos ni si llegan a los pobres. Tampoco mide el gasto corriente (salud, educación, programas sociales), que puede ser más relevante para la pobreza.
-
-- **Dentro del departamento:** la inversión se registra donde se ejecuta, no donde viven sus beneficiarios. Por ejemplo, una obra nacional en Lima puede servir a todo el país.
-
+===== C1 A
+el de gobierno | Cajamarca | Total nacional |
+|---|---|---|
+| Gobierno nacional | 2 459,0 | 93 553,3 |
+| Gobiernos regionales | 2 374,3 | 47 659,1 |
+| Gobiernos locales | 5 127,6 | 85 153,0 |
+| **Suma** | **9 960,9** | **226 365,3** |
+
+Cajamarca ejecutó 9 960,9 / 226 365,3 = **4,40 %** de la inversión.
+
+**Pobreza 2024 (ENAHO, Sumaria 2024)**
+
+Conté como pobres a las personas con `pobreza` igual a 1 (pobre extremo) o 2 (pobre no extremo). Ponderé por `factor07 × mieperho` y asigné el departamento con los dos primeros dígitos del ubigeo (06 = Cajamarca). Eso da unos 700 mil pobres en Cajamarca de unos 9,51 millones en todo el país, es decir **7,36 %** de los pobres del Perú. Como referencia, Cajamarca tiene el 4,5 % de la población total y su tasa de pobreza es de 45,0 %.
+
+**Comparación**
+
+La inversión de Cajamarca es unos 2,96 puntos porcentuales menor que su parte de los pobres. La razón entre ambas es 4,40 / 7,36 ≈ 0,60.
+
+**Salvedades**
+- La inversión es la ejecutada en el departamento, no la que corresponde a su población. Parte de la inversión del gobierno nacional se registra por departamento según el BCRP, pero no verifiqué cómo se asigna la que sirve a varias regiones.
+- Sumé los tres niveles en soles corrientes, sin deflactar. No usé los totales de pobreza oficiales publicados por el INEI. Mi cálculo viene directamente de la base microdatos.
+
+RESPUESTA FINAL: Cajamarca ejecutó ≈4,40 % de la inversión bruta fija (gobierno nacional + regionales + locales, 2020–2024) y concentraba ≈7,36 % de los pobres del Perú en 2024; recibe una parte MENOR que su parte de los pobres.
+
+===== C2 A
+rsión se reparte entre el 16,0 % de la población.
+
+## Qué no se puede concluir
+- **Causalidad:** no se puede decir que la menor inversión cause la pobreza, ni que más inversión la reduciría. La pobreza de 2024 es un resultado de largo plazo. La inversión de 2020-2024 es solo un flujo reciente.
+- **Eficiencia o calidad:** el monto no dice si los proyectos sean buenos ni si llegan a los pobres. Tampoco mide el gasto corriente (salud, educación, programas sociales), que puede ser más relevante para la pobreza.
+- **Dentro del departamento:** la inversión se registra donde se ejecuta, no donde viven sus beneficiarios. Por ejemplo, una obra nacional en Lima puede servir a todo el país.
 - **Ranking:** Pasco (38,97 %) y Huánuco (38,96 %) casi empatan, y la ENAHO es una encuesta con margen de error. No calculé intervalos de confianza, así que
 … [4091 caracteres más omitidos]
 ```
@@ -2607,8 +2415,7 @@ De acuerdo. Hago las tres cosas.
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Modo A: 10/10 correctas, 29.0 s en promedio; incorrectas: []
-
+Modo A: 10/10 correctas, 29.0 s en promedio; incorrectas: []
 Modo B: 10/10 correctas, 34.7 s en promedio; incorrectas: []
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -2651,10 +2458,8 @@ The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\evalua
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-<stdin>:4: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
-
-<stdin>:6: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
-
+<stdin>:4: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+<stdin>:6: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
 Guardado: informes/policy_brief.png y informes/policy_brief.pdf
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -2902,62 +2707,34 @@ File created successfully at: C:\Users\[usuario]\Documents\GitHub\Python_Interm\
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-intento1_01_pregunta_investigacion.png | sin datos personales
-
-intento1_02_Plan.png | sin datos personales
-
-intento1_03_mcp.png | sin datos personales
-
-intento1_04_hallazgo.png | sin datos personales
-
-intento1_05_hallazgo.png | sin datos personales
-
-intento1_06_skill.png | sin datos personales
-
-intento1_07_skill.png | sin datos personales
-
-intento1_08_informe_final.png | sin datos personales
-
-intento2_01_preg_investigacion.png | sin datos personales
-
-intento2_02_plan_1.png | • Bash(cd "C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4" && uv run || "C : /Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/. claude/ skills/ 1„.)
-
-intento2_03_mcp_1.png | sin datos personales
-
-intento2_03_mcp_2.png | sin datos personales
-
-intento2_03_mcp_3.png | sin datos personales
-
-intento2_03_mcp_4.png | sin datos personales
-
-intento2_03_mcp_5.png | sin datos personales
-
-intento2_03_mcp_6.png | sin datos personales
-
-intento2_04_skill_limpieza.png | • Bash(cd "C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4" && uv run || "C : /Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/. claude/ skills/ 1„.)
-
-intento2_04_skill_limpieza_2.png | sin datos personales
-
-intento2_05_skill_grafico_mapa.png | • Bash(cd "C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4" && uv run || "C : /Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/. claude/ skills/g„.) || • Bash(cd "C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4" && uv run || "C : /Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/. claude/ skills/rm..)
-
-intento2_05_skill_grafico_mapa_2.png | sin datos personales
-
-intento2_06_skill_analisis.png | • Bash(cd "C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4" && uv run || "C : /Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/. claude/ skills/ a„.)
-
-intento2_06_skill_analisis_2.png | sin datos personales
-
-intento2_07_hallazgos.png | sin datos personales
-
-intento2_07_hallazgos_2.png | sin datos personales
-
-intento2_08_informe_final_1.png | sin datos personales
-
-intento2_09_correcciones_1.png | "Fiorella Ampuero"; (2) en "Fallas de herramientas" elimina Ia frase sobre eI servidor || Autora: Fiorella Ampuero • Ela
-
-intento2_09_correcciones_2.png | Fiorella Ampuero • || • Autora: Fiorella Ampuero • Elaborado con Claude
-
-01_bcrp_RD16682DA.png | sin datos personales
-
+intento1_01_pregunta_investigacion.png | sin datos personales
+intento1_02_Plan.png | sin datos personales
+intento1_03_mcp.png | sin datos personales
+intento1_04_hallazgo.png | sin datos personales
+intento1_05_hallazgo.png | sin datos personales
+intento1_06_skill.png | sin datos personales
+intento1_07_skill.png | sin datos personales
+intento1_08_informe_final.png | sin datos personales
+intento2_01_preg_investigacion.png | sin datos personales
+intento2_02_plan_1.png | • Bash(cd "C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4" && uv run || "C : /Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/. claude/ skills/ 1„.)
+intento2_03_mcp_1.png | sin datos personales
+intento2_03_mcp_2.png | sin datos personales
+intento2_03_mcp_3.png | sin datos personales
+intento2_03_mcp_4.png | sin datos personales
+intento2_03_mcp_5.png | sin datos personales
+intento2_03_mcp_6.png | sin datos personales
+intento2_04_skill_limpieza.png | • Bash(cd "C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4" && uv run || "C : /Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/. claude/ skills/ 1„.)
+intento2_04_skill_limpieza_2.png | sin datos personales
+intento2_05_skill_grafico_mapa.png | • Bash(cd "C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4" && uv run || "C : /Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/. claude/ skills/g„.) || • Bash(cd "C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4" && uv run || "C : /Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/. claude/ skills/rm..)
+intento2_05_skill_grafico_mapa_2.png | sin datos personales
+intento2_06_skill_analisis.png | • Bash(cd "C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4" && uv run || "C : /Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/. claude/ skills/ a„.)
+intento2_06_skill_analisis_2.png | sin datos personales
+intento2_07_hallazgos.png | sin datos personales
+intento2_07_hallazgos_2.png | sin datos personales
+intento2_08_informe_final_1.png | sin datos personales
+intento2_09_correcciones_1.png | "Fiorella Ampuero"; (2) en "Fallas de herramientas" elimina Ia frase sobre eI servidor || Autora: Fiorella Ampuero • Ela
+intento2_09_correcciones_2.png | Fiorella Ampuero • || • Autora: Fiorella Ampuero • Elaborado con Claude
+01_bcrp_RD16682DA.png | sin datos personales
 02_03_inei_cajamarca_lima_metropolitana.png | sin datos personales
 ```
 </details>
@@ -2967,24 +2744,15 @@ intento2_09_correcciones_2.png | Fiorella Ampuero • || • Autora: Fiorella Am
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-intento2_02_plan_1.png,123,511,748,19,"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4"
-
-intento2_02_plan_1.png,111,537,723,19,/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.
-
-intento2_04_skill_limpieza.png,128,389,748,19,"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4"
-
-intento2_04_skill_limpieza.png,116,415,723,19,/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.
-
-intento2_05_skill_grafico_mapa.png,131,100,748,19,"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4"
-
-intento2_05_skill_grafico_mapa.png,119,126,723,19,/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.
-
-intento2_05_skill_grafico_mapa.png,131,516,748,19,"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4"
-
-intento2_05_skill_grafico_mapa.png,119,542,723,19,/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.
-
-intento2_06_skill_analisis.png,131,96,748,19,"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4"
-
+intento2_02_plan_1.png,123,511,748,19,"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4"
+intento2_02_plan_1.png,111,537,723,19,/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.
+intento2_04_skill_limpieza.png,128,389,748,19,"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4"
+intento2_04_skill_limpieza.png,116,415,723,19,/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.
+intento2_05_skill_grafico_mapa.png,131,100,748,19,"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4"
+intento2_05_skill_grafico_mapa.png,119,126,723,19,/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.
+intento2_05_skill_grafico_mapa.png,131,516,748,19,"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4"
+intento2_05_skill_grafico_mapa.png,119,542,723,19,/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.
+intento2_06_skill_analisis.png,131,96,748,19,"C:/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4"
 intento2_06_skill_analisis.png,119,122,723,19,/Users/[usuario]/Documents/GitHub/Python_Interm/Tareas/Tarea_4/.
 ```
 </details>
@@ -2998,12 +2766,9 @@ Tengo la posición exacta de cada ruta. Tapo **solo la parte del usuario** (`[us
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-tapado: intento2_02_plan_1.png
-
-tapado: intento2_04_skill_limpieza.png
-
-tapado: intento2_05_skill_grafico_mapa.png
-
+tapado: intento2_02_plan_1.png
+tapado: intento2_04_skill_limpieza.png
+tapado: intento2_05_skill_grafico_mapa.png
 tapado: intento2_06_skill_analisis.png
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -3027,12 +2792,9 @@ El usuario quedó tapado y el resto de la ruta se sigue leyendo. Confirmo con el
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-intento2_02_plan_1.png: limpia
-
-intento2_04_skill_limpieza.png: limpia
-
-intento2_05_skill_grafico_mapa.png: limpia
-
+intento2_02_plan_1.png: limpia
+intento2_04_skill_limpieza.png: limpia
+intento2_05_skill_grafico_mapa.png: limpia
 intento2_06_skill_analisis.png: limpia
 ```
 </details>
@@ -3150,36 +2912,21 @@ Así se cubre justo el punto por el que te descontaron, aunque esta vez el entre
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-plugins: anyio-4.16.0, platformdirs-4.14.5
-
-collecting ... collected 10 items
-
-
-
-mcp/test_cuadre.py::test_cuadre_inversion_regional_explica_lima_metropolitana PASSED [ 10%]
-
-mcp/test_cuadre.py::test_cuadre_avisa_cuando_no_hay_datos_en_vez_de_inventar PASSED [ 20%]
-
-mcp/test_server.py::test_buscar_encuentra_el_ipc PASSED                  [ 30%]
-
-mcp/test_server.py::test_cuatro_herramientas_como_minimo PASSED          [ 40%]
-
-mcp/test_server.py::test_serie_mensual PASSED                            [ 50%]
-
-mcp/test_server.py::test_serie_diaria PASSED                             [ 60%]
-
-mcp/test_server.py::test_resumen_sin_cuentas_a_mano PASSED               [ 70%]
-
-mcp/test_server.py::test_codigo_inexistente_da_un_error_claro PASSED     [ 80%]
-
-mcp/test_server.py::test_un_recurso PASSED                               [ 90%]
-
-mcp/test_server.py::test_un_prompt PASSED                                [100%]
-
-
-
-============================= 10 passed in 20.75s =============================
-
+plugins: anyio-4.16.0, platformdirs-4.14.5
+collecting ... collected 10 items
+
+mcp/test_cuadre.py::test_cuadre_inversion_regional_explica_lima_metropolitana PASSED [ 10%]
+mcp/test_cuadre.py::test_cuadre_avisa_cuando_no_hay_datos_en_vez_de_inventar PASSED [ 20%]
+mcp/test_server.py::test_buscar_encuentra_el_ipc PASSED                  [ 30%]
+mcp/test_server.py::test_cuatro_herramientas_como_minimo PASSED          [ 40%]
+mcp/test_server.py::test_serie_mensual PASSED                            [ 50%]
+mcp/test_server.py::test_serie_diaria PASSED                             [ 60%]
+mcp/test_server.py::test_resumen_sin_cuentas_a_mano PASSED               [ 70%]
+mcp/test_server.py::test_codigo_inexistente_da_un_error_claro PASSED     [ 80%]
+mcp/test_server.py::test_un_recurso PASSED                               [ 90%]
+mcp/test_server.py::test_un_prompt PASSED                                [100%]
+
+============================= 10 passed in 20.75s =============================
 ---
 10 sesiones con sonnet, 4 a la vez...
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
@@ -3404,152 +3151,79 @@ Sigue corriendo. Te escribo apenas termine el modo «solo memoria» y tenga las 
 
 ```text
 17:27
-10 sesiones con sonnet, 4 a la vez...
-
-B1 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
-
-B2 M: 180.7 s, MCP=False, skills=False 
-
-B3 M: 5.7 s, MCP=False, skills=False 
-
-B4 M: 9.0 s, MCP=False, skills=False 
-
-E1 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
-
-E2 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
-
-E3 M: 4.7 s, MCP=False, skills=False 
-
-E4 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
-
-C1 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
-
-C2 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
-
-Guardado: evaluacion\corridas.csv
-
-5 sesiones con sonnet, 4 a la vez...
-
-R1 M: 2315.6 s, MCP=False, skills=False tiempo agotado (300 s)
-
-R2 M: 5.5 s, MCP=False, skills=False 
-
-R3 M: 4.8 s, MCP=False, skills=False 
-
-R4 M: 2316.3 s, MCP=False, skills=False tiempo agotado (300 s)
-
-R5 M: 8.4 s, MCP=False, skills=False 
-
-Guardado: evaluacion\robustez_corridas.csv
-
---- B1 300.1 | tiempo agotado (300 s) | 
-
---- B2 180.7 |  | name="Glob">
-
-<parameter name="pattern">*</parameter>
-
-</invoke>
-
-
-
-<invoke name="Bash">
-
-<parameter name="command">pwd; ls -la</parameter>
-
-</invoke>
-
-
-
-
-
-
-
-<invoke name="Glob">
-
-<parameter name="pattern">*</parameter>
-
-</invoke>
-
-
-
-<invoke name="Bash">
-
-<parameter name="command">pwd; ls -la</parameter>
-
-</invoke>
-
---- B3 5.7 |  | Voy a revisar primero qué hay en la carpeta de trabajo.
-
-
-
-
-
-<invoke name="Glob">
-
-<parameter name="pattern">**/*</parameter>
-
-</invoke>
-
-k
-
---- B4 9.0 |  | gob.pe/estadisticas/series/anuales/resultados/PM05017AA/html</parameter>
-
-<parameter name="prompt">Exportaciones tradicionales mineras Arequipa 2022</parameter>
-
-</invoke>
-
-
-
-<invoke name="Read">
-
-<parameter name="file_path">C:\Users\[usuario]\AppData\Local\Temp\tarea4_modoM_e3jp1403</parameter>
-
-</invoke>
-
---- C1 300.1 | tiempo agotado (300 s) | 
-
---- C2 300.1 | tiempo agotado (300 s) | 
-
---- E1 300.1 | tiempo agotado (300 s) | 
-
---- E2 300.1 | tiempo agotado (300 s) | 
-
---- E3 4.7 |  | Voy a revisar primero si hay datos en la carpeta de trabajo.
-
-
-
-
-
-<invoke name="Glob">
-
-<parameter name="pattern">**/*</parameter>
-
-</invoke>
-
-k
-
-
-
-
-
-<invoke name="WebSearch">
-
-<parameter name="query">INEI pobreza monetaria 2024 área rural porcentaje ENAHO informe técnico</parameter>
-
-</invoke>
-
---- E4 300.1 | tiempo agotado (300 s) | 
-
---- R1 2315.6 | tiempo agotado (300 s) | Voy a revisar primero qué datos hay en la carpeta de trabajo.
-
-
-
-
-
-<invoke name="Glob">
-
-<parameter name="pattern">**/*</parameter>
-
+10 sesiones con sonnet, 4 a la vez...
+B1 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+B2 M: 180.7 s, MCP=False, skills=False 
+B3 M: 5.7 s, MCP=False, skills=False 
+B4 M: 9.0 s, MCP=False, skills=False 
+E1 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+E2 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+E3 M: 4.7 s, MCP=False, skills=False 
+E4 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+C1 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+C2 M: 300.1 s, MCP=False, skills=False tiempo agotado (300 s)
+Guardado: evaluacion\corridas.csv
+5 sesiones con sonnet, 4 a la vez...
+R1 M: 2315.6 s, MCP=False, skills=False tiempo agotado (300 s)
+R2 M: 5.5 s, MCP=False, skills=False 
+R3 M: 4.8 s, MCP=False, skills=False 
+R4 M: 2316.3 s, MCP=False, skills=False tiempo agotado (300 s)
+R5 M: 8.4 s, MCP=False, skills=False 
+Guardado: evaluacion\robustez_corridas.csv
+--- B1 300.1 | tiempo agotado (300 s) | 
+--- B2 180.7 |  | name="Glob">
+<parameter name="pattern">*</parameter>
+</invoke>
+
+<invoke name="Bash">
+<parameter name="command">pwd; ls -la</parameter>
+</invoke>
+
+
+
+<invoke name="Glob">
+<parameter name="pattern">*</parameter>
+</invoke>
+
+<invoke name="Bash">
+<parameter name="command">pwd; ls -la</parameter>
+</invoke>
+--- B3 5.7 |  | Voy a revisar primero qué hay en la carpeta de trabajo.
+
+
+<invoke name="Glob">
+<parameter name="pattern">**/*</parameter>
+</invoke>
+k
+--- B4 9.0 |  | gob.pe/estadisticas/series/anuales/resultados/PM05017AA/html</parameter>
+<parameter name="prompt">Exportaciones tradicionales mineras Arequipa 2022</parameter>
+</invoke>
+
+<invoke name="Read">
+<parameter name="file_path">C:\Users\[usuario]\AppData\Local\Temp\tarea4_modoM_e3jp1403</parameter>
+</invoke>
+--- C1 300.1 | tiempo agotado (300 s) | 
+--- C2 300.1 | tiempo agotado (300 s) | 
+--- E1 300.1 | tiempo agotado (300 s) | 
+--- E2 300.1 | tiempo agotado (300 s) | 
+--- E3 4.7 |  | Voy a revisar primero si hay datos en la carpeta de trabajo.
+
+
+<invoke name="Glob">
+<parameter name="pattern">**/*</parameter>
+</invoke>
+k
+
+
+<invoke name="WebSearch">
+<parameter name="query">INEI pobreza monetaria 2024 área rural porcentaje ENAHO informe técnico</parameter>
+</invoke>
+--- E4 300.1 | tiempo agotado (300 s) | 
+--- R1 2315.6 | tiempo agotado (300 s) | Voy a revisar primero qué datos hay en la carpeta de trabajo.
+
+
+<invoke name="Glob">
+<parameter name="pattern">**/*</parameter>
 
 … [1279 caracteres más omitidos]
 ```
@@ -3584,14 +3258,10 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Modo A: 10/10 correctas, 29.0 s en promedio; incorrectas: []
-
-Modo B: 10/10 correctas, 34.7 s en promedio; incorrectas: []
-
-Modo A: 5/5 cumplen
-
-Modo B: 5/5 cumplen
-
+Modo A: 10/10 correctas, 29.0 s en promedio; incorrectas: []
+Modo B: 10/10 correctas, 34.7 s en promedio; incorrectas: []
+Modo A: 5/5 cumplen
+Modo B: 5/5 cumplen
  M evaluacion/evaluar.py
 ?? evaluacion/ejecucion_memoria.txt
 ?? evidencias_ia/exportar_conversaciones.py
@@ -3614,18 +3284,12 @@ The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\evalua
 
 ```text
 161:| Las 30 sesiones de evaluación (modos A y B, preguntas y robustez) y las 15 del intento fallido de «solo memoria», en bruto | [`evaluacion/logs/`](evaluacion/logs/) |
-mcp/01_desarrollo_mcp_bcrp_sesion04.md: 72 mensajes de la usuaria, 84 de Claude, 76 usos de herramientas
-
-mcp/02_prueba_mcp_en_claude_code.md: 3 mensajes de la usuaria, 4 de Claude, 4 usos de herramientas
-
-skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
-
-integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
-
-integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
-
-00_conversacion_principal_tarea4.md: 73 mensajes de la usuaria, 137 de Claude, 245 usos de herramientas
-
+mcp/01_desarrollo_mcp_bcrp_sesion04.md: 72 mensajes de la usuaria, 84 de Claude, 76 usos de herramientas
+mcp/02_prueba_mcp_en_claude_code.md: 3 mensajes de la usuaria, 4 de Claude, 4 usos de herramientas
+skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
+integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
+integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
+00_conversacion_principal_tarea4.md: 73 mensajes de la usuaria, 137 de Claude, 245 usos de herramientas
 Verificado: sin correo ni usuario de Windows en 52 archivos.
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 [This command modified 1 file you've previously read: ..\Python_Interm\Tareas\Tarea_4\README.md. Call Read before editing.]
@@ -3647,22 +3311,14 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-<stdin>:7: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
-
-mcp/01_desarrollo_mcp_bcrp_sesion04.md: 72 mensajes de la usuaria, 84 de Claude, 76 usos de herramientas
-
-mcp/02_prueba_mcp_en_claude_code.md: 3 mensajes de la usuaria, 4 de Claude, 4 usos de herramientas
-
-skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
-
-integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
-
-integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
-
-00_conversacion_principal_tarea4.md: 73 mensajes de la usuaria, 137 de Claude, 246 usos de herramientas
-
-Verificado: sin correo ni usuario de Windows en 52 archivos.
-
+<stdin>:7: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+mcp/01_desarrollo_mcp_bcrp_sesion04.md: 72 mensajes de la usuaria, 84 de Claude, 76 usos de herramientas
+mcp/02_prueba_mcp_en_claude_code.md: 3 mensajes de la usuaria, 4 de Claude, 4 usos de herramientas
+skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
+integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
+integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
+00_conversacion_principal_tarea4.md: 73 mensajes de la usuaria, 137 de Claude, 246 usos de herramientas
+Verificado: sin correo ni usuario de Windows en 52 archivos.
 evidencias_ia/00_conversacion_principal_tarea4.md:3
 evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:1
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
@@ -3764,12 +3420,9 @@ MEMORIA = re.compile(r"[\/]memory[\/]|MEMORY\.md", re.I)   # notas personales de
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-ERROR: quedan datos personales en evaluacion\logs\B1_A.jsonl, evaluacion\logs\B1_B.jsonl, evaluacion\logs\B1_M.jsonl, evaluacion\logs\B2_A.jsonl, evaluacion\logs\B2_B.jsonl, evaluacion\logs\B2_M.jsonl, evaluacion\logs\B3_A.jsonl, evaluacion\logs\B3_B.jsonl, evaluacion\logs\B3_M.jsonl, evaluacion\logs\B4_A.jsonl, evaluacion\logs\B4_B.jsonl, evaluacion\logs\B4_M.jsonl, evaluacion\logs\C1_A.jsonl, evaluacion\logs\C1_B.jsonl, evaluacion\logs\C1_M.jsonl, evaluacion\logs\C2_A.jsonl, evaluacion\logs\C2_B.jsonl, evaluacion\logs\C2_M.jsonl, evaluacion\logs\E1_A.jsonl, evaluacion\logs\E1_B.jsonl, evaluacion\logs\E1_M.jsonl, evaluacion\logs\E2_A.jsonl, evaluacion\logs\E2_B.jsonl, evaluacion\logs\E2_M.jsonl, evaluacion\logs\E3_A.jsonl, evaluacion\logs\E3_B.jsonl, evaluacion\logs\E3_M.jsonl, evaluacion\logs\E4_A.jsonl, evaluacion\logs\E4_B.jsonl, evaluacion\logs\E4_M.jsonl, evaluacion\logs\R1_A.jsonl, evaluacion\logs\R1_B.jsonl, evaluacion\logs\R1_M.jsonl, evaluacion\logs\R2_A.jsonl, evaluacion\logs\R2_B.jsonl, evaluacion\logs\R2_M.jsonl, evaluacion\logs\R3_A.jsonl, evaluacion\logs\R3_B.jsonl, evaluacion\logs\R3_M.jsonl, evaluacion\logs\R4_A.jsonl, evaluacion\logs\R4_B.jsonl, evaluacion\logs\R4_M.jsonl, evaluacion\logs\R5_A.jsonl, evaluacion\logs\R5_B.jsonl, evaluacion\logs\R5_M.jsonl
-
-integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
-
-00_conversacion_principal_tarea4.md: 73 mensajes de la usuaria, 139 de Claude, 255 usos de herramientas
-
+ERROR: quedan datos personales en evaluacion\logs\B1_A.jsonl, evaluacion\logs\B1_B.jsonl, evaluacion\logs\B1_M.jsonl, evaluacion\logs\B2_A.jsonl, evaluacion\logs\B2_B.jsonl, evaluacion\logs\B2_M.jsonl, evaluacion\logs\B3_A.jsonl, evaluacion\logs\B3_B.jsonl, evaluacion\logs\B3_M.jsonl, evaluacion\logs\B4_A.jsonl, evaluacion\logs\B4_B.jsonl, evaluacion\logs\B4_M.jsonl, evaluacion\logs\C1_A.jsonl, evaluacion\logs\C1_B.jsonl, evaluacion\logs\C1_M.jsonl, evaluacion\logs\C2_A.jsonl, evaluacion\logs\C2_B.jsonl, evaluacion\logs\C2_M.jsonl, evaluacion\logs\E1_A.jsonl, evaluacion\logs\E1_B.jsonl, evaluacion\logs\E1_M.jsonl, evaluacion\logs\E2_A.jsonl, evaluacion\logs\E2_B.jsonl, evaluacion\logs\E2_M.jsonl, evaluacion\logs\E3_A.jsonl, evaluacion\logs\E3_B.jsonl, evaluacion\logs\E3_M.jsonl, evaluacion\logs\E4_A.jsonl, evaluacion\logs\E4_B.jsonl, evaluacion\logs\E4_M.jsonl, evaluacion\logs\R1_A.jsonl, evaluacion\logs\R1_B.jsonl, evaluacion\logs\R1_M.jsonl, evaluacion\logs\R2_A.jsonl, evaluacion\logs\R2_B.jsonl, evaluacion\logs\R2_M.jsonl, evaluacion\logs\R3_A.jsonl, evaluacion\logs\R3_B.jsonl, evaluacion\logs\R3_M.jsonl, evaluacion\logs\R4_A.jsonl, evaluacion\logs\R4_B.jsonl, evaluacion\logs\R4_M.jsonl, evaluacion\logs\R5_A.jsonl, evaluacion\logs\R5_B.jsonl, evaluacion\logs\R5_M.jsonl
+integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
+00_conversacion_principal_tarea4.md: 73 mensajes de la usuaria, 139 de Claude, 255 usos de herramientas
 ./00_conversacion_principal_tarea4.md:20
 ./mcp/01_desarrollo_mcp_bcrp_sesion04.md:10
 ./skills/01_desarrollo_skills_enaho_sesion16.md:8
@@ -3891,10 +3544,8 @@ Ejecuto la reescritura. git guarda un respaldo automático del historial origina
 e36715d 2026-11-08 12:50:10 -0500 exportar_conversaciones.py: sin el correo de la autora e
 7a10cde 2026-11-08 12:49:24 -0500 Evidencias de IA: 6 conversaciones exportadas sin datos 
 5ca2388 2026-11-07 16:47:33 -0500 README con entregables enlazados; borradores de explorac
-
-Rewrite 7a10cde26e63ef898690e223f0df5dea31b2bb79 (18/19) (121 seconds passed, remaining 6 predicted)    warning: in the working copy of 'evidencias_ia/exportar_conversaciones.py', LF will be replaced by CRLF the next time Git touches it
-
-Rewrite e36715d401d8301adecafcc91af5b2434ebd1b30 (19/19) (124 seconds passed, remaining 0 predicted)    
+Rewrite 7a10cde26e63ef898690e223f0df5dea31b2bb79 (18/19) (121 seconds passed, remaining 6 predicted)    warning: in the working copy of 'evidencias_ia/exportar_conversaciones.py', LF will be replaced by CRLF the next time Git touches it
+Rewrite e36715d401d8301adecafcc91af5b2434ebd1b30 (19/19) (124 seconds passed, remaining 0 predicted)    
 Ref 'refs/heads/main' was rewritten
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -3954,8 +3605,7 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```text
 c92feaf:evidencias_ia/00_conversacion_principal_tarea4.md
 c92feaf:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md
-c92feaf:evidencias_ia/00_conversacion_principal_tarea4.md:8177:25	CORREO = re.compile(r"[correo]", re.I)
-
+c92feaf:evidencias_ia/00_conversacion_principal_tarea4.md:8177:25	CORREO = re.compile(r"[correo]", re.I)
 c92feaf:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3759: sale mi @gmail.com
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -3966,21 +3616,14 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-<stdin>:9: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
-
+<stdin>:9: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
 25:CORREO = re.compile(r"[\w.+\\-]+@[\w\\-]+\\?\.[\w.\\-]+")   # cualquier correo, también escrito con «\.» (no se escribe el de la autora)
-<string>:3: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
-
-'[correo]' -> [correo]
-
-'[correo]' -> [correo]
-
-'[correo]' -> [correo]
-
-'sale mi @gmail.com' -> sale mi @gmail.com
-
-Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 52 archivos.
-
+<string>:3: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+'[correo]' -> [correo]
+'[correo]' -> [correo]
+'[correo]' -> [correo]
+'sale mi @gmail.com' -> sale mi @gmail.com
+Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 52 archivos.
 evidencias_ia/00_conversacion_principal_tarea4.md:4
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -3991,8 +3634,7 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 52 archivos.
-
+Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 52 archivos.
 evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3634:[correo] Unverified
 evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3637: actualmente el primary es [correo] pero quisiera que sea el otro [correo]
 evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3656:- Junto a `[correo]`, haz clic en **Resend verification email**.
@@ -4021,8 +3663,7 @@ El correo ya no se ve, pero quedó como `[correo]`, porque la regla del fragment
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 52 archivos.
-
+Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 52 archivos.
 evidencias_ia/00_conversacion_principal_tarea4.md:8435:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3634:[correo] Unveri
 evidencias_ia/00_conversacion_principal_tarea4.md:8436:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3637: actualmente el primary es 
 evidencias_ia/00_conversacion_principal_tarea4.md:8437:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3656:- Junto a `[correo]
@@ -4033,8 +3674,7 @@ evidencias_ia/00_conversacion_principal_tarea4.md:8441:evidencias_ia/mcp/01_desa
 evidencias_ia/00_conversacion_principal_tarea4.md:8442:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3691:git config --global user.em
 evidencias_ia/00_conversacion_principal_tarea4.md:8443:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3705:- En **Default notification
 evidencias_ia/00_conversacion_principal_tarea4.md:8444:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3730:git config --global user.em
-evidencias_ia/00_conversacion_principal_tarea4.md:8445:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3740:[correo]
-
+evidencias_ia/00_conversacion_principal_tarea4.md:8445:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3740:[correo]
 evidencias_ia/00_conversacion_principal_tarea4.md:8447:evidencias_ia/mcp/01_desarrollo_mcp_bcrp_sesion04.md:3779:[correo] is you
 evidencias_ia/00_conversacion_principal_tarea4.md:8448:evidencias_ia/skills/01_desarrollo_skills_enaho_sesion16.md:570:    { name = "fampuer
 --- revisado
@@ -4061,16 +3701,11 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-README.md 39 enlaces locales; rotos: ninguno
-
-informes/informe_final.md 6 enlaces locales; rotos: ninguno
-
-evaluacion/comparacion.md 0 enlaces locales; rotos: ninguno
-
-analisis/README.md 1 enlaces locales; rotos: ninguno
-
-10 passed in 21.15s
-
+README.md 39 enlaces locales; rotos: ninguno
+informes/informe_final.md 6 enlaces locales; rotos: ninguno
+evaluacion/comparacion.md 0 enlaces locales; rotos: ninguno
+analisis/README.md 1 enlaces locales; rotos: ninguno
+10 passed in 21.15s
 0
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -4081,8 +3716,7 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 52 archivos.
-
+Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 52 archivos.
 73ec5c1 Evidencias: conversación principal exportada hasta la revisión final
 12:55
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
@@ -4338,22 +3972,14 @@ Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Traceback (most recent call last):
-
-  File "<stdin>", line 34, in <module>
-
-AssertionError: a1
-
-skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
-
-integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
-
-integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
-
-00_conversacion_principal_tarea4.md: 75 mensajes de la usuaria, 147 de Claude, 277 usos de herramientas
-
-Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 52 archivos.
-
+Traceback (most recent call last):
+  File "<stdin>", line 34, in <module>
+AssertionError: a1
+skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
+integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
+integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
+00_conversacion_principal_tarea4.md: 75 mensajes de la usuaria, 147 de Claude, 277 usos de herramientas
+Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 52 archivos.
 688712 evidencias_ia/00_conversacion_principal_tarea4.md
 57306 evidencias_ia/integracion/intento1_conversacion.md
 48889 evidencias_ia/integracion/intento2_conversacion.md
@@ -4401,16 +4027,11 @@ The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\eviden
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-00_conversacion_principal_tarea4.md: 75 mensajes de la usuaria, 148 de Claude, 282 usos de herramientas
-
-evaluacion/modo_A_sin_mcp_ni_skills.md
-
-evaluacion/modo_B_con_mcp_y_skills.md
-
-evaluacion/modo_M_solo_memoria_intento_fallido.md
-
-Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 57 archivos.
-
+00_conversacion_principal_tarea4.md: 75 mensajes de la usuaria, 148 de Claude, 282 usos de herramientas
+evaluacion/modo_A_sin_mcp_ni_skills.md
+evaluacion/modo_B_con_mcp_y_skills.md
+evaluacion/modo_M_solo_memoria_intento_fallido.md
+Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 57 archivos.
     287 evidencias_ia/00_conversacion_principal_tarea4.md
  381729 evidencias_ia/00_conversacion_principal_tarea4_parte1.md
  315315 evidencias_ia/00_conversacion_principal_tarea4_parte2.md
@@ -4461,8 +4082,7 @@ The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\eviden
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 57 archivos.
-
+Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 57 archivos.
 ## Pregunta B1 · modo A
 
 > **Pregunta:** Según el BCRP, ¿cuánto fue la inversión bruta fija de los gobiernos regionales en el departamento de Cusco en 2024, en millones de soles?
@@ -4560,26 +4180,16 @@ ya están las capturas en la carpeta evidencias_ia\mcp\
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-Name                                        Length LastWriteTime        
-
-----                                        ------ -------------        
-
-01_desarrollo_mcp_bcrp_sesion04.md          218500 11/8/2026 1:07:03 PM 
-
-02_prueba_mcp_en_claude_code.md              11797 11/8/2026 1:07:03 PM 
-
-mcp_03_prompt_informe_1.png                 320435 11/8/2026 3:15:23 PM 
-
-mcp_03_prompt_informe_2.png                 372086 11/8/2026 3:16:05 PM 
-
-mcp_04_recurso_serie.png                    212197 11/8/2026 3:19:26 PM 
-
-pruebas.txt                                    997 11/7/2026 4:44:45 PM 
-
-288b6482-a668-4558-85d4-ed6833fd096e.jsonl  739159 11/8/2026 3:20:09 PM 
-
-ff4b3efb-1caf-4214-8fff-c882108a2032.jsonl 3804550 11/7/2026 12:16:43 PM
-
+Name                                        Length LastWriteTime        
+----                                        ------ -------------        
+01_desarrollo_mcp_bcrp_sesion04.md          218500 11/8/2026 1:07:03 PM 
+02_prueba_mcp_en_claude_code.md              11797 11/8/2026 1:07:03 PM 
+mcp_03_prompt_informe_1.png                 320435 11/8/2026 3:15:23 PM 
+mcp_03_prompt_informe_2.png                 372086 11/8/2026 3:16:05 PM 
+mcp_04_recurso_serie.png                    212197 11/8/2026 3:19:26 PM 
+pruebas.txt                                    997 11/7/2026 4:44:45 PM 
+288b6482-a668-4558-85d4-ed6833fd096e.jsonl  739159 11/8/2026 3:20:09 PM 
+ff4b3efb-1caf-4214-8fff-c882108a2032.jsonl 3804550 11/7/2026 12:16:43 PM
 1bb110e2-4f4e-4827-909e-21b1901164f9.jsonl 3682188 11/6/2026 3:26:02 AM
 ```
 </details>
@@ -4782,36 +4392,21 @@ The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\eviden
 
 ```text
 Exit code 1
-mcp/01_desarrollo_mcp_bcrp_sesion04.md: 72 mensajes de la usuaria, 84 de Claude, 76 usos de herramientas
-
-mcp/02_prueba_mcp_en_claude_code.md: 3 mensajes de la usuaria, 4 de Claude, 4 usos de herramientas
-
-mcp/03_prompt_y_recurso.md: 1 mensajes de la usuaria, 2 de Claude, 15 usos de herramientas
-
-skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
-
-integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
-
-integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
-
-00_conversacion_principal_tarea4.md: 78 mensajes de la usuaria, 152 de Claude, 302 usos de herramientas
-
-evaluacion/modo_A_sin_mcp_ni_skills.md
-
-evaluacion/modo_B_con_mcp_y_skills.md
-
-evaluacion/modo_M_solo_memoria_intento_fallido.md
-
-uv : ERROR: quedan datos personales en evidencias_ia\00_conversacion_principal_tarea4_parte2.md
-
-At line:1 char:370
-
-+ ... as\Tarea_4; uv run python evidencias_ia\exportar_conversaciones.py 2> ...
-
-+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    + CategoryInfo          : NotSpecified: (ERROR: quedan d...area4_parte2.md:String) [], RemoteException
-
+mcp/01_desarrollo_mcp_bcrp_sesion04.md: 72 mensajes de la usuaria, 84 de Claude, 76 usos de herramientas
+mcp/02_prueba_mcp_en_claude_code.md: 3 mensajes de la usuaria, 4 de Claude, 4 usos de herramientas
+mcp/03_prompt_y_recurso.md: 1 mensajes de la usuaria, 2 de Claude, 15 usos de herramientas
+skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
+integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
+integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
+00_conversacion_principal_tarea4.md: 78 mensajes de la usuaria, 152 de Claude, 302 usos de herramientas
+evaluacion/modo_A_sin_mcp_ni_skills.md
+evaluacion/modo_B_con_mcp_y_skills.md
+evaluacion/modo_M_solo_memoria_intento_fallido.md
+uv : ERROR: quedan datos personales en evidencias_ia\00_conversacion_principal_tarea4_parte2.md
+At line:1 char:370
++ ... as\Tarea_4; uv run python evidencias_ia\exportar_conversaciones.py 2> ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR: quedan d...area4_parte2.md:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
 ```
 </details>
@@ -4871,8 +4466,7 @@ Estoy revisando un aviso del exportador: encontró un posible dato personal en l
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-{'parentUuid': '146e2c40-1921-46fa-9af5-1301b7442b3a', 'isSidechain': False, 'promptId': '9eba999f-1d32-4b2a-97ad-a53a757b1ce9', 'type': 'user', 'isVisibleInTranscriptOnly': True, 'isCompactSummary': True, 'uuid': 'a8c0b9a4-57a6-4abd-b274-eaed9d7f6b8c', 'timestamp': '2026-11-08T19:12:47.312Z', 'turnPosition': {'promptIndex': 71, 'turnIndex': 75}, 'userType': 'external', 'entrypoint': 'cli', 'cwd': 'C:\\Users\\[usuario]\\Documents\\GitHub\\Data-Science-Python', 'sessionId': '731e3686-e8f6-4969-a16d-1b34e470beee', 'version': '2.1.317', 'gitBranch': 'main', 'slug': 'toasty-wandering-patterson'} {'role': 'user', 'content': '<artifact-content-authored-by-others/>\nThe summari
-
+{'parentUuid': '146e2c40-1921-46fa-9af5-1301b7442b3a', 'isSidechain': False, 'promptId': '9eba999f-1d32-4b2a-97ad-a53a757b1ce9', 'type': 'user', 'isVisibleInTranscriptOnly': True, 'isCompactSummary': True, 'uuid': 'a8c0b9a4-57a6-4abd-b274-eaed9d7f6b8c', 'timestamp': '2026-11-08T19:12:47.312Z', 'turnPosition': {'promptIndex': 71, 'turnIndex': 75}, 'userType': 'external', 'entrypoint': 'cli', 'cwd': 'C:\\Users\\[usuario]\\Documents\\GitHub\\Data-Science-Python', 'sessionId': '731e3686-e8f6-4969-a16d-1b34e470beee', 'version': '2.1.317', 'gitBranch': 'main', 'slug': 'toasty-wandering-patterson'} {'role': 'user', 'content': '<artifact-content-authored-by-others/>\nThe summari
 {'type': 'api-request-blob', 'sessionId': '731e3686-e8f6-4969-a16d-1b34e470beee', 'hash': '67fa06f1ef978e6e5aea6a907e3478b3767308b596c6989124a2f1fdcbc59c9b'} {'role': 'user', 'content': '<artifact-content-authored-by-others/>\nThe summari
 ```
 </details>
@@ -4955,54 +4549,30 @@ The variable is `lineas`, so the fix fits. Re-exporting:
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
-
-00_conversacion_principal_tarea4.md: 77 mensajes de la usuaria, 153 de Claude, 310 usos de herramientas
-
-evaluacion/modo_A_sin_mcp_ni_skills.md
-
-evaluacion/modo_B_con_mcp_y_skills.md
-
-evaluacion/modo_M_solo_memoria_intento_fallido.md
-
-Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 58 archivos.
-
-# Prompt informe y recurso bcrp://serie/RD16682DA del MCP desde Claude Code (8-nov-2026)
-
-> 🔧 **mcp__bcrp__buscar_series** `{"texto": "inversión", "limite": 25}`
-
-> 🔧 **mcp__bcrp__buscar_series** `{"texto": "inversión pública", "limite": 25}`
-
-> 🔧 **mcp__bcrp__buscar_series** `{"texto": "inversión bruta fija gobiernos locales total"}`
-
-> 🔧 **mcp__bcrp__resumen** `{"codigo": "PM10075FA", "desde": "2020", "hasta": "2025"}`
-
-> 🔧 **mcp__bcrp__resumen** `{"codigo": "PM10081FA", "desde": "2020", "hasta": "2025"}`
-
-> 🔧 **mcp__bcrp__resumen** `{"codigo": "RD14170DM", "desde": "2025-01", "hasta": "2026-08"}`
-
-> 🔧 **mcp__bcrp__buscar_series** `{"texto": "inversión bruta fija gobiernos regionales total", "frecuencia": "Anual"}`
-
-> 🔧 **mcp__bcrp__resumen** `{"codigo": "RD16708DA", "desde": "2020", "hasta": "2025"}`
-
-> 🔧 **mcp__bcrp__cuadre_territorial** `{"indicador": "inversion_gobiernos_regionales", "desde": "2024", "hasta": "2025"}`
-
-> 🔧 **mcp__bcrp__resumen** `{"codigo": "RD16735DA", "desde": "2020", "hasta": "2025"}`
-
-> 🔧 **mcp__bcrp__resumen** `{"codigo": "RD16726DA", "desde": "2020", "hasta": "2025"}`
-
-> 🔧 **mcp__bcrp__resumen** `{"codigo": "RD16718DA", "desde": "2024", "hasta": "2025"}`
-
-### 🤖 Claude · 2026-11-08 18:17 UTC
-
-## 👤 Usuaria · 2026-11-08 20:16 UTC
-
-@bcrp:bcrp://serie/RD16682DA ¿qué mide esta serie y desde cuándo hay datos?
-
-> 🔧 **ReadMcpResourceTool** `{"server": "bcrp", "uri": "bcrp://serie/RD16682DA"}`
-
-{"contents":[{"uri":"bcrp://serie/RD16682DA","mimeType":"text/plain","text":"{\"codigo\": \"RD16682DA\", \"nombre\": \"Inversi\\u00f3n bruta fija del 
-
+integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
+00_conversacion_principal_tarea4.md: 77 mensajes de la usuaria, 153 de Claude, 310 usos de herramientas
+evaluacion/modo_A_sin_mcp_ni_skills.md
+evaluacion/modo_B_con_mcp_y_skills.md
+evaluacion/modo_M_solo_memoria_intento_fallido.md
+Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 58 archivos.
+# Prompt informe y recurso bcrp://serie/RD16682DA del MCP desde Claude Code (8-nov-2026)
+> 🔧 **mcp__bcrp__buscar_series** `{"texto": "inversión", "limite": 25}`
+> 🔧 **mcp__bcrp__buscar_series** `{"texto": "inversión pública", "limite": 25}`
+> 🔧 **mcp__bcrp__buscar_series** `{"texto": "inversión bruta fija gobiernos locales total"}`
+> 🔧 **mcp__bcrp__resumen** `{"codigo": "PM10075FA", "desde": "2020", "hasta": "2025"}`
+> 🔧 **mcp__bcrp__resumen** `{"codigo": "PM10081FA", "desde": "2020", "hasta": "2025"}`
+> 🔧 **mcp__bcrp__resumen** `{"codigo": "RD14170DM", "desde": "2025-01", "hasta": "2026-08"}`
+> 🔧 **mcp__bcrp__buscar_series** `{"texto": "inversión bruta fija gobiernos regionales total", "frecuencia": "Anual"}`
+> 🔧 **mcp__bcrp__resumen** `{"codigo": "RD16708DA", "desde": "2020", "hasta": "2025"}`
+> 🔧 **mcp__bcrp__cuadre_territorial** `{"indicador": "inversion_gobiernos_regionales", "desde": "2024", "hasta": "2025"}`
+> 🔧 **mcp__bcrp__resumen** `{"codigo": "RD16735DA", "desde": "2020", "hasta": "2025"}`
+> 🔧 **mcp__bcrp__resumen** `{"codigo": "RD16726DA", "desde": "2020", "hasta": "2025"}`
+> 🔧 **mcp__bcrp__resumen** `{"codigo": "RD16718DA", "desde": "2024", "hasta": "2025"}`
+### 🤖 Claude · 2026-11-08 18:17 UTC
+## 👤 Usuaria · 2026-11-08 20:16 UTC
+@bcrp:bcrp://serie/RD16682DA ¿qué mide esta serie y desde cuándo hay datos?
+> 🔧 **ReadMcpResourceTool** `{"server": "bcrp", "uri": "bcrp://serie/RD16682DA"}`
+{"contents":[{"uri":"bcrp://serie/RD16682DA","mimeType":"text/plain","text":"{\"codigo\": \"RD16682DA\", \"nombre\": \"Inversi\\u00f3n bruta fija del 
 ### 🤖 Claude · 2026-11-08 20:17 UTC
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -5017,44 +4587,25 @@ The prompt invocation itself doesn't appear as a message. Checking the start of 
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-# Prompt informe y recurso bcrp://serie/RD16682DA del MCP desde Claude Code (8-nov-2026)
-
-
-
-*Exportado de Claude Code. Datos personales reemplazados por [correo] y [usuario]; recordatorios internos del sistema y razonamiento interno omitidos; resultados largos de herramientas recortados.*
-
-
-
-> 🔧 **ToolSearch** `{"query": "bcrp buscar_series resumen serie", "max_results": 10}`
-
-
-
-<details><summary>Resultado de la herramienta</summary>
-
-
-
-ʼʼʼtext
-
-[imagen omitida]
-
-[imagen omitida]
-
-[imagen omitida]
-
-[imagen omitida]
-
-[imagen omitida]
-
-None <command-message>mcp__bcrp__informe</command-message> | <command-name>/mcp__bcrp__informe</command-name> | <command-args>inversión pública por departamento</command-args>
-
---
-
-True [{"type": "text", "text": "Escribe un informe de cinco viñetas sobre «inversión» en el Perú con datos del BCRP. Busca las series con buscar_series y usa resumen o serie para las cifras; no calcules a mano. Cada viñeta debe citar el código de la serie y el periodo, y al final lista las URLs de las fu
-
---
-
-None @bcrp:bcrp://serie/RD16682DA ¿qué mide esta serie y desde cuándo hay datos?
-
+# Prompt informe y recurso bcrp://serie/RD16682DA del MCP desde Claude Code (8-nov-2026)
+
+*Exportado de Claude Code. Datos personales reemplazados por [correo] y [usuario]; recordatorios internos del sistema y razonamiento interno omitidos; resultados largos de herramientas recortados.*
+
+> 🔧 **ToolSearch** `{"query": "bcrp buscar_series resumen serie", "max_results": 10}`
+
+<details><summary>Resultado de la herramienta</summary>
+
+ʼʼʼtext
+[imagen omitida]
+[imagen omitida]
+[imagen omitida]
+[imagen omitida]
+[imagen omitida]
+None <command-message>mcp__bcrp__informe</command-message> | <command-name>/mcp__bcrp__informe</command-name> | <command-args>inversión pública por departamento</command-args>
+--
+True [{"type": "text", "text": "Escribe un informe de cinco viñetas sobre «inversión» en el Perú con datos del BCRP. Busca las series con buscar_series y usa resumen o serie para las cifras; no calcules a mano. Cada viñeta debe citar el código de la serie y el periodo, y al final lista las URLs de las fu
+--
+None @bcrp:bcrp://serie/RD16682DA ¿qué mide esta serie y desde cuándo hay datos?
 --
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -5144,70 +4695,38 @@ The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\eviden
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-mcp/01_desarrollo_mcp_bcrp_sesion04.md: 72 mensajes de la usuaria, 84 de Claude, 76 usos de herramientas
-
-mcp/02_prueba_mcp_en_claude_code.md: 4 mensajes de la usuaria, 4 de Claude, 4 usos de herramientas
-
-mcp/03_prompt_y_recurso.md: 2 mensajes de la usuaria, 2 de Claude, 15 usos de herramientas
-
-skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
-
-integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
-
-integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
-
-00_conversacion_principal_tarea4.md: 77 mensajes de la usuaria, 156 de Claude, 317 usos de herramientas
-
-evaluacion/modo_A_sin_mcp_ni_skills.md
-
-evaluacion/modo_B_con_mcp_y_skills.md
-
-evaluacion/modo_M_solo_memoria_intento_fallido.md
-
-Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 58 archivos.
-
-# Prompt informe y recurso bcrp://serie/RD16682DA del MCP desde Claude Code (8-nov-2026)
-
-
-
-*Exportado de Claude Code. Datos personales reemplazados por [correo] y [usuario]; recordatorios internos del sistema y razonamiento interno omitidos; resultados largos de herramientas recortados.*
-
-
-
-## 👤 Usuaria · 2026-11-08 18:17 UTC
-
-
-
-/mcp__bcrp__informe inversión pública por departamento
-
-
-
-<details open><summary>Texto que devuelve el prompt del servidor MCP</summary>
-
-
-
-ʼʼʼtext
-
-Escribe un informe de cinco viñetas sobre «inversión» en el Perú con datos del BCRP. Busca las series con buscar_series y usa resumen o serie para las cifras; no calcules a mano. Cada viñeta debe citar el código de la serie y el periodo, y al final lista las URLs de las fuentes.
-
-ʼʼʼ
-
-</details>
-
-
-
-> 🔧 **ToolSearch** `{"query": "bcrp buscar_series resumen serie", "max_results": 10}`
-
-
-
-<details><summary>Resultado de la herramienta</summary>
-
-
-
-ʼʼʼtext
-
-[imagen omitida]
-
+mcp/01_desarrollo_mcp_bcrp_sesion04.md: 72 mensajes de la usuaria, 84 de Claude, 76 usos de herramientas
+mcp/02_prueba_mcp_en_claude_code.md: 4 mensajes de la usuaria, 4 de Claude, 4 usos de herramientas
+mcp/03_prompt_y_recurso.md: 2 mensajes de la usuaria, 2 de Claude, 15 usos de herramientas
+skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
+integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
+integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
+00_conversacion_principal_tarea4.md: 77 mensajes de la usuaria, 156 de Claude, 317 usos de herramientas
+evaluacion/modo_A_sin_mcp_ni_skills.md
+evaluacion/modo_B_con_mcp_y_skills.md
+evaluacion/modo_M_solo_memoria_intento_fallido.md
+Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 58 archivos.
+# Prompt informe y recurso bcrp://serie/RD16682DA del MCP desde Claude Code (8-nov-2026)
+
+*Exportado de Claude Code. Datos personales reemplazados por [correo] y [usuario]; recordatorios internos del sistema y razonamiento interno omitidos; resultados largos de herramientas recortados.*
+
+## 👤 Usuaria · 2026-11-08 18:17 UTC
+
+/mcp__bcrp__informe inversión pública por departamento
+
+<details open><summary>Texto que devuelve el prompt del servidor MCP</summary>
+
+ʼʼʼtext
+Escribe un informe de cinco viñetas sobre «inversión» en el Perú con datos del BCRP. Busca las series con buscar_series y usa resumen o serie para las cifras; no calcules a mano. Cada viñeta debe citar el código de la serie y el periodo, y al final lista las URLs de las fuentes.
+ʼʼʼ
+</details>
+
+> 🔧 **ToolSearch** `{"query": "bcrp buscar_series resumen serie", "max_results": 10}`
+
+<details><summary>Resultado de la herramienta</summary>
+
+ʼʼʼtext
+[imagen omitida]
 [imagen omitida]
 Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
 ```
@@ -5227,8 +4746,7 @@ The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\README
 <details><summary>Resultado de la herramienta</summary>
 
 ```text
-50 enlaces locales, 0 rotos
-
+50 enlaces locales, 0 rotos
 M  README.md
 M  evidencias_ia/00_conversacion_principal_tarea4_parte2.md
 M  evidencias_ia/exportar_conversaciones.py

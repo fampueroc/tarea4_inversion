@@ -27,8 +27,16 @@ USUARIO = re.compile(r"(?<![A-Za-z])" + re.escape(Path.home().name) + r"(?![A-Za
 RESTO_CORREO = re.compile(r"[\w.+\-]*\[correo\](?:@[\w.\-\\]*|[\w.+\-]+)?")
 PROMPT_MCP = re.compile(r"<command-name>(?P<nombre>/mcp__[\w-]+)</command-name>\s*<command-args>(?P<args>.*?)</command-args>", re.S)
 RECORDATORIO = re.compile(r"<system-reminder>.*?</system-reminder>", re.S)
-ORGANIZACION = re.compile(r"[organización]|\bIPA\b|[organización]")   # «[organización]» solo como sigla
-MEMORIA = re.compile(r"[\\/]memory[\\/]|MEMORY\.md|originSessionId|node_type: memory|[nota omitida]|[nota omitida]|Diplomado PUCP\. Trab", re.I)   # notas de memoria de Claude
+# Los términos privados (organización y frases de las notas de memoria) no se escriben aquí: se leen de
+# datos/privado.txt, que no se sube. Sin ese archivo el script se detiene en vez de exportar sin ocultarlos.
+_PRIVADO = Path(__file__).resolve().parent.parent / "datos" / "privado.txt"
+if not _PRIVADO.exists():
+    sys.exit(f"Falta {_PRIVADO}: contiene los términos que hay que ocultar.")
+_TERMINOS = [l.split("\t", 1) for l in _PRIVADO.read_text(encoding="utf-8").splitlines()
+             if l.strip() and not l.startswith("#")]
+ORGANIZACION = re.compile("|".join(rx for tipo, rx in _TERMINOS if tipo == "ORG"))
+MEMORIA = re.compile("|".join([r"[\\/]memory[\\/]", r"MEMORY\.md", "originSessionId", "node_type: memory"]
+                              + [rx for tipo, rx in _TERMINOS if tipo == "MEM"]), re.I)   # notas de memoria de Claude
 LIMITE = 2500
 OMITIDOS = set()   # ids de llamadas que tocan la memoria, para omitir también su resultado
 

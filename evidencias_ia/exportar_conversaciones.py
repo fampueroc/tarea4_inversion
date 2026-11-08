@@ -118,9 +118,64 @@ def exportar(origen, destino, titulo):
             for nombre, entrada in usos:
                 n_herr += 1
                 lineas += [f"> 🔧 **{nombre}** `{recortar(limpiar(entrada)).replace('`', 'ʼ')}`", ""]
-    destino.parent.mkdir(parents=True, exist_ok=True)
-    destino.write_text("\n".join(lineas) + "\n", encoding="utf-8")
+    escribir_en_partes(destino, lineas)
     return n_usuaria, n_claude, n_herr
+
+
+def escribir_en_partes(destino, lineas, maximo=400_000):
+    """Escribe el Markdown; si pasa de ~400 KB lo divide en partes que empiezan en un mensaje de la usuaria."""
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    for viejo in destino.parent.glob(destino.stem + "_parte*.md"):
+        viejo.unlink()
+    texto = "\n".join(lineas) + "\n"
+    if len(texto.encode("utf-8")) <= maximo:
+        destino.write_text(texto, encoding="utf-8")
+        return
+    partes, actual, tam = [], [], 0
+    for l in lineas:
+        if l.startswith("## 👤") and tam > maximo * 0.9:
+            partes.append(actual)
+            actual, tam = [], 0
+        actual.append(l)
+        tam += len(l.encode("utf-8")) + 1
+    partes.append(actual)
+    n = len(partes)
+    for i, parte in enumerate(partes, 1):
+        cab = [] if i == 1 else [f"{lineas[0]} (parte {i} de {n})", ""]
+        pie = ["", f"*Continúa en [{destino.stem}_parte{i + 1}.md]({destino.stem}_parte{i + 1}.md).*"] if i < n else []
+        (destino.parent / f"{destino.stem}_parte{i}.md").write_text("\n".join(cab + parte + pie) + "\n", encoding="utf-8")
+    indice = [lineas[0], "", f"La conversación es larga y está dividida en {n} partes:", ""]
+    indice += [f"- [Parte {i}]({destino.stem}_parte{i}.md)" for i in range(1, n + 1)]
+    destino.write_text("\n".join(indice) + "\n", encoding="utf-8")
+
+
+def exportar_evaluacion():
+    """Los registros de evaluacion/logs/ como Markdown legible, un archivo por modo, en evidencias_ia/evaluacion/."""
+    import csv
+    global PREGUNTAS
+    PREGUNTAS = {}
+    for archivo in ("preguntas.csv", "robustez.csv"):
+        with open(RAIZ / "evaluacion" / archivo, encoding="utf-8") as f:
+            PREGUNTAS.update({r["id"]: r["pregunta"] for r in csv.DictReader(f)})
+    logs_dir = RAIZ / "evaluacion" / "logs"
+    grupos = {"A": "modo_A_sin_mcp_ni_skills", "B": "modo_B_con_mcp_y_skills",
+              "M": "modo_M_solo_memoria_intento_fallido"}
+    for modo, nombre in grupos.items():
+        lineas = [f"# Sesiones de evaluación: {nombre.replace('_', ' ')}", "",
+                  "*Cada sección es una sesión independiente de `claude -p` (`evaluacion/evaluar.py`), con las mismas "
+                  "reglas de privacidad que el resto de las evidencias. Registro original en `evaluacion/logs/`.*", ""]
+        for log in sorted(logs_dir.glob(f"*_{modo}.jsonl")):
+            tmp = RAIZ / "evidencias_ia" / "evaluacion" / "_tmp.md"
+            exportar(log, tmp, "")
+            cuerpo = tmp.read_text(encoding="utf-8").splitlines()[4:]
+            tmp.unlink()
+            pid = log.stem.split("_")[0]
+            texto_p = PREGUNTAS.get(pid, "")
+            lineas += ["---", "", f"## Pregunta {pid} · modo {modo}", "", f"> **Pregunta:** {texto_p}", ""]
+            lineas += [l.replace("## 👤 Usuaria", "### 👤 Pregunta enviada").replace("### 🤖 Claude", "#### 🤖 Claude")
+                       for l in cuerpo]
+        escribir_en_partes(RAIZ / "evidencias_ia" / "evaluacion" / f"{nombre}.md", lineas)
+        print(f"evaluacion/{nombre}.md")
 
 
 def main():
@@ -135,6 +190,7 @@ def main():
     # Registros de la evaluación: misma limpieza, en su lugar
     for log in sorted((RAIZ / "evaluacion" / "logs").glob("*.jsonl")):
         log.write_text(limpiar(log.read_text(encoding="utf-8")), encoding="utf-8")
+    exportar_evaluacion()
     # Verificación final: ningún dato personal en lo que se va a publicar
     # En los registros de la evaluación la ruta «...\memory\» es la carpeta vacía de cada copia temporal: ahí se
     # buscan solo datos personales; en las conversaciones exportadas, además, cualquier rastro de las notas de memoria.

@@ -158,7 +158,7 @@ El desarrollo se hizo con Claude Code. Las conversaciones completas están expor
 | Desarrollo de las skills de la ENAHO (sesión 16, 31-oct) | [`evidencias_ia/skills/01_desarrollo_skills_enaho_sesion16.md`](evidencias_ia/skills/01_desarrollo_skills_enaho_sesion16.md) |
 | Ejecución integrada, intento 1 (skills corridas por Bash) | [`evidencias_ia/integracion/intento1_conversacion.md`](evidencias_ia/integracion/intento1_conversacion.md) · [informe de ese intento](evidencias_ia/integracion/intento1_informe_final.md) |
 | Ejecución integrada, intento 2 (4 skills + 9 llamadas al MCP) | [`evidencias_ia/integracion/intento2_conversacion.md`](evidencias_ia/integracion/intento2_conversacion.md) |
-| Las 30 sesiones de evaluación (modos A y B, preguntas y robustez) y las 15 del intento fallido de «solo memoria», en bruto | [`evaluacion/logs/`](evaluacion/logs/) |
+| Sesiones de evaluación, legibles (cada pregunta, sus herramientas y su respuesta) | [Modo A](evidencias_ia/evaluacion/modo_A_sin_mcp_ni_skills.md) · [Modo B](evidencias_ia/evaluacion/modo_B_con_mcp_y_skills.md) · [Intento «solo memoria»](evidencias_ia/evaluacion/modo_M_solo_memoria_intento_fallido.md) · registros en bruto en [`evaluacion/logs/`](evaluacion/logs/) |
 | Capturas de la ejecución integrada y de la verificación manual | [`evidencias_ia/integracion/`](evidencias_ia/integracion/) · [`evidencias_ia/verificacion/`](evidencias_ia/verificacion/) |
 
 ## Estructura

@@ -1,4 +1,4 @@
-# Conversación principal de la Tarea 4: plan, MCP, skills, análisis, evaluación e informe (3 al 7-nov-2026) (parte 2 de 2)
+# Conversación principal de la Tarea 4: plan, MCP, skills, análisis, evaluación e informe (3 al 7-nov-2026) (parte 2 de 3)
 
 ## 👤 Usuaria · 2026-11-06 05:33 UTC
 
@@ -5141,3 +5141,148 @@ The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\eviden
 ```
 </details>
 
+<details><summary>Resultado de la herramienta</summary>
+
+```text
+mcp/01_desarrollo_mcp_bcrp_sesion04.md: 72 mensajes de la usuaria, 84 de Claude, 76 usos de herramientas
+
+mcp/02_prueba_mcp_en_claude_code.md: 4 mensajes de la usuaria, 4 de Claude, 4 usos de herramientas
+
+mcp/03_prompt_y_recurso.md: 2 mensajes de la usuaria, 2 de Claude, 15 usos de herramientas
+
+skills/01_desarrollo_skills_enaho_sesion16.md: 18 mensajes de la usuaria, 19 de Claude, 63 usos de herramientas
+
+integracion/intento1_conversacion.md: 4 mensajes de la usuaria, 13 de Claude, 28 usos de herramientas
+
+integracion/intento2_conversacion.md: 3 mensajes de la usuaria, 11 de Claude, 32 usos de herramientas
+
+00_conversacion_principal_tarea4.md: 77 mensajes de la usuaria, 156 de Claude, 317 usos de herramientas
+
+evaluacion/modo_A_sin_mcp_ni_skills.md
+
+evaluacion/modo_B_con_mcp_y_skills.md
+
+evaluacion/modo_M_solo_memoria_intento_fallido.md
+
+Verificado: sin correo, usuario de Windows, organización ni notas de memoria en 58 archivos.
+
+# Prompt informe y recurso bcrp://serie/RD16682DA del MCP desde Claude Code (8-nov-2026)
+
+
+
+*Exportado de Claude Code. Datos personales reemplazados por [correo] y [usuario]; recordatorios internos del sistema y razonamiento interno omitidos; resultados largos de herramientas recortados.*
+
+
+
+## 👤 Usuaria · 2026-11-08 18:17 UTC
+
+
+
+/mcp__bcrp__informe inversión pública por departamento
+
+
+
+<details open><summary>Texto que devuelve el prompt del servidor MCP</summary>
+
+
+
+ʼʼʼtext
+
+Escribe un informe de cinco viñetas sobre «inversión» en el Perú con datos del BCRP. Busca las series con buscar_series y usa resumen o serie para las cifras; no calcules a mano. Cada viñeta debe citar el código de la serie y el periodo, y al final lista las URLs de las fuentes.
+
+ʼʼʼ
+
+</details>
+
+
+
+> 🔧 **ToolSearch** `{"query": "bcrp buscar_series resumen serie", "max_results": 10}`
+
+
+
+<details><summary>Resultado de la herramienta</summary>
+
+
+
+ʼʼʼtext
+
+[imagen omitida]
+
+[imagen omitida]
+Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
+```
+</details>
+
+> 🔧 **Edit** `{"replace_all": false, "file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\README.md", "old_string": "[conversación](evidencias_ia/mcp/03_prompt_y_recurso.md) y capturas en [ʼevidencias_ia/mcp/ʼ](evidencias_ia/mcp/).", "new_string": "[conversación](evidencias_ia/mcp/03_prompt_y_recurso.md) y capturas en [ʼevidencias_ia/mcp/ʼ](evidencias_ia/mcp/). Claude Code separa los argumentos de un prompt por espacios, así que el prompt recibió solo ʼtema = «inversión»ʼ (se ve en el texto exportado); el agente igual armó el informe por departamento con 12 llamadas al MCP. Para un tema de varias palabras hay que escribirlo entre comillas."}`
+
+> 🔧 **PowerShell** `{"command": "cd C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4; @'\nimport re,pathlib,urllib.parse\nt=pathlib.Path(\"README.md\").read_text(encoding=\"utf-8\"); bad=0; n=0\nfor l in re.findall(r\"\\]\\(([^)#]+?)(?:#[^)]*)?\\)\", t):\n    if l.startswith(\"http\"): continue\n    n+=1\n    if not pathlib.Path(urllib.parse.unquote(l)).exists(): bad+=1; print(\"ROTO\",l)\nprint(n,\"enlaces locales,\",bad,\"rotos\")\n'@ | uv run python -; git add -A; git status --short", "description": "Verify README links and stage changes"}`
+
+<details><summary>Resultado de la herramienta</summary>
+
+```text
+The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\README.md has been updated successfully.
+```
+</details>
+
+<details><summary>Resultado de la herramienta</summary>
+
+```text
+50 enlaces locales, 0 rotos
+
+M  README.md
+M  evidencias_ia/00_conversacion_principal_tarea4_parte2.md
+M  evidencias_ia/exportar_conversaciones.py
+M  evidencias_ia/mcp/02_prueba_mcp_en_claude_code.md
+A  evidencias_ia/mcp/03_prompt_y_recurso.md
+A  evidencias_ia/mcp/mcp_03_prompt_informe_1.png
+A  evidencias_ia/mcp/mcp_03_prompt_informe_2.png
+A  evidencias_ia/mcp/mcp_04_recurso_serie.png
+Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
+```
+</details>
+
+### 🤖 Claude · 2026-11-08 20:26 UTC
+
+I'm removing the last sentence I added: I haven't tested whether quotes fix it, and I won't claim something that wasn't checked.
+
+> 🔧 **Edit** `{"replace_all": false, "file_path": "C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4\\README.md", "old_string": " el agente igual armó el informe por departamento con 12 llamadas al MCP. Para un tema de varias palabras hay que escribirlo entre comillas.", "new_string": " el agente igual armó el informe por departamento con 12 llamadas al MCP."}`
+
+> 🔧 **PowerShell** `{"command": "cd C:\\Users\\[usuario]\\Documents\\GitHub\\Python_Interm\\Tareas\\Tarea_4; git add -A; git commit -q -m @'\nEvidencia del prompt y el recurso del MCP usados desde Claude Code\n\n- Exporta la sesión del 8-nov (/mcp__bcrp__informe y @bcrp:bcrp://serie/RD16682DA) con sus 3 capturas.\n- El exportador muestra los prompts MCP y el texto que devuelve el servidor, y omite el resumen de compactación.\n- README: enlaces directos a la nueva evidencia.\n\nCo-Authored-By: Claude Opus 5.5 <[correo]>\n'@; git log --oneline -3; git status --short", "description": "Commit the new MCP evidence"}`
+
+<details><summary>Resultado de la herramienta</summary>
+
+```text
+The file C:\Users\[usuario]\Documents\GitHub\Python_Interm\Tareas\Tarea_4\README.md has been updated successfully.
+```
+</details>
+
+<details><summary>Resultado de la herramienta</summary>
+
+```text
+4141053 Evidencia del prompt y el recurso del MCP usados desde Claude Code
+370d40c Evidencias: sesiones de evaluación legibles en evidencias_ia/evaluacion/; conversación principal en 2 partes
+73ec5c1 Evidencias: conversación principal exportada hasta la revisión final
+Shell cwd was reset to C:\Users\[usuario]\Documents\GitHub\Data-Science-Python
+```
+</details>
+
+### 🤖 Claude · 2026-11-08 20:27 UTC
+
+Listo, ya está todo en el commit `4141053`. Con esto cubrimos el único punto de la tarea que faltaba: usar el prompt y el recurso del MCP desde Claude Code.
+
+**Qué agregué**
+- Revisé tus 3 capturas. La ruta sale como `~\Documents\...`, así que no se ve tu usuario ni tu correo y no hubo que tapar nada.
+- Exporté la sesión a `evidencias_ia/mcp/03_prompt_y_recurso.md`. Ahí se ven el comando `/mcp__bcrp__informe`, el texto que devuelve el servidor, las 12 llamadas al MCP y la lectura del recurso `bcrp://serie/RD16682DA`.
+- En el README hay enlaces directos a la conversación y a cada captura, tanto en "Entregables" como en la sección 12. Revisé los 50 enlaces del README y todos abren su archivo.
+
+**Dos cosas que corregí en el camino**
+- **Un dato privado que casi se publica.** El resumen automático que Claude Code hace al compactar esta conversación se estaba exportando como si fuera un mensaje tuyo, y mencionaba tus notas de memoria. La revisión automática lo detectó y no dejó pasar el archivo. Ahora ese resumen se omite y en su lugar queda una línea que avisa que se omitió.
+- **El tema le llegó cortado al prompt.** Claude Code le pasó solo la primera palabra (`tema = «inversión»`), y eso se ve en el texto exportado. Igual armó el informe por departamento. Lo dejé dicho en el README para que nadie lo tome como un error escondido.
+
+**Paso 2: publicar en GitHub Desktop**
+1. Abre **File → Add local repository** y elige la carpeta `...\Tareas\Tarea_4`.
+2. Pulsa **Publish repository**. En Name pon **`tarea4_inversion`** y **desmarca "Keep this code private"**.
+3. Cuando termine, avísame y reviso que el repositorio se vea público y que los enlaces funcionen. Después publicas el comentario en el issue #201.
+
+
+*Continúa en [00_conversacion_principal_tarea4_parte3.md](00_conversacion_principal_tarea4_parte3.md).*

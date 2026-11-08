@@ -24,6 +24,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 PROYECTOS = Path.home() / ".claude" / "projects"
 CORREO = re.compile(r"[\w.+\\-]+@[\w\\-]+\\?\.[\w.\\-]+")   # cualquier correo, también escrito con «\.» (no se escribe el de la autora)
 USUARIO = re.compile(r"(?<![A-Za-z])" + re.escape(Path.home().name) + r"(?![A-Za-z])", re.I)   # usuario de Windows, leído del sistema
+RESTO_CORREO = re.compile(r"[\w.+\-]*\[correo\](?:@[\w.\-\\]*|[\w.+\-]+)?")
 PROMPT_MCP = re.compile(r"<command-name>(?P<nombre>/mcp__[\w-]+)</command-name>\s*<command-args>(?P<args>.*?)</command-args>", re.S)
 RECORDATORIO = re.compile(r"<system-reminder>.*?</system-reminder>", re.S)
 ORGANIZACION = re.compile(r"[organización]|\bIPA\b|[organización]")   # «[organización]» solo como sigla
@@ -56,6 +57,7 @@ def limpiar(s):
     s = RECORDATORIO.sub("[recordatorio interno del sistema omitido]", s)
     s = CORREO.sub("[correo]", s)          # primero el correo completo
     s = FRAGMENTO.sub("[correo]", s)       # luego, fragmentos sueltos
+    s = RESTO_CORREO.sub("[correo]", s)    # y lo que quede pegado a un reemplazo (inicial, dominio)
     s = ORGANIZACION.sub("[organización]", s)
     return USUARIO.sub("[usuario]", s)
 
@@ -219,12 +221,14 @@ def main():
     # Verificación final: ningún dato personal en lo que se va a publicar
     # En los registros de la evaluación la ruta «...\memory\» es la carpeta vacía de cada copia temporal: ahí se
     # buscan solo datos personales; en las conversaciones exportadas, además, cualquier rastro de las notas de memoria.
+    PEGADO = re.compile(r"[\w.+\-]\[correo\]|\[correo\][@\w]")  # restos de correo junto a un reemplazo
     md = list((RAIZ / "evidencias_ia").rglob("*.md"))
     logs = list((RAIZ / "evaluacion").rglob("*.jsonl"))
     revisar = md + logs
     malos = [str(p.relative_to(RAIZ)) for p in revisar
              if any(rx.search(p.read_text(encoding="utf-8"))
-                    for rx in ((CORREO, FRAGMENTO, USUARIO, ORGANIZACION, MEMORIA) if p in md else (CORREO, FRAGMENTO, USUARIO, ORGANIZACION)))]
+                    for rx in ((CORREO, FRAGMENTO, USUARIO, ORGANIZACION, MEMORIA, PEGADO) if p in md
+                               else (CORREO, FRAGMENTO, USUARIO, ORGANIZACION, PEGADO)))]
     if malos:
         sys.exit("ERROR: quedan datos personales en " + ", ".join(malos))
     print(f"Verificado: sin correo, usuario de Windows, organización ni notas de memoria en {len(revisar)} archivos.")
